@@ -150,6 +150,12 @@ class SiteController extends Controller
                                 $reql->idartigo = $id;
                                 $reql->inventario = "0".$stock;
                                 $reql->idreq = $req->id;
+                                $artigo = Artigos::model()->findByPk($reql->idartigo);
+                                if(isset($artigo))
+                                {
+                                    $reql->idunidadeenc = $artigo->tipounidade_enc;
+                                    $reql->idunidadeinv = $artigo->tipounidade_inv;
+                                }
                                 if($reql->save())
                                 {
                                     echo "-->";
@@ -161,10 +167,13 @@ class SiteController extends Controller
                                         $encL->idartigo = $reql->idartigo;
                                         $encL->quantidade = $reql->encomenda;
                                         $encL->idreqlinha = $reql->id;
-                                        $artigo = Artigos::model()->findByPk($reql->idartigo);
+                                        //$artigo = Artigos::model()->findByPk($reql->idartigo);
+                                        $encL->idunidadeenc = $reql->idunidadeenc;
+                                        $encL->idunidadeinv = $reql->idunidadeinv;
                                         if(isset($artigo))
                                         {
                                             $encL->idfornecedor = $artigo->idfornecedor;
+
                                         }
                                         else
                                         {
