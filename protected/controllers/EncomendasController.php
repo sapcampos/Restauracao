@@ -131,6 +131,11 @@ class EncomendasController extends Controller
                                         $encL->quantidade = $reqL->encomenda;
                                         $encL->idreqlinha = $reqL->id;
                                         $artigo = Artigos::model()->findByPk($reqL->idartigo);
+                                        if(isset($artigo))
+                                        {
+                                            $encL->idunidadeenc = $reqL->idunidadeenc;
+                                            $encL->idunidadeinv = $reqL->idunidadeenc;
+                                        }
                                         $encL->idfornecedor = $artigo->idfornecedor;
                                         if($encL->save())
                                         {
@@ -155,6 +160,12 @@ class EncomendasController extends Controller
                                 $reql1->idartigo = $idArt;
                                 $reql1->inventario = "0".$stock;
                                 $reql1->idreq = $req->id;
+                                $artigo = Artigos::model()->findByPk($reql1->idartigo);
+                                if(isset($artigo))
+                                {
+                                    $reql1->idunidadeenc = $artigo->tipounidade_enc;
+                                    $reql1->idunidadeinv = $artigo->tipounidade_inv;
+                                }
                                 if($reql1->save())
                                 {
                                     $ok = $ok && true;
@@ -166,7 +177,12 @@ class EncomendasController extends Controller
                                         $encL->quantidade = $reql1->encomenda;
                                         $encL->idreqlinha = $reql1->id;
                                         $artigo = Artigos::model()->findByPk($reql1->idartigo);
-                                        $encL->idfornecedor = $artigo->idfornecedor;
+                                        if(isset($artigo))
+                                        {
+                                            $encL->idfornecedor = $artigo->idfornecedor;
+                                            $encL->idunidadeenc = $reql1->idunidadeenc;
+                                            $encL->idunidadeinv = $reql1->idunidadeenc;
+                                        }
                                         if($encL->save())
                                         {
                                             $ok = $ok && true;
@@ -202,14 +218,15 @@ class EncomendasController extends Controller
             }
 
             $connection=Yii::app()->db;
-            $sql = "SELECT rl.id AS ID, a.id AS idArtigo, a.descricao, rl.inventario, rl.encomenda, f.nome AS Fornecedor, ee.nome AS Entrega, een.nome AS Encomenda, tu1.nome AS 'Unidade Encomeda',tu2.nome AS 'Unidade Stock' FROM requesicao_linha rl ";
+            $sql = "SELECT rl.id AS ID, a.id AS idArtigo, a.descricao, rl.inventario, rl.encomenda, f.nome AS Fornecedor, ee.nome AS Entrega, een.nome AS Encomenda, tu1.nome AS 'Unidade Encomenda',tu2.nome AS 'Unidade Stock' FROM requesicao_linha rl ";
             $sql = $sql . " LEFT JOIN requesicao r ON rl.idreq = r.id ";
             $sql = $sql . " LEFT JOIN artigos a ON rl.idartigo = a.id ";
             $sql = $sql . " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
             $sql = $sql . " LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja ";
             $sql = $sql . " LEFT JOIN entidadeentrega ee ON al.identrega = ee.id ";
             $sql = $sql . " LEFT JOIN entidadeencomenda een ON al.idencomenda = een.id ";
-            $sql = $sql . "LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id";
+            $sql = $sql . " LEFT JOIN tipounidade tu1 ON rl.idunidadeenc = tu1.id ";
+            $sql = $sql . " LEFT JOIN tipounidade tu2 ON rl.idunidadeinv = tu2.id ";
             $sql = $sql . " WHERE r.id = " . $id;
             $command=$connection->createCommand($sql);
             $_rows=$command->queryAll();
@@ -220,6 +237,8 @@ class EncomendasController extends Controller
                 {
                     $rows1["e".$r1["idArtigo"]] = $r1["encomenda"];
                     $rows1["i".$r1["idArtigo"]] = $r1["inventario"];
+                    $rows1["ui".$r1["idArtigo"]] = $r1["Unidade Stock"];
+                    $rows1["ue".$r1["idArtigo"]] = $r1["Unidade Encomenda"];
                 }
             }
 
@@ -242,7 +261,10 @@ class EncomendasController extends Controller
             $command=$connection->createCommand($sql1);
             $rows=$command->queryAll();
 
-            $sql2 = "SELECT idartigo, inventario, encomenda, idreq FROM requesicao_linha WHERE idreq = (SELECT MAX(id) FROM requesicao WHERE idloja = ".$req->idloja." AND id < ".$id.");";
+            $sql2 = "SELECT rl.idartigo, rl.inventario, rl.encomenda, rl.idreq, tu2.nome AS 'Unidade Encomenda', tu1.nome AS 'Unidade Stock' FROM requesicao_linha rl ";
+            $sql2 = $sql2 . " LEFT JOIN tipounidade tu1 ON rl.idunidadeenc = tu1.id ";
+            $sql2 = $sql2 . " LEFT JOIN tipounidade tu2 ON rl.idunidadeinv = tu2.id ";
+            $sql2 = $sql2 . " WHERE idreq = (SELECT MAX(id) FROM requesicao WHERE idloja = ".$req->idloja." AND id < ".$id.");";
             $command2=$connection->createCommand($sql2);
             $rows2=$command2->queryAll();
             $idReq = 0;
@@ -251,6 +273,8 @@ class EncomendasController extends Controller
             {
                 $rowsOld["i".$r2["idartigo"]] = $r2["inventario"];
                 $rowsOld["e".$r2["idartigo"]] = $r2["encomenda"];
+                $rowsOld["ui".$r2["idartigo"]] = $r2["Unidade Stock"];
+                $rowsOld["ue".$r2["idartigo"]] = $r2["Unidade Encomenda"];
                 if($idReq == 0)
                 {
                     $idReq = $r2["idreq"];

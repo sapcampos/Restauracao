@@ -50,6 +50,11 @@
     </tbody>
 </table>
 */?>
+
+<?php
+//print_r($rows1);
+//print_r($rows2);
+?>
 <div style="width:100%">
     <strong>NOTA:</strong>&nbsp;<comment>Deve usar . para as casas décimais.</comment>
 </div>
@@ -126,8 +131,12 @@
                     }
                     $inv = "";
                     $enc = "";
+                    $uinv = "";
+                    $uenc = "";
                     $inv1 = "";
                     $enc1 = "";
+                    $uinv1 = "";
+                    $uenc1 = "";
                     if(isset($rows2["i".$row["ID"]]))
                     {
                         $inv = $rows2["i".$row["ID"]];
@@ -135,6 +144,14 @@
                     if(isset($rows2["e".$row["ID"]]))
                     {
                         $enc = $rows2["e".$row["ID"]];
+                    }
+                    if(isset($rows2["ui".$row["ID"]]))
+                    {
+                        $uinv = $rows2["ui".$row["ID"]];
+                    }
+                    if(isset($rows2["ue".$row["ID"]]))
+                    {
+                        $yenc = $rows2["ue".$row["ID"]];
                     }
 
                     if(isset($rows1["i".$row["ID"]]))
@@ -145,14 +162,22 @@
                     {
                         $enc1 = $rows1["e".$row["ID"]];
                     }
+                    if(isset($rows1["ui".$row["ID"]]))
+                    {
+                        $uinv1 = $rows1["ui".$row["ID"]];
+                    }
+                    if(isset($rows1["ue".$row["ID"]]))
+                    {
+                        $uenc1 = $rows1["ue".$row["ID"]];
+                    }
                     echo "<td>&nbsp;".$row["Fornecedor"]."</td>";
                     echo "<td>".$row["Descricao"]."<input type=\"hidden\" name=\"ID_".$row["ID"]."\"</td>";
                     echo "<td>".$row["Encomenda"]."</td>";
                     echo "<td>".$row["Entrega"]."</td>";
-                    echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$inv."\" style=\"width:40px; margin:5px;\" readonly/>".$row["Unidade Stock"]."</td>";
-                    echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$enc."\" style=\"width:40px; margin:5px;\" readonly/>".$row["Unidade Encomenda"]."</td>";
-                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"stock".$row["ID"]."\" class=\"inpt\" value=\"".$inv1."\"/>".$row["Unidade Stock"]."</td>";
-                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"enc".$row["ID"]."\" class=\"inpt\" value=\"".$enc1."\"/>".$row["Unidade Encomenda"]."</td>";
+                    echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$inv."\" style=\"width:40px; margin:5px;\" readonly/>".$uinv."</td>";
+                    echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$enc."\" style=\"width:40px; margin:5px;\" readonly/>".$uenc."</td>";
+                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"stock".$row["ID"]."\" class=\"inpt\" value=\"".$inv1."\"/>".$uinv1."</td>";
+                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"enc".$row["ID"]."\" class=\"inpt\" value=\"".$enc1."\"/>".$uenc1."</td>";
                     echo "</tr>";
                     $i++;
                 }
