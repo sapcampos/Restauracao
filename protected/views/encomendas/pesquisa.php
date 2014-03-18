@@ -102,8 +102,24 @@
                     {
                         $enc = $oldR["e".$row["ID"]];
                     }
-                    echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$inv."\" style=\"width:40px; margin:5px;\" readonly/>".$row["Unidade Stock"]."</td>";
-                    echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$enc."\" style=\"width:40px; margin:5px;\" readonly/>".$row["Unidade Encomenda"]."</td>";
+                    if(isset($oldR["ue".$row["ID"]]))
+                    {
+                        $ue = $oldR["ue".$row["ID"]];
+                    }
+                    else
+                    {
+                        $ue = $row["Unidade Encomenda"];
+                    }
+                    if(isset($oldR["ui".$row["ID"]]))
+                    {
+                        $ui = $oldR["ui".$row["ID"]];
+                    }
+                    else
+                    {
+                        $ui = $row["Unidade Stock"];
+                    }
+                    echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$inv."\" style=\"width:40px; margin:5px;\" readonly/>".$ui."</td>";
+                    echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$enc."\" style=\"width:40px; margin:5px;\" readonly/>".$ue."</td>";
                 }
 
                 echo "</tr>";

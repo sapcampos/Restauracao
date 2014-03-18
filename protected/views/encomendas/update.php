@@ -149,26 +149,44 @@
                     {
                         $uinv = $rows2["ui".$row["ID"]];
                     }
+                    else
+                    {
+                        $uinv = $row["Unidade Stock"];
+                    }
                     if(isset($rows2["ue".$row["ID"]]))
                     {
-                        $yenc = $rows2["ue".$row["ID"]];
+                        $uenc = $rows2["ue".$row["ID"]];
+                    }
+                    else
+                    {
+                        $uenc = $row["Unidade Encomenda"];
                     }
 
                     if(isset($rows1["i".$row["ID"]]))
                     {
                         $inv1 = $rows1["i".$row["ID"]];
                     }
+
                     if(isset($rows1["e".$row["ID"]]))
                     {
                         $enc1 = $rows1["e".$row["ID"]];
                     }
+
                     if(isset($rows1["ui".$row["ID"]]))
                     {
                         $uinv1 = $rows1["ui".$row["ID"]];
                     }
+                    else
+                    {
+                        $uinv1 = $row["Unidade Stock"];
+                    }
                     if(isset($rows1["ue".$row["ID"]]))
                     {
                         $uenc1 = $rows1["ue".$row["ID"]];
+                    }
+                    else
+                    {
+                        $uenc1 = $row["Unidade Encomenda"];
                     }
                     echo "<td>&nbsp;".$row["Fornecedor"]."</td>";
                     echo "<td>".$row["Descricao"]."<input type=\"hidden\" name=\"ID_".$row["ID"]."\"</td>";

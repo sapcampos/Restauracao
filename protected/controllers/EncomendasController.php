@@ -354,7 +354,10 @@ class EncomendasController extends Controller
         $rowsOld = array();
         foreach($_rows as $r1)
         {
-            $sql2 = "SELECT idartigo, inventario, encomenda, idreq FROM requesicao_linha WHERE idreq = ".$r1["id"]."";
+            $sql2 = "SELECT rl.idartigo, rl.inventario, rl.encomenda, rl.idreq, tu1.nome AS 'UE', tu2.nome AS 'US' FROM requesicao_linha rl";
+            $sql2 = $sql2 . " LEFT JOIN tipounidade tu1 ON rl.idunidadeenc = tu1.id ";
+            $sql2 = $sql2 . " LEFT JOIN tipounidade tu2 ON rl.idunidadeinv = tu2.id ";
+            $sql2 = $sql2 . " WHERE idreq = ".$r1["id"]."";
             $command2=$connection->createCommand($sql2);
             $rows2=$command2->queryAll();
             $idReq = 0;
@@ -367,6 +370,8 @@ class EncomendasController extends Controller
                 }
                 $rowsOld1["i".$r2["idartigo"]] = $r2["inventario"];
                 $rowsOld1["e".$r2["idartigo"]] = $r2["encomenda"];
+                $rowsOld1["ui".$r2["idartigo"]] = $r2["US"];
+                $rowsOld1["ue".$r2["idartigo"]] = $r2["UE"];
             }
             $rowsOld[$idReq] = $rowsOld1;
 
@@ -421,7 +426,7 @@ class EncomendasController extends Controller
         $this->layout = "none";
         $connection=Yii::app()->db;
         $sql = "SELECT a.descricao, rl.encomenda, tu.nome, f.nome AS 'fornecedor' FROM requesicao_linha rl LEFT JOIN artigos a ON rl.idartigo = a.id ";
-        $sql .= " LEFT JOIN tipounidade tu ON a.tipounidade_enc = tu.id ";
+        $sql .= " LEFT JOIN tipounidade tu ON rl.idunidadeenc = tu.id ";
         $sql .= " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
         $sql .= " WHERE rl.encomenda > 0 AND idreq = " . $id . " ORDER BY f.nome ASC,a.descricao ASC;";
         $command=$connection->createCommand($sql);
@@ -495,7 +500,10 @@ class EncomendasController extends Controller
         $rowsOld = array();
         foreach($_rows as $r1)
         {
-            $sql2 = "SELECT idartigo, inventario, encomenda, idreq FROM requesicao_linha WHERE idreq = ".$r1["id"]."";
+            $sql2 = "SELECT idartigo, inventario, encomenda, idreq FROM requesicao_linha  ";
+            $sql2 = $sql2 . " LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id ";
+            $sql2 = $sql2 . " LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id ";
+            $sql2 = $sql2 . " WHERE idreq = ".$r1["id"]."";
             $command2=$connection->createCommand($sql2);
             $rows2=$command2->queryAll();
             $idReq = 0;
