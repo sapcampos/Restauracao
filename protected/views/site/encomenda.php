@@ -10,7 +10,8 @@
         echo "<option value=\"0\" SELECTED>Todas</option>";*/
     foreach($lojas as $l)
     {
-        if($l->id == 6 || $l->id == 7)
+        //if($l->id == 6 || $l->id == 7)
+        if($l->id == 7)
         {}
         else{
             $sel = "";

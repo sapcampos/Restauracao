@@ -296,7 +296,7 @@ class EncomendasFornecedorController extends Controller
         }
 
 
-        $sql1 = "SELECT id, nome FROM loja WHERE activo = 1 AND id NOT iN (6,7) ORDER BY nome ASC;";
+        $sql1 = "SELECT id, nome FROM loja WHERE activo = 1 AND id NOT iN (7) ORDER BY nome ASC;";
         $command1=$connection->createCommand($sql1);
         $rows1=$command1->queryAll();
 
@@ -367,7 +367,7 @@ class EncomendasFornecedorController extends Controller
             }
             //$rowsUnidades["index"] = $r["unidade"];
         }
-        $sql1 = "SELECT id, nome FROM loja WHERE activo = 1 AND id NOT iN (6,7) AND id IN (SELECT distinct idloja FROM encomendalinha WHERE idencomenda = ".$id.") ORDER BY nome ASC;";
+        $sql1 = "SELECT id, nome FROM loja WHERE activo = 1 AND id NOT iN (7) AND id IN (SELECT distinct idloja FROM encomendalinha WHERE idencomenda = ".$id.") ORDER BY nome ASC;";
         $command1=$connection->createCommand($sql1);
         $rows1=$command1->queryAll();
 

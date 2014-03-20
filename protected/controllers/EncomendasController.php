@@ -500,9 +500,9 @@ class EncomendasController extends Controller
         $rowsOld = array();
         foreach($_rows as $r1)
         {
-            $sql2 = "SELECT idartigo, inventario, encomenda, idreq FROM requesicao_linha  ";
-            $sql2 = $sql2 . " LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id ";
-            $sql2 = $sql2 . " LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id ";
+            $sql2 = "SELECT rl.idartigo, rl.inventario, rl.encomenda, rl.idreq, tu1.nome as 'UE', tu2.nome AS 'UI'  FROM requesicao_linha rl  ";
+            $sql2 = $sql2 . " LEFT JOIN tipounidade tu1 ON rl.idunidadeenc = tu1.id ";
+            $sql2 = $sql2 . " LEFT JOIN tipounidade tu2 ON rl.idunidadeinv = tu2.id ";
             $sql2 = $sql2 . " WHERE idreq = ".$r1["id"]."";
             $command2=$connection->createCommand($sql2);
             $rows2=$command2->queryAll();
@@ -516,6 +516,8 @@ class EncomendasController extends Controller
                 }
                 $rowsOld1["i".$r2["idartigo"]] = $r2["inventario"];
                 $rowsOld1["e".$r2["idartigo"]] = $r2["encomenda"];
+                $rowsOld1["ui".$r2["idartigo"]] = $r2["UI"];
+                $rowsOld1["ue".$r2["idartigo"]] = $r2["UE"];
             }
             $rowsOld[$idReq] = $rowsOld1;
 

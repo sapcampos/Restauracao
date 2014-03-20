@@ -25,12 +25,31 @@ for($i = $start; $i<$end; $i++)
             {
                 $inv = $oldR["i".$row[$i]["ID"]];
             }
+
             if(isset($oldR["e".$row[$i]["ID"]]))
             {
                 $enc = $oldR["e".$row[$i]["ID"]];
             }
-            echo "<td style=\"background-color:".$color.";\">".$inv." ".$row[$i]["Unidade Stock"]."</td>";
-            echo "<td style=\"background-color:".$color.";\">".$enc." ".$row[$i]["Unidade Encomenda"]."</td>";
+
+            if(isset($oldR["ue".$row[$i]["ID"]]))
+            {
+                $ue = $oldR["ue".$row[$i]["ID"]];
+            }
+            else
+            {
+                $ue = $row[$i]["Unidade Encomenda"];
+            }
+
+            if(isset($oldR["ui".$row[$i]["ID"]]))
+            {
+                $ui = $oldR["ui".$row[$i]["ID"]];
+            }
+            else
+            {
+                $ui = $row[$i]["Unidade Stock"];
+            }
+            echo "<td style=\"background-color:".$color.";\">".$inv." ".$ui."</td>";
+            echo "<td style=\"background-color:".$color.";\">".$enc." ".$ue."</td>";
         }
     }
     echo "</tr>";
