@@ -83,14 +83,22 @@ border:1px solid #000000;
     {
         echo "<tr>";
         echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$r2["descricao"]."</td>";
-        echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$r2["unidade"]."</td>";
+        //echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$r2["unidade"]."</td>";
+        echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$rows["u".$r2["id"]]."</td>";
         foreach($rows1 as $r1)
         {
 
             if(isset($rows[$r2["id"]."-".$r1["id"]]))
+            {
+        //        echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$rows["u".$r2["id"]."-".$r1["id"]]."</td>";
                 echo "<td style=\"text-align:center;vertical-align:middle;\">".$rows[$r2["id"]."-".$r1["id"]]."</td>";
+            }
             else
+            {
+          //      echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$r2["unidade"]."</td>";
                 echo "<td style=\"text-align:center;vertical-align:middle;\">--</td>";
+            }
+
         }
         echo "</tr>";
         $i++;

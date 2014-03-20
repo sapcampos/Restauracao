@@ -345,10 +345,10 @@ class EncomendasFornecedorController extends Controller
 
         $connection=Yii::app()->db;
 
-        $sql = "SELECT el.quantidade AS quantidade, CONCAT(el.idartigo,'-',el.idloja) as 'index', el.id, tu.nome AS unidade ";
-        $sql = $sql . " FROM encomenda_linha el ";
+        $sql = "SELECT el.quantidade AS quantidade, CONCAT(el.idartigo,'-',el.idloja) as 'index', el.idartigo, el.id, tu.nome AS unidade ";
+        $sql = $sql . " FROM encomendalinha el ";
         $sql = $sql . " LEFT JOIN artigos a ON el.idartigo = a.id ";
-        $sql = $sql . " LEFT JOIN tipounidade tu ON a.tipounidade_enc = tu.id ";
+        $sql = $sql . " LEFT JOIN tipounidade tu ON el.idunidadeenc = tu.id ";
         $sql = $sql . " WHERE el.quantidade > 0 AND idencomenda = ". $id ." ;";
         $command=$connection->createCommand($sql);
         $rowsX=$command->queryAll();
@@ -365,6 +365,7 @@ class EncomendasFornecedorController extends Controller
             {
                 $rows[$r["index"]] = $r["quantidade"];
             }
+            $rows["u".$r["idartigo"]] = $r["unidade"];
             //$rowsUnidades["index"] = $r["unidade"];
         }
         $sql1 = "SELECT id, nome FROM loja WHERE activo = 1 AND id NOT iN (7) AND id IN (SELECT distinct idloja FROM encomendalinha WHERE idencomenda = ".$id.") ORDER BY nome ASC;";
