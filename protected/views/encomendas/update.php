@@ -85,6 +85,9 @@
     <a href="<?php echo $this->createUrl("print", array("id" => $req->id));?>" target="_BLANK">Imprimir S/Inventário</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="<?php echo $this->createUrl("print3", array("id" => $req->id));?>" target="_BLANK">Imprimir C/Inventário</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="<?php echo $this->createUrl("print3", array("id" => $req->id));?>" target="_BLANK">Imprimir Enc. Loja</a>
+
     <br/><br/>
     <?php /*<div style="width: 100%">
         <div style="float:left; padding-left:25px;padding-bottom: 20px;">

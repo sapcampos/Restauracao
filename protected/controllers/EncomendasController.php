@@ -28,7 +28,7 @@ class EncomendasController extends Controller
     {
         return array(
             array('allow',  // allow all users to perform 'index' and 'view' actions
-                'actions'=>array('index','view', 'print', 'print2', 'print3'),
+                'actions'=>array('index','view', 'print', 'print2', 'print3', 'print4'),
                 'users'=>array('@'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -444,6 +444,34 @@ class EncomendasController extends Controller
         $mpdf->setAutoBottomMargin = 'strech';
         $mpdf->SetFooter('{PAGENO}');
         $mpdf->WriteHTML($this->render("_print", array("linhas" => $linhas, 'req' => $req, "loja" => $loja),true));
+        $mpdf->Output();
+    }
+
+    public function actionPrint4($id)
+    {
+        $this->layout = "none";
+        $connection=Yii::app()->db;
+        $sql = "SELECT a.descricao, rl.encomenda, tu.nome, f.nome AS 'fornecedor' FROM requesicao_linha rl LEFT JOIN artigos a ON rl.idartigo = a.id ";
+        $sql .= " LEFT JOIN tipounidade tu ON rl.idunidadeenc = tu.id ";
+        $sql .= " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
+        $sql .= " LEFT JOIN requesicao r ON rl.idreq = r.id ";
+        $sql .= " LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja";
+        $sql .= " WHERE rl.encomenda > 0 AND idreq = " . $id . " AND al.idencomenda = 2 ORDER BY f.nome ASC,a.descricao ASC;";
+        $command=$connection->createCommand($sql);
+        $linhas=$command->queryAll();
+        $req = Requesicao::model()->findByPk($id);
+        if(isset($req))
+        {
+            $loja = Loja::model()->findByPk($req->idloja);
+        }
+
+
+        $mpdf = Yii::app()->ePdf->mpdf();
+        $mpdf->useSubstitutions = false;
+        $mpdf->setAutoTopMargin = 'stretch';
+        $mpdf->setAutoBottomMargin = 'strech';
+        $mpdf->SetFooter('{PAGENO}');
+        $mpdf->WriteHTML($this->render("_print4", array("linhas" => $linhas, 'req' => $req, "loja" => $loja),true));
         $mpdf->Output();
     }
 
