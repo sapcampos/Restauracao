@@ -535,11 +535,11 @@ class ArtigosController extends Controller
             $text = $_GET["pesq"];
             if(!empty($criteria))
             {
-                $criteria = $criteria. " AND descricao like '%" . $_POST["pesq"] . "%' ";
+                $criteria = $criteria. " AND descricao like '%" . $text . "%' ";
             }
             else
             {
-                $criteria = " descricao like '%" . $_POST["pesq"] . "%' ";
+                $criteria = " descricao like '%" . $text . "%' ";
             }
         }
         if(!empty($criteria))

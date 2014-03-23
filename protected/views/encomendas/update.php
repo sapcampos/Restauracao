@@ -81,12 +81,24 @@
         echo "<div style=\"\">Actualizado pela ultima vez em <strong>".$resLog[0]["data"]."</strong> por <strong>".$resLog[0]["nome"]."</strong>.<div>";
     }
     ?>
+    <div style="width:40%; float:left;">
+        <strong>Loja</strong>
+        <br/>
+        <a href="<?php echo $this->createUrl("print4", array("id" => $req->id));?>" target="_BLANK">Imprimir Lista Compras Loja</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="<?php echo $this->createUrl("print4", array("id" => $req->id, 'not' => 1));?>" target="_BLANK">Imprimir Restantes Compras</a>
 
-    <a href="<?php echo $this->createUrl("print", array("id" => $req->id));?>" target="_BLANK">Imprimir S/Inventário</a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="<?php echo $this->createUrl("print3", array("id" => $req->id));?>" target="_BLANK">Imprimir C/Inventário</a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="<?php echo $this->createUrl("print3", array("id" => $req->id));?>" target="_BLANK">Imprimir Enc. Loja</a>
+    </div>
+    <div style="width:60%; float:left;">
+        <strong>Outras</strong>
+        <br/>
+        <a href="<?php echo $this->createUrl("print", array("id" => $req->id));?>" target="_BLANK">Imprimir S/Inventário</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="<?php echo $this->createUrl("print3", array("id" => $req->id));?>" target="_BLANK">Imprimir C/Inventário</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+
+
 
     <br/><br/>
     <?php /*<div style="width: 100%">

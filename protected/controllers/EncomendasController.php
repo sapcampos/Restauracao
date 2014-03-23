@@ -447,7 +447,7 @@ class EncomendasController extends Controller
         $mpdf->Output();
     }
 
-    public function actionPrint4($id)
+    public function actionPrint4($id, $not = 0)
     {
         $this->layout = "none";
         $connection=Yii::app()->db;
@@ -456,7 +456,16 @@ class EncomendasController extends Controller
         $sql .= " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
         $sql .= " LEFT JOIN requesicao r ON rl.idreq = r.id ";
         $sql .= " LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja";
-        $sql .= " WHERE rl.encomenda > 0 AND idreq = " . $id . " AND al.idencomenda = 2 ORDER BY f.nome ASC,a.descricao ASC;";
+        $sql .= " WHERE rl.encomenda > 0 AND idreq = " . $id . " ";
+        if($not == 0)
+        {
+            $sql .= "AND al.idencomenda = 2";
+        }
+        else
+        {
+            $sql .= "AND al.idencomenda <> 2";
+        }
+        $sql .= " ORDER BY f.nome ASC,a.descricao ASC;";
         $command=$connection->createCommand($sql);
         $linhas=$command->queryAll();
         $req = Requesicao::model()->findByPk($id);
@@ -471,7 +480,7 @@ class EncomendasController extends Controller
         $mpdf->setAutoTopMargin = 'stretch';
         $mpdf->setAutoBottomMargin = 'strech';
         $mpdf->SetFooter('{PAGENO}');
-        $mpdf->WriteHTML($this->render("_print4", array("linhas" => $linhas, 'req' => $req, "loja" => $loja),true));
+        $mpdf->WriteHTML($this->render("_print4", array("linhas" => $linhas, 'req' => $req, "loja" => $loja, 'not' => $not,),true));
         $mpdf->Output();
     }
 

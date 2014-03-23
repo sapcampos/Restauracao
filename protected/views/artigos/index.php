@@ -105,6 +105,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value' => 'CHtml::CheckBox("Activo",$data->activo, array("disabled"=>true,))',
         ),
         array(
+            'name' => 'Tem Lojas',
+            'type' => 'raw',
+            'value' => '$data->TemLoja()',
+        ),
+        array(
             'class'=>'CButtonColumn',
             'template'=>'{delete}',
             'htmlOptions' => array('class'=>'MyDeleteBtn'),

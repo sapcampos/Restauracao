@@ -1,3 +1,14 @@
+<?php
+    if($not == 0)
+    {
+        echo "<h2>Lista Compras Loja</h2><br/>";
+    }
+    else
+    {
+        echo "<h2>Lista Compras - Restantes Entregas</h2><br/>";
+    }
+?>
+
 <h4>
     <?php
     if(isset($loja))
