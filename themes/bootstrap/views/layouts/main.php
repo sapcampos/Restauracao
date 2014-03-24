@@ -52,6 +52,7 @@ $this->widget('bootstrap.widgets.TbNavbar',array(
                     array('label'=>'Lista Enc. Forn.', 'url'=>array('/encomendasFornecedor/index')),
                     array('label'=>'Calendário Ent.', 'url'=>array('/site/calendarioEntregas')),
                     array('label'=>'Lista Entregas', 'url'=>array('/entregaFornecedor/index')),
+                    array('label'=>'Estatisticas', 'url'=>array('/encomendasFornecedor/estatisticas')),
                 )),
                 //array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
                 //array('label'=>'Contact', 'url'=>array('/site/contact')),

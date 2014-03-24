@@ -32,7 +32,7 @@ class EncomendasFornecedorController extends Controller
                 'users'=>array('@'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions'=>array('create','update','admin','delete', 'print'),
+                'actions'=>array('create','update','admin','delete', 'print', 'estatisticas'),
                 'users'=>array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -466,13 +466,93 @@ class EncomendasFornecedorController extends Controller
         $sql = $sql . " LEFT JOIN requesicao_linha rl ON el.idreqlinha = rl.id";
         $sql = $sql . " LEFT JOIN requesicao r ON rl.idreq = r.id";
         $sql = $sql . " LEFT JOIN fornecedores f ON el.idfornecedor = f.id";
-        $slq = $sql . " LEFT JOIN artigos a ON rl.idartigo = a.id";
+        $sql = $sql . " LEFT JOIN artigos a ON rl.idartigo = a.id";
         $sql = $sql . " WHERE el.idencomenda IS NULL;";
 
         $sql1 = "SELECT idloja, loja FROM (".$sql.") t GROUP BY idloja";
         $connection=Yii::app()->db;
         $command=$connection->createCommand($sql1);
         $lojas=$command->queryAll();
+    }
+
+//public function actionEstatisticas($loja = 0, $fornecedor = 0, $dataInicio = '', $dataFim = '')
+    public function actionEstatisticas($loja = 0, $fornecedor = 0, $dataInicio = '', $dataFim = '')
+    {
+        if(isset($_POST["loja"]) && !empty($_POST["loja"]))
+        {
+            $loja = $_POST["loja"];
+        }
+        if(isset($_POST["fornecedor"]) && !empty($_POST["fornecedor"]))
+        {
+            $fornecedor = $_POST["fornecedor"];
+        }
+        if(isset($_POST["dataInicio"]) && !empty($_POST["dataInicio"]))
+        {
+            $dataInicio = $_POST["dataInicio"];
+        }
+        if(isset($_POST["dataFim"]) && !empty($_POST["dataFim"]))
+        {
+            $dataFim = $_POST["dataFim"];
+        }
+        $sql = "SELECT el.idartigo, a.descricao AS 'Descricao', el.idloja, SUM(el.quantidade) as 'Quantidade', tu.nome AS 'Unidade', ";
+        $sql .= " f.nome AS 'Fornecedor' FROM encomendalinha el ";
+        $sql .= " LEFT JOIN encomenda e ON el.idencomenda = e.id ";
+        $sql .= " LEFT JOIN artigos a ON el.idartigo = a.id ";
+        $sql .= " LEFT JOIN tipounidade tu ON el.idunidadeenc = tu.id ";
+        $sql .= " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
+        if($loja > 0 || $fornecedor > 0 || !empty($dataInicio) || !empty($dataFim))
+        {
+            $sql .= " WHERE ";
+            $sql1 = "";
+            if($loja > 0)
+            {
+                $sql1 .= " el.idloja = " . $loja;
+            }
+            if($fornecedor > 0)
+            {
+                if(empty($sql1))
+                {
+                    $sql1 .= " f.id = " . $fornecedor;
+                }
+                else
+                {
+                    $sql1 .= " AND f.id = " . $fornecedor;
+                }
+            }
+            if(!empty($dataInicio))
+            {
+                if(empty($sql1))
+                {
+                    $sql1 .= " e.data >= '" . $dataInicio ." 00:00:00' ";
+                }
+                else
+                {
+                    $sql1 .= " AND e.data >= '" . $dataInicio ." 00:00:00' ";
+                }
+                //$sql .= " e.data > '" . $dataInicio ." 00:00:00' ";
+            }
+            if(!empty($dataFim))
+            {
+                //$sql .= " e.data > '" . $dataFim ." 23:59:59' ";
+                if(empty($sql1))
+                {
+                    $sql1 .= " e.data <= '" . $dataFim ." 23:59:59' ";
+                }
+                else
+                {
+                    $sql1 .= " AND e.data <= '" . $dataFim ." 23:59:59' ";
+                }
+            }
+            $sql .= $sql1;
+        }
+
+        $sql .= " GROUP BY idartigo,idloja,idunidadeenc ";
+        $sql .= " ORDER BY f.nome ASC, a.descricao ASC";
+        $connection=Yii::app()->db;
+        $command=$connection->createCommand($sql);
+        $rows=$command->queryAll();
+        $this->render("estatisticas", array('rows' => $rows, 'loja' => $loja, 'fornecedor' => $fornecedor, 'dataI' => $dataInicio, 'dataF' => $dataFim));
+
     }
 
 }

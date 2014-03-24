@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf33038-ddd5-479b-8667-b2a15d13d765" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Artigos.php" afterPath="$PROJECT_DIR$/protected/models/Artigos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/ArtigosController.php" afterPath="$PROJECT_DIR$/protected/controllers/ArtigosController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/EncomendasController.php" afterPath="$PROJECT_DIR$/protected/controllers/EncomendasController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/encomendas/_print4.php" afterPath="$PROJECT_DIR$/protected/views/encomendas/_print4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/artigos/index.php" afterPath="$PROJECT_DIR$/protected/views/artigos/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/encomendas/update.php" afterPath="$PROJECT_DIR$/protected/views/encomendas/update.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticas.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" afterPath="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Restauracao.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,66 +33,127 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_print2_1.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/encomendas/_print2_1.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="17" selection-start="948" selection-end="948" vertical-scroll-proportion="-12.375" vertical-offset="138" max-vertical-offset="570">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="EncomendasController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="469" column="37" selection-start="20242" selection-end="21101" vertical-scroll-proportion="-5.76" vertical-offset="6747" max-vertical-offset="12120">
+            <state line="323" column="90" selection-start="14995" selection-end="15033" vertical-scroll-proportion="-1.86" vertical-offset="4752" max-vertical-offset="12120">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_print.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/encomendas/_print.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="77" selection-start="1055" selection-end="1055" vertical-scroll-proportion="-16.25" vertical-offset="285" max-vertical-offset="855">
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-                <marker date="1395602081000" expanded="true" signature="1003:1022" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_print4.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/encomendas/_print4.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="56" selection-start="156" selection-end="156" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1020">
-              <folding>
-                <marker date="1395612231000" expanded="true" signature="178:291" placeholder="..." />
-                <marker date="1395612231000" expanded="true" signature="299:520" placeholder="..." />
-                <marker date="1395612231000" expanded="true" signature="318:407" placeholder="{...}" />
-                <marker date="1395612231000" expanded="true" signature="426:512" placeholder="{...}" />
-                <marker date="1395612231000" expanded="false" signature="536:599" placeholder="..." />
-                <marker date="1395612231000" expanded="true" signature="600:1292" placeholder="..." />
-                <marker date="1395612231000" expanded="true" signature="612:856" placeholder="..." />
-                <marker date="1395612231000" expanded="true" signature="621:843" placeholder="..." />
-                <marker date="1395612231000" expanded="true" signature="642:651" placeholder="..." />
-                <marker date="1395612231000" expanded="false" signature="688:697" placeholder="..." />
-                <marker date="1395612231000" expanded="false" signature="730:739" placeholder="..." />
-                <marker date="1395612231000" expanded="true" signature="776:785" placeholder="..." />
-                <marker date="1395612231000" expanded="true" signature="819:827" placeholder="..." />
-                <marker date="1395612231000" expanded="true" signature="868:1283" placeholder="..." />
-                <marker date="1395612231000" expanded="true" signature="1178:1197" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArtigosController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ArtigosController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/ArtigosController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="541" column="56" selection-start="17057" selection-end="17057" vertical-scroll-proportion="0.6062052" vertical-offset="7861" max-vertical-offset="9315">
+            <state line="541" column="56" selection-start="17057" selection-end="17057" vertical-scroll-proportion="-10.583333" vertical-offset="7861" max-vertical-offset="9315">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="25" selection-start="3258" selection-end="3258" vertical-scroll-proportion="-4.375" vertical-offset="675" max-vertical-offset="1740">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntregaFornecedorController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/EntregaFornecedorController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2655">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EncomendasFornecedorController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="525" column="40" selection-start="19675" selection-end="19675" vertical-scroll-proportion="-0.625" vertical-offset="7860" max-vertical-offset="8445">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pesquisa.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/encomendas/pesquisa.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="146" column="9" selection-start="0" selection-end="5636" vertical-scroll-proportion="-16.208334" vertical-offset="1801" max-vertical-offset="2280">
+              <folding>
+                <marker date="1395185103000" expanded="false" signature="12:36" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="37:1962" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="305:356" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="357:715" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="402:434" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="537:549" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="585:700" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="661:680" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="780:831" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="832:1219" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="877:928" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="1025:1037" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="1077:1204" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="1157:1180" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="1241:1292" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="1293:1645" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="1326:1630" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="1978:2020" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="2021:5328" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="2041:2063" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="2078:5321" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="2102:2121" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="2122:3146" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="2147:2245" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="2246:2646" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="2504:2534" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="2671:2769" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="2770:3129" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="2835:2847" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="3162:5308" placeholder="..." />
+                <marker date="1395185103000" expanded="false" signature="3386:3410" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="5337:5635" placeholder="..." />
+                <marker date="1395185103000" expanded="true" signature="5356:5624" placeholder="{...}" />
+                <marker date="1395185103000" expanded="true" signature="5427:5498" placeholder="{&quot;language&quot;: 'pt-BR'...}" />
+                <marker date="1395185103000" expanded="true" signature="5546:5616" placeholder="{&quot;pickTime&quot;: false...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estatisticas.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticas.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="178" selection-start="2811" selection-end="2811" vertical-scroll-proportion="0.21479714" vertical-offset="855" max-vertical-offset="1905">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+                <marker date="1395620991000" expanded="true" signature="2909:4186" placeholder="..." />
+                <marker date="1395620991000" expanded="true" signature="2966:4179" placeholder="..." />
+                <marker date="1395620991000" expanded="true" signature="3010:3382" placeholder="..." />
+                <marker date="1395620991000" expanded="true" signature="3134:3365" placeholder="..." />
+                <marker date="1395620991000" expanded="true" signature="3622:3646" placeholder="..." />
+                <marker date="1395620991000" expanded="true" signature="3648:3771" placeholder="..." />
+                <marker date="1395620991000" expanded="true" signature="3775:4089" placeholder="..." />
+                <marker date="1395620991000" expanded="true" signature="4195:4249" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,31 +167,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EncomendasFornecedorController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="367" column="34" selection-start="13367" selection-end="13367" vertical-scroll-proportion="-16.208334" vertical-offset="5116" max-vertical-offset="7245">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="print.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="92" selection-start="2599" selection-end="2599" vertical-scroll-proportion="-8.625" vertical-offset="1083" max-vertical-offset="1725">
-              <folding>
-                <marker date="1395354334000" expanded="true" signature="3158:3198" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/artigos/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="109" column="40" selection-start="2917" selection-end="2917" vertical-scroll-proportion="-11.25" vertical-offset="1320" max-vertical-offset="2115">
-              <folding />
+              <folding>
+                <marker date="1395612701000" expanded="false" signature="302:313" placeholder="..." />
+                <marker date="1395612701000" expanded="true" signature="314:1358" placeholder="..." />
+                <marker date="1395612701000" expanded="false" signature="1372:1403" placeholder="..." />
+                <marker date="1395612701000" expanded="true" signature="1404:1617" placeholder="..." />
+                <marker date="1395612701000" expanded="true" signature="1429:1607" placeholder="..." />
+                <marker date="1395612701000" expanded="true" signature="3334:3807" placeholder="..." />
+                <marker date="1395612701000" expanded="true" signature="3371:3561" placeholder="{...}" />
+                <marker date="1395612701000" expanded="true" signature="3606:3796" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -181,14 +229,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/models/EncomendaLinha.php" />
-        <option value="$PROJECT_DIR$/protected/models/Encomendalinhas.php" />
         <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendas/pesquisa.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendas/_print3_2.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendas/_print2_2.php" />
         <option value="$PROJECT_DIR$/protected/views/site/encomenda.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendas/_print.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendas/update.php" />
@@ -197,6 +242,9 @@
         <option value="$PROJECT_DIR$/protected/views/artigos/index.php" />
         <option value="$PROJECT_DIR$/protected/models/Artigos.php" />
         <option value="$PROJECT_DIR$/protected/controllers/ArtigosController.php" />
+        <option value="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
+        <option value="$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticas.php" />
       </list>
     </option>
   </component>
@@ -965,39 +1013,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="83" selection-start="4635" selection-end="4766" vertical-scroll-proportion="-4.0833335" vertical-offset="2242" max-vertical-offset="6585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Encomendalinhas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="34" selection-start="348" selection-end="360" vertical-scroll-proportion="-6.5833335" vertical-offset="22" max-vertical-offset="1575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/pesquisa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="158" selection-start="5008" selection-end="5008" vertical-scroll-proportion="-13.125" vertical-offset="1485" max-vertical-offset="2280">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1395185103000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/_print3_2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="40" selection-start="1896" selection-end="1896" vertical-scroll-proportion="-23.625" vertical-offset="273" max-vertical-offset="1005">
-          <folding>
-            <marker date="1395186110000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/encomendas/_print2_2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="75" selection-start="1315" selection-end="1315" vertical-scroll-proportion="-16.125" vertical-offset="363" max-vertical-offset="930">
@@ -1020,15 +1035,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="92" selection-start="2599" selection-end="2599" vertical-scroll-proportion="-8.625" vertical-offset="1083" max-vertical-offset="1725">
           <folding>
-            <marker date="1395354334000" expanded="true" signature="3158:3198" placeholder="..." />
+            <marker date="1395354334000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="367" column="34" selection-start="13367" selection-end="13367" vertical-scroll-proportion="-16.208334" vertical-offset="5116" max-vertical-offset="7245">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,7 +1045,7 @@
         <state line="45" column="77" selection-start="1055" selection-end="1055" vertical-scroll-proportion="-16.25" vertical-offset="285" max-vertical-offset="855">
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-            <marker date="1395602081000" expanded="true" signature="1003:1022" placeholder="..." />
+            <marker date="1395602081000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1053,21 +1061,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="56" selection-start="156" selection-end="156" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1020">
           <folding>
-            <marker date="1395612231000" expanded="true" signature="178:291" placeholder="..." />
-            <marker date="1395612231000" expanded="true" signature="299:520" placeholder="..." />
-            <marker date="1395612231000" expanded="true" signature="318:407" placeholder="{...}" />
-            <marker date="1395612231000" expanded="true" signature="426:512" placeholder="{...}" />
-            <marker date="1395612231000" expanded="false" signature="536:599" placeholder="..." />
-            <marker date="1395612231000" expanded="true" signature="600:1292" placeholder="..." />
-            <marker date="1395612231000" expanded="true" signature="612:856" placeholder="..." />
-            <marker date="1395612231000" expanded="true" signature="621:843" placeholder="..." />
-            <marker date="1395612231000" expanded="true" signature="642:651" placeholder="..." />
-            <marker date="1395612231000" expanded="false" signature="688:697" placeholder="..." />
-            <marker date="1395612231000" expanded="false" signature="730:739" placeholder="..." />
-            <marker date="1395612231000" expanded="true" signature="776:785" placeholder="..." />
-            <marker date="1395612231000" expanded="true" signature="819:827" placeholder="..." />
-            <marker date="1395612231000" expanded="true" signature="868:1283" placeholder="..." />
-            <marker date="1395612231000" expanded="true" signature="1178:1197" placeholder="..." />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1395612231000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395612231000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1095,17 +1103,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="469" column="37" selection-start="20242" selection-end="21101" vertical-scroll-proportion="-5.76" vertical-offset="6747" max-vertical-offset="12120">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/artigos/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="109" column="40" selection-start="2917" selection-end="2917" vertical-scroll-proportion="-11.25" vertical-offset="1320" max-vertical-offset="2115">
-          <folding />
+          <folding>
+            <marker date="1395612701000" expanded="false" signature="302:313" placeholder="..." />
+            <marker date="1395612701000" expanded="true" signature="314:1358" placeholder="..." />
+            <marker date="1395612701000" expanded="false" signature="1372:1403" placeholder="..." />
+            <marker date="1395612701000" expanded="true" signature="1404:1617" placeholder="..." />
+            <marker date="1395612701000" expanded="true" signature="1429:1607" placeholder="..." />
+            <marker date="1395612701000" expanded="true" signature="3334:3807" placeholder="..." />
+            <marker date="1395612701000" expanded="true" signature="3371:3561" placeholder="{...}" />
+            <marker date="1395612701000" expanded="true" signature="3606:3796" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1118,8 +1128,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/ArtigosController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="541" column="56" selection-start="17057" selection-end="17057" vertical-scroll-proportion="0.6062052" vertical-offset="7861" max-vertical-offset="9315">
+        <state line="541" column="56" selection-start="17057" selection-end="17057" vertical-scroll-proportion="-10.583333" vertical-offset="7861" max-vertical-offset="9315">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/EntregaFornecedorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2655">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/pesquisa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="9" selection-start="0" selection-end="5636" vertical-scroll-proportion="-16.208334" vertical-offset="1801" max-vertical-offset="2280">
+          <folding>
+            <marker date="1395185103000" expanded="false" signature="12:36" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="37:1962" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="305:356" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="357:715" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="402:434" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="537:549" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="585:700" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="661:680" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="780:831" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="832:1219" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="877:928" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="1025:1037" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="1077:1204" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="1157:1180" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="1241:1292" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="1293:1645" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="1326:1630" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="1978:2020" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="2021:5328" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="2041:2063" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="2078:5321" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="2102:2121" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="2122:3146" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="2147:2245" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="2246:2646" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="2504:2534" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="2671:2769" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="2770:3129" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="2835:2847" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="3162:5308" placeholder="..." />
+            <marker date="1395185103000" expanded="false" signature="3386:3410" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="5337:5635" placeholder="..." />
+            <marker date="1395185103000" expanded="true" signature="5356:5624" placeholder="{...}" />
+            <marker date="1395185103000" expanded="true" signature="5427:5498" placeholder="{&quot;language&quot;: 'pt-BR'...}" />
+            <marker date="1395185103000" expanded="true" signature="5546:5616" placeholder="{&quot;pickTime&quot;: false...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="25" selection-start="3258" selection-end="3258" vertical-scroll-proportion="-4.375" vertical-offset="675" max-vertical-offset="1740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="323" column="90" selection-start="14995" selection-end="15033" vertical-scroll-proportion="-1.86" vertical-offset="4752" max-vertical-offset="12120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="525" column="40" selection-start="19675" selection-end="19675" vertical-scroll-proportion="-0.625" vertical-offset="7860" max-vertical-offset="8445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="178" selection-start="2811" selection-end="2811" vertical-scroll-proportion="0.21479714" vertical-offset="855" max-vertical-offset="1905">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <marker date="1395620991000" expanded="true" signature="2909:4186" placeholder="..." />
+            <marker date="1395620991000" expanded="true" signature="2966:4179" placeholder="..." />
+            <marker date="1395620991000" expanded="true" signature="3010:3382" placeholder="..." />
+            <marker date="1395620991000" expanded="true" signature="3134:3365" placeholder="..." />
+            <marker date="1395620991000" expanded="true" signature="3622:3646" placeholder="..." />
+            <marker date="1395620991000" expanded="true" signature="3648:3771" placeholder="..." />
+            <marker date="1395620991000" expanded="true" signature="3775:4089" placeholder="..." />
+            <marker date="1395620991000" expanded="true" signature="4195:4249" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
