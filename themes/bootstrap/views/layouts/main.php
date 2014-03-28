@@ -46,13 +46,14 @@ $this->widget('bootstrap.widgets.TbNavbar',array(
                     array('label'=>'Criar Encomenda', 'url'=>array('/site/encomenda')),
                     array('label'=>'Lista Encomenda', 'url'=>array('/encomendas/index')),
                     array('label'=>'Pesq. Encomenda', 'url'=>array('/encomendas/pesquisa')),
+                    array('label'=>'Estatisticas', 'url'=>array('/encomendasFornecedor/estatisticas')),
                 )),
                 array('label'=>'Enc. a Fornecedor', 'url'=>'#', 'items' => array(
                     array('label'=>'Criar Enc. Forn.', 'url'=>array('/encomendasFornecedor/create')),
                     array('label'=>'Lista Enc. Forn.', 'url'=>array('/encomendasFornecedor/index')),
                     array('label'=>'Calendário Ent.', 'url'=>array('/site/calendarioEntregas')),
                     array('label'=>'Lista Entregas', 'url'=>array('/entregaFornecedor/index')),
-                    array('label'=>'Estatisticas', 'url'=>array('/encomendasFornecedor/estatisticas')),
+
                 )),
                 //array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
                 //array('label'=>'Contact', 'url'=>array('/site/contact')),
@@ -76,6 +77,7 @@ else if(Yii::app()->user->id > 1)
                         array('label'=>'Criar Encomenda', 'url'=>array('/site/encomenda')),
                         array('label'=>'Lista Encomenda', 'url'=>array('/encomendas/index')),
                         array('label'=>'Documentos', 'url'=>array('/site/documentos')),
+                        array('label'=>'Estatisticas', 'url'=>array('/encomendasFornecedor/estatisticas')),
                     )),
 
                     //array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),

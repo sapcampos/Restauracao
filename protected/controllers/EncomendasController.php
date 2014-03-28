@@ -164,7 +164,7 @@ class EncomendasController extends Controller
                                 if(isset($artigo))
                                 {
                                     $reql1->idunidadeenc = $artigo->tipounidade_enc;
-                                    $reql1->idunidadeinv = $artigo->tipounidade_inv;
+                                    $reql1->idunidadeinv = $artigo->tipounidade_stock;
                                 }
                                 if($reql1->save())
                                 {

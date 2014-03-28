@@ -232,7 +232,7 @@ class EncomendasFornecedorController extends Controller
         {
             $id = $rows3[0]["id"];
         }
-        $sql2 = "SELECT id, descricao FROM artigos WHERE idfornecedor = ".$id."  AND id IN (SELECT idartigo FROM encomenda_linha WHERE idencomenda is NULL AND quantidade > 0);";
+        $sql2 = "SELECT id, descricao FROM artigos WHERE idfornecedor = ".$id."  AND id IN (SELECT idartigo FROM encomenda_linha WHERE idencomenda is NULL AND quantidade > 0) ORDER by descricao ASC;";
         $command2=$connection->createCommand($sql2);
         $rows2=$command2->queryAll();
 
@@ -300,7 +300,7 @@ class EncomendasFornecedorController extends Controller
         $command1=$connection->createCommand($sql1);
         $rows1=$command1->queryAll();
 
-        $sql2 = "SELECT id, descricao FROM artigos WHERE id in (SELECT idartigo FROM encomenda_linha WHERE idencomenda = " . $id . " AND quantidade > 0);";
+        $sql2 = "SELECT id, descricao FROM artigos WHERE id in (SELECT idartigo FROM encomenda_linha WHERE idencomenda = " . $id . " AND quantidade > 0) ORDER BY descricao ASC;";
         $command2=$connection->createCommand($sql2);
         $rows2=$command2->queryAll();
 
@@ -349,7 +349,7 @@ class EncomendasFornecedorController extends Controller
         $sql = $sql . " FROM encomendalinha el ";
         $sql = $sql . " LEFT JOIN artigos a ON el.idartigo = a.id ";
         $sql = $sql . " LEFT JOIN tipounidade tu ON el.idunidadeenc = tu.id ";
-        $sql = $sql . " WHERE el.quantidade > 0 AND idencomenda = ". $id ." ;";
+        $sql = $sql . " WHERE el.quantidade > 0 AND idencomenda = ". $id ." ORDER BY a.descricao ASC;";
         $command=$connection->createCommand($sql);
         $rowsX=$command->queryAll();
         $rows = array();
@@ -389,7 +389,7 @@ class EncomendasFornecedorController extends Controller
             $obs = $r["obs"];
         }
 
-        $sql2 = "SELECT a.id, a.descricao, tu.nome AS unidade FROM artigos a LEFT JOIN tipounidade tu ON a.tipounidade_enc = tu.id WHERE a.id in (SELECT idartigo FROM encomenda_linha WHERE idencomenda = " . $id . " AND quantidade > 0);";
+        $sql2 = "SELECT a.id, a.descricao, tu.nome AS unidade FROM artigos a LEFT JOIN tipounidade tu ON a.tipounidade_enc = tu.id WHERE a.id in (SELECT idartigo FROM encomenda_linha WHERE idencomenda = " . $id . " AND quantidade > 0) ORDER BY a.descricao ASC;";
         $command2=$connection->createCommand($sql2);
         $rows2=$command2->queryAll();
 

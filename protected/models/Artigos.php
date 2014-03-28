@@ -119,7 +119,7 @@ class Artigos extends CActiveRecord
     public function TemLoja()
     {
         $connection=Yii::app()->db;
-        $sql = "Select count(*) FROM ArtigoLoja WHERE idartigo = " . $this->id . " AND activo = 1";
+        $sql = "Select count(*) FROM artigoloja WHERE idartigo = " . $this->id . " AND activo = 1";
         $command=$connection->createCommand($sql);
         $linhas=$command->queryScalar();
         return $linhas;

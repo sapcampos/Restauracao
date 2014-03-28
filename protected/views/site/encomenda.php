@@ -1,3 +1,8 @@
+<?php
+foreach(Yii::app()->user->getFlashes() as $key => $message) {
+    echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
+}
+?>
 <form method="post">
 <div style="width: 100%">
 <div style="float:left;">

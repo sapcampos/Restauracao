@@ -154,7 +154,7 @@ class SiteController extends Controller
                                 if(isset($artigo))
                                 {
                                     $reql->idunidadeenc = $artigo->tipounidade_enc;
-                                    $reql->idunidadeinv = $artigo->tipounidade_inv;
+                                    $reql->idunidadeinv = $artigo->tipounidade_stock;
                                 }
                                 if($reql->save())
                                 {
@@ -167,7 +167,6 @@ class SiteController extends Controller
                                         $encL->idartigo = $reql->idartigo;
                                         $encL->quantidade = $reql->encomenda;
                                         $encL->idreqlinha = $reql->id;
-                                        //$artigo = Artigos::model()->findByPk($reql->idartigo);
                                         $encL->idunidadeenc = $reql->idunidadeenc;
                                         $encL->idunidadeinv = $reql->idunidadeinv;
                                         if(isset($artigo))
@@ -212,6 +211,7 @@ class SiteController extends Controller
             catch(Exception $ex)
             {
                 $ok = false;
+                echo $ex->getMessage();
             }
 
             if($count < 1)
@@ -227,10 +227,12 @@ class SiteController extends Controller
             if($ok == true)
             {
                 $transaction->commit();
+                Yii::app()->user->setFlash('success', "Encomenda criada com sucesso!");
             }
             else
             {
                 $transaction->rollBack();
+                Yii::app()->user->setFlash('error', "Erro ao criar encomenda!");
             }
         }
 
