@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf33038-ddd5-479b-8667-b2a15d13d765" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Artigos.php" afterPath="$PROJECT_DIR$/protected/models/Artigos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/EncomendasController.php" afterPath="$PROJECT_DIR$/protected/controllers/EncomendasController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" afterPath="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/SiteController.php" afterPath="$PROJECT_DIR$/protected/controllers/SiteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/encomenda.php" afterPath="$PROJECT_DIR$/protected/views/site/encomenda.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Restauracao.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +33,7 @@
       <file leaf-file-name="EncomendasController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="85" selection-start="7301" selection-end="7301" vertical-scroll-proportion="-2.62" vertical-offset="2359" max-vertical-offset="12120">
+            <state line="167" column="33" selection-start="6990" selection-end="7336" vertical-scroll-proportion="-2.92" vertical-offset="2359" max-vertical-offset="12120">
               <folding />
             </state>
           </provider>
@@ -74,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Artigos.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Artigos.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/models/Artigos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="44" selection-start="3909" selection-end="3909" vertical-scroll-proportion="0.6736111" vertical-offset="1524" max-vertical-offset="1980">
+            <state line="121" column="44" selection-start="3909" selection-end="3909" vertical-scroll-proportion="-12.125" vertical-offset="1524" max-vertical-offset="1980">
               <folding />
             </state>
           </provider>
@@ -101,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EncomendasFornecedorController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="EncomendasFornecedorController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="234" column="197" selection-start="8989" selection-end="8989" vertical-scroll-proportion="-119.958336" vertical-offset="631" max-vertical-offset="8445">
+            <state line="153" column="49" selection-start="5988" selection-end="5988" vertical-scroll-proportion="0.2124105" vertical-offset="2206" max-vertical-offset="8535">
               <folding />
             </state>
           </provider>
@@ -219,12 +213,12 @@
         <option value="$PROJECT_DIR$/protected/views/artigos/index.php" />
         <option value="$PROJECT_DIR$/protected/controllers/ArtigosController.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticas.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
         <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/protected/views/site/encomenda.php" />
         <option value="$PROJECT_DIR$/protected/controllers/EncomendasController.php" />
         <option value="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/models/Artigos.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
       </list>
     </option>
   </component>
@@ -1155,13 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="234" column="197" selection-start="8989" selection-end="8989" vertical-scroll-proportion="-119.958336" vertical-offset="631" max-vertical-offset="8445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/site/encomenda.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="2" selection-start="141" selection-end="141" vertical-scroll-proportion="-0.68" vertical-offset="26" max-vertical-offset="2595">
@@ -1174,13 +1161,6 @@
     <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="156" column="84" selection-start="4750" selection-end="4767" vertical-scroll-proportion="-5.7916665" vertical-offset="2201" max-vertical-offset="6615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="85" selection-start="7301" selection-end="7301" vertical-scroll-proportion="-2.62" vertical-offset="2359" max-vertical-offset="12120">
           <folding />
         </state>
       </provider>
@@ -1208,7 +1188,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/Artigos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="44" selection-start="3909" selection-end="3909" vertical-scroll-proportion="0.6736111" vertical-offset="1524" max-vertical-offset="1980">
+        <state line="121" column="44" selection-start="3909" selection-end="3909" vertical-scroll-proportion="-12.125" vertical-offset="1524" max-vertical-offset="1980">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="33" selection-start="6990" selection-end="7336" vertical-scroll-proportion="-2.92" vertical-offset="2359" max-vertical-offset="12120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="49" selection-start="5988" selection-end="5988" vertical-scroll-proportion="0.2124105" vertical-offset="2206" max-vertical-offset="8535">
           <folding />
         </state>
       </provider>

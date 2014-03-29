@@ -147,6 +147,12 @@ class EncomendasFornecedorController extends Controller
                                     if(isset($arrInfo[0]) && isset($arrInfo[1]) && !empty($arrInfo[0]) && !empty($arrInfo[1]))
                                     {
                                         $encL->idartigo = $arrInfo[0];
+                                        $artigo = Artigos::model()->findByPk($encL->idartigo);
+                                        if(isset($artigo))
+                                        {
+                                            $encL->idunidadeenc = $artigo->tipounidade_enc;
+                                            $encL->idunidadeinv = $artigo->tipounidade_stock;
+                                        }
                                         $encL->idloja = $arrInfo[1];
                                         $encL->quantidade = $val;
                                         if(!$encL->save())
