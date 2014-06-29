@@ -13,13 +13,14 @@ $desc=array (
 );
 $up=-63;
 $ut=44;
-$ttffile='/Users/sapc/Sites/Restauracao/protected/vendors/mpdf/ttfonts/DejaVuSansCondensed-Oblique.ttf';
+$ttffile='/Users/sapc/Sites/restauracao/protected/vendors/mpdf/ttfonts/DejaVuSansCondensed-Oblique.ttf';
 $TTCfontID='0';
 $originalsize=489032;
 $sip=false;
 $smp=false;
 $BMPselected=true;
 $fontkey='dejavusanscondensedI';
-$panose='0 0 2 11 6 6 3 3 4 11 2 4';
+$panose=' 0 0 2 b 6 6 3 3 4 b 2 4';
 $haskerninfo=false;
+$unAGlyphs=false;
 ?>

@@ -30,6 +30,14 @@
             foreach($lojas as $l)
             {
                 $sel = "";
+                if(!isset($loja) || empty($loja))
+                {
+                    echo "<option value=\"0\" SELECTED></option>";
+                }
+                else
+                {
+                    echo "<option value=\"0\"></option>";
+                }
                 if($loja == $l->id)
                     $sel = " SELECTED ";
                 echo "<option value=\"".$l->id."\" $sel>".$l->nome."</option>";
@@ -59,6 +67,10 @@
             }
             ?>
         </select>
+    </div>
+    <div style="float:left; padding-right: 15px;padding-left: 15px;">
+        <label for="artigo" style="float:left; padding-right: 15px;">Artigo</label>
+        <input type="text" name="artigo" style="width:100px;" value="<?php if(isset($artigo)){echo $artigo;}else{echo "";} ?>"/>
     </div>
     <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Pesquisar')); ?>
     <?php /*<a href="<?php echo $this->createUrl("print2");?>?loja=<?php echo $idLoja;?>&di=<?php echo $dataInicio;?>&df=<?php echo $dataFim;?>" target="_BLANK">Imprimir</a> */?>

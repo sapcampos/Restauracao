@@ -35,7 +35,11 @@ class SiteController extends Controller
         {
             // renders the view file 'protected/views/site/index.php'
             // using the default layout 'protected/views/layouts/main.php'
-            $this->render('index');
+            $connection=Yii::app()->db;
+            $sql = "SELECT e.id, e.data, e.obs, f.nome FROM encomenda e LEFT JOIN fornecedores f ON e.idfornecedor = f.id WHERE e.idestado <> 3 AND e.obs <> '' AND e.obs IS NOT NULL ORDER BY e.data DESC";
+            $command=$connection->createCommand($sql);
+            $rows=$command->queryAll();
+            $this->render('index', array("notas" => $rows));
         }
 	}
 

@@ -42,9 +42,9 @@
             {
 
                 if(isset($rows[$r2["id"]."-".$r1["id"]]))
-                    echo "<td style=\"text-align:center;vertical-align:middle;\"><input type=\"text\" readonly name=\"".$r2["id"]."-".$r1["id"]."\" value=\"".$rows[$r2["id"]."-".$r1["id"]]."\" style=\"width:50px;text-align:right;\"/></td>";
+                    echo "<td style=\"text-align:center;vertical-align:middle;\"><input type=\"text\"  name=\"".$r2["id"]."-".$r1["id"]."\" value=\"".$rows[$r2["id"]."-".$r1["id"]]."\" style=\"width:50px;text-align:right;\"/></td>";
                 else
-                    echo "<td style=\"text-align:center;vertical-align:middle;\"><input type=\"text\" readonly name=\"".$r2["id"]."-".$r1["id"]."\" value=\"0\" style=\"width:50px;text-align:right;\"/></td>";
+                    echo "<td style=\"text-align:center;vertical-align:middle;\"><input type=\"text\"  name=\"".$r2["id"]."-".$r1["id"]."\" value=\"0\" style=\"width:50px;text-align:right;\"/></td>";
             }
             echo "</tr>";
             $i++;
@@ -79,11 +79,12 @@
     <textarea name="obs" style="width:500px; height: 150px;"><?php echo $obs;?></textarea>
     </div>
     <!--<input type="submit" value="Gravar"/>-->
-    <?php $this->widget('bootstrap.widgets.TbButton', array(
+    <?php /*$this->widget('bootstrap.widgets.TbButton', array(
         'label'=>'Gravar',
         'type'=>'submit', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
         'size'=>'normal', // null, 'large', 'small' or 'mini'
-    )); ?>
+    ));*/ ?>
+    <input type="submit" value="Gravar" />
     <div style="width:100%">
         <div style="text-align:right;">
             <?php echo CHtml::link("Imprimir",$this->createUrl("print", array("id"=>$id)), array("target" => "_BLANK"));?>

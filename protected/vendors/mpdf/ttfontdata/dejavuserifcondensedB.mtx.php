@@ -13,13 +13,14 @@ $desc=array (
 );
 $up=-63;
 $ut=44;
-$ttffile='C:/xampp/htdocs/HTUBO/protected/vendors/mpdf/ttfonts/DejaVuSerifCondensed-Bold.ttf';
+$ttffile='/Users/sapc/Sites/restauracao/protected/vendors/mpdf/ttfonts/DejaVuSerifCondensed-Bold.ttf';
 $TTCfontID='0';
 $originalsize=283140;
 $sip=false;
 $smp=false;
 $BMPselected=true;
 $fontkey='dejavuserifcondensedB';
-$panose='0 0 2 6 8 6 5 6 5 2 2 4';
+$panose=' 0 0 2 6 8 6 5 6 5 2 2 4';
 $haskerninfo=false;
+$unAGlyphs=false;
 ?>

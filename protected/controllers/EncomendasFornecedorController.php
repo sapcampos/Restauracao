@@ -32,7 +32,7 @@ class EncomendasFornecedorController extends Controller
                 'users'=>array('@'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions'=>array('create','update','admin','delete', 'print', 'estatisticas'),
+                'actions'=>array('create','update','admin','delete', 'print', 'estatisticas','indexUrl', 'index2'),
                 'users'=>array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -98,6 +98,101 @@ class EncomendasFornecedorController extends Controller
         $rows=$command->queryAll();
         $this->render('index',array('id' => $id,'rows'=>$rows));
 
+    }
+
+    public function actionIndexUrl()
+    {
+        $this->layout  = "none2";
+        $sql = "SELECT e.id, f.nome, e.data, ee.nome as 'nomeEstado' FROM encomenda e LEFT JOIN estadoencomenda ee ON e.idestado = ee.id LEFT JOIN fornecedores f ON e.idfornecedor = f.id";
+        if(isset($_POST) && count($_POST) > 0)
+        {
+            $where = "";
+            if(isset($_POST["idfornecedor"]) && !empty($_POST["idfornecedor"]))
+            {
+                $where = $where . " f.id = " . $_POST["idfornecedor"];
+            }
+            if(isset($_POST["datainicio"]) && !empty($_POST["datainicio"]))
+            {
+                if(empty($where))
+                {
+                    $where = $where . " e.data >= '" . $_POST["datainicio"] . "' " ;
+                }
+                else
+                {
+                    $where = $where . " AND e.data >= " . $_POST["datainicio"] . "' ";
+                }
+            }
+            if(isset($_POST["datafim"]) && !empty($_POST["datafim"]))
+            {
+                if(empty($where))
+                {
+                    $where = $where . " e.data <= '" . $_POST["datafim"] ."' ";
+                }
+                else
+                {
+                    $where = $where . " AND e.data <= " . $_POST["datafim"] . "' ";
+                }
+            }
+            if(!empty($where))
+            {
+                $sql = $sql . " WHERE " . $where;
+            }
+        }
+        $sql = $sql . " ORDER BY e.id DESC";
+        $id = 0;
+        $connection=Yii::app()->db;
+        $command=$connection->createCommand($sql);
+        $rows=$command->queryAll();
+        $this->render('indexUrl',array('id' => $id,'rows'=>$rows));
+
+    }
+
+    public function actionIndex2()
+    {
+        Yii::app()->clientScript->scriptMap=array(
+            'jquery.js'=>false,
+          );
+        $sql = "SELECT e.id, f.nome, e.data, ee.nome as 'nomeEstado' FROM encomenda e LEFT JOIN estadoencomenda ee ON e.idestado = ee.id LEFT JOIN fornecedores f ON e.idfornecedor = f.id";
+        if(isset($_POST) && count($_POST) > 0)
+        {
+            $where = "";
+            if(isset($_POST["idfornecedor"]) && !empty($_POST["idfornecedor"]))
+            {
+                $where = $where . " f.id = " . $_POST["idfornecedor"];
+            }
+            if(isset($_POST["datainicio"]) && !empty($_POST["datainicio"]))
+            {
+                if(empty($where))
+                {
+                    $where = $where . " e.data >= '" . $_POST["datainicio"] . "' " ;
+                }
+                else
+                {
+                    $where = $where . " AND e.data >= " . $_POST["datainicio"] . "' ";
+                }
+            }
+            if(isset($_POST["datafim"]) && !empty($_POST["datafim"]))
+            {
+                if(empty($where))
+                {
+                    $where = $where . " e.data <= '" . $_POST["datafim"] ."' ";
+                }
+                else
+                {
+                    $where = $where . " AND e.data <= " . $_POST["datafim"] . "' ";
+                }
+            }
+            if(!empty($where))
+            {
+                $sql = $sql . " WHERE " . $where;
+            }
+        }
+        $sql = $sql . " ORDER BY e.id DESC";
+
+        $connection=Yii::app()->db;
+        $command=$connection->createCommand($sql);
+        $rows=$command->queryAll();
+        $this->render('index2', array("rows" => $rows));
     }
 
     public function actionCreate($id = 0)
@@ -228,9 +323,17 @@ class EncomendasFornecedorController extends Controller
                 $ids = $ids . ",".$r["id"];
             }
         }
-
-
-        $sql1 = "SELECT id, nome FROM loja WHERE activo = 1 AND id NOT iN (6,7) ORDER BY nome ASC;";
+        $sql6 = "SELECT quantidade AS quantidade, CONCAT(idartigo,'-',idloja) as 'index', id FROM encomenda_linha WHERE idencomenda IS NULL AND quantidade > 0 AND idloja = 6 AND idfornecedor = ".$idFornecedor.";";
+        $command6=$connection->createCommand($sql6);
+        $rows6=$command6->queryAll();
+        if(count($rows6) > 0)
+        {
+            $sql1 = "SELECT id, nome FROM loja WHERE activo = 1 AND id NOT iN (7) ORDER BY nome ASC;";
+        }
+        else
+        {
+            $sql1 = "SELECT id, nome FROM loja WHERE activo = 1 AND id NOT iN (6,7) ORDER BY nome ASC;";
+        }
         $command1=$connection->createCommand($sql1);
         $rows1=$command1->queryAll();
 
@@ -256,10 +359,54 @@ class EncomendasFornecedorController extends Controller
             $enc = Encomenda::model()->findByPk($id);
             $enc->idestado = $_POST["estado"];
             $enc->obs = $_POST["obs"];
+            $post = $_POST;
+            foreach($post as $key => $value )
+            {
+                $arrInfo = explode("-",$key);
+                if(isset($arrInfo[0]) && isset($arrInfo[1]) && !empty($arrInfo[0]) && !empty($arrInfo[1]) && is_numeric($value))
+                {
+                    $linha = Encomendalinhas::model()->findByAttributes(array("idencomenda" => $id, "idartigo" => $arrInfo[0], "idloja" => $arrInfo[1]));
+                    if(isset($linha) && $value > 0 && $value != $linha->quantidade)
+                    {
+                        //altera quantidade
+                        $linha->quantidade = $value;
+                        $linha->save();
+                    }
+                    elseif(isset($linha) && $value <= 0 )
+                    {
+                        //apaga linha
+                        $linha->delete();
+                    }
+                    elseif(!isset($linha) && $value > 0)
+                    {
+                        $linha = new Encomendalinhas();
+                        $linha->quantidade = $value;
+                        $linha->idartigo = $arrInfo[0];
+                        $linha->idloja = $arrInfo[1];
+                        $linha->idencomenda = $id;
+                        //$linha->idreqlinha = -1;
+                        $artigo = Artigos::model()->findByPk($arrInfo[0]);
+                        if(isset($artigo))
+                        {
+                            $linha->idfornecedor = $artigo->idfornecedor;
+                            $linha->idunidadeenc = $artigo->tipounidade_enc;
+                            $linha->idunidadeinv = $artigo->tipounidade_stock;
+                        }
+                        if(!$linha->save())
+                        {
+                            //echo "erro:" . print_r($linha->getErrors());
+                        }
+                    }
+                    else
+                    {
+                        //nao faz nada;
+                    }
+                }
+            }
             $enc->save();
         }
 
-        $sql = "SELECT quantidade AS quantidade, CONCAT(idartigo,'-',idloja) as 'index', id FROM encomenda_linha WHERE idencomenda = ". $id ." AND quantidade > 0;";
+        $sql = "SELECT quantidade AS quantidade, CONCAT(idartigo,'-',idloja) as 'index', id FROM encomendalinha WHERE idencomenda = ". $id ." AND quantidade > 0;";
         $command=$connection->createCommand($sql);
         $rowsX=$command->queryAll();
         $rows = array();
@@ -482,11 +629,15 @@ class EncomendasFornecedorController extends Controller
     }
 
 //public function actionEstatisticas($loja = 0, $fornecedor = 0, $dataInicio = '', $dataFim = '')
-    public function actionEstatisticas($loja = 0, $fornecedor = 0, $dataInicio = '', $dataFim = '')
+    public function actionEstatisticas($loja = 0, $fornecedor = 0, $dataInicio = '', $dataFim = '', $artigo = '')
     {
         if(isset($_POST["loja"]) && !empty($_POST["loja"]))
         {
             $loja = $_POST["loja"];
+        }
+        if(isset($_POST["artigo"]) && !empty($_POST["artigo"]))
+        {
+            $artigo = $_POST["artigo"];
         }
         if(isset($_POST["fornecedor"]) && !empty($_POST["fornecedor"]))
         {
@@ -549,15 +700,33 @@ class EncomendasFornecedorController extends Controller
                     $sql1 .= " AND e.data <= '" . $dataFim ." 23:59:59' ";
                 }
             }
+            if(!empty($artigo))
+            {
+                //$sql .= " e.data > '" . $dataFim ." 23:59:59' ";
+                if(empty($sql1))
+                {
+                    $sql1 .= " a.descricao like '%" . $artigo ."%' ";
+                }
+                else
+                {
+                    $sql1 .= " AND a.descricao like '%" . $artigo ."%' ";
+                }
+            }
             $sql .= $sql1;
         }
-
-        $sql .= " GROUP BY idartigo,idloja,idunidadeenc ";
+        if($loja > 0)
+        {
+            $sql .= " GROUP BY idartigo,idloja,idunidadeenc ";
+        }
+        else
+        {
+            $sql .= " GROUP BY idartigo,idunidadeenc ";
+        }
         $sql .= " ORDER BY f.nome ASC, a.descricao ASC";
         $connection=Yii::app()->db;
         $command=$connection->createCommand($sql);
         $rows=$command->queryAll();
-        $this->render("estatisticas", array('rows' => $rows, 'loja' => $loja, 'fornecedor' => $fornecedor, 'dataI' => $dataInicio, 'dataF' => $dataFim));
+        $this->render("estatisticas", array('rows' => $rows, 'loja' => $loja, 'fornecedor' => $fornecedor, 'dataI' => $dataInicio, 'dataF' => $dataFim, 'artigo' => $artigo));
 
     }
 

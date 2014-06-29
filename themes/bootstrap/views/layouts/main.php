@@ -10,10 +10,13 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/css/bootstrap-datetimepicker.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/css/main.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/css/colorPicker.css" />
+    <!--<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/css/ui.jqgrid.css" />-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <!--<script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.jqGrid.min.js" type="text/javascript"></script>-->
     <script src="<?php echo Yii::app()->baseUrl; ?>/js/bootstrap-datetimepicker.min.js"></script>
     <script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.colorPicker.js" type="text/javascript"></script>
+
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
 	<?php Yii::app()->bootstrap->register(); ?>
@@ -32,6 +35,7 @@ $this->widget('bootstrap.widgets.TbNavbar',array(
                 //array('label'=>'Home', 'url'=>array('/site/index')),
                 array('label'=>'Configurações', 'url'=>'#', 'items' => array(
                     array('label'=>'Artigos', 'url'=>array('/artigos/index')),
+                    array('label'=>'Listas Artigos', 'url'=>array('/artigos/imprimirArtigos')),
                     array('label'=>'Fornecedores', 'url'=>array('/fornecedores/index')),
                     array('label'=>'Concelhos', 'url'=>array('/concelhos/index')),
                     array('label'=>'Lojas', 'url'=>array('/loja/index')),
@@ -47,6 +51,7 @@ $this->widget('bootstrap.widgets.TbNavbar',array(
                     array('label'=>'Lista Encomenda', 'url'=>array('/encomendas/index')),
                     array('label'=>'Pesq. Encomenda', 'url'=>array('/encomendas/pesquisa')),
                     array('label'=>'Estatisticas', 'url'=>array('/encomendasFornecedor/estatisticas')),
+                    array('label'=>'Graficos Encomendas', 'url'=>array('/encomendas/estatistica')),
                 )),
                 array('label'=>'Enc. a Fornecedor', 'url'=>'#', 'items' => array(
                     array('label'=>'Criar Enc. Forn.', 'url'=>array('/encomendasFornecedor/create')),
@@ -77,7 +82,9 @@ else if(Yii::app()->user->id > 1)
                         array('label'=>'Criar Encomenda', 'url'=>array('/site/encomenda')),
                         array('label'=>'Lista Encomenda', 'url'=>array('/encomendas/index')),
                         array('label'=>'Documentos', 'url'=>array('/site/documentos')),
+                        array('label'=>'Listas Artigos', 'url'=>array('/artigos/imprimirArtigos')),
                         array('label'=>'Estatisticas', 'url'=>array('/encomendasFornecedor/estatisticas')),
+                        array('label'=>'Graficos Encomendas', 'url'=>array('/encomendas/estatistica')),
                     )),
 
                     //array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),

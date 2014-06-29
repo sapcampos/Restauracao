@@ -52,12 +52,17 @@
         echo "<td>&nbsp;".$r2["descricao"]."</td>";
         foreach($rows1 as $r1)
         {
-
             if(isset($rows[$r2["id"]."-".$r1["id"]]))
+            {
                 echo "<td style=\"text-align:center;vertical-align:middle;\"><input type=\"text\" name=\"".$r2["id"]."-".$r1["id"]."\" value=\"".$rows[$r2["id"]."-".$r1["id"]]."\" style=\"width:50px;text-align:right;\"/></td>";
+
+            }
             else
+            {
                 echo "<td style=\"text-align:center;vertical-align:middle;\"><input type=\"text\" name=\"".$r2["id"]."-".$r1["id"]."\" value=\"0\" style=\"width:50px;text-align:right;\"/></td>";
+            }
         }
+
         echo "</tr>";
         $i++;
     }

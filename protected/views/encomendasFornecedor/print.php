@@ -10,8 +10,9 @@ border:1px solid #000000;
 }
 
 .title{
-    color: #ffffff;
+    /*color: #ffffff;*/
     /*font-weight: bold;*/
+    font-weight: bold;
 }
 </style>
 <div style="width: 100%; text-align: center;">
@@ -25,11 +26,19 @@ border:1px solid #000000;
     <div style="float:left; font-size: 10px; width:300px; font-family: Verdana, Arial, sans-serif;">
         VIVAINFUSÃO, LDA (NIF <i>509010423</i>)
         <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;Lojas: Mr. Pz Odivelas, Mr. Pz Mercado Alvalade.
+        <br/>
         SABORES DO FUTURO,LDA (NIF <i>508173787</i>)
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;Lojas: Ice'It Clb, Mr. Pz Clb.
         <br/>
         VIVA A COMIDA,LDA (NIF <i>50730719</i>)
         <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;Lojas: Mr. Pz Alvalade.
+        <br/>
         VERDADEIRAS TENTAÇÕES,LDA (NIF <i>509153151</i>)
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;Lojas: Ice'It Leiria.
         <br/>
     </div>
     <div style="float:left; width:250px;font-size: 10px; font-family: Verdana, Arial, sans-serif;">
@@ -65,7 +74,7 @@ border:1px solid #000000;
 
 <table style="float:left;width:100%;font-size:12px;" cellspacing=2>
     <thead style="margin-bottom:10px;">
-    <tr style="background-color:#666;color:#ffffff;font-weight:bold;height:40px;padding:5px;text-align:center;">
+    <tr style="background-color:#ededec; color:#666;font-weight:bold;height:40px;padding:5px;text-align:center;">
         <td class="title" style="width:40%;">Artigo</td>
         <td class="title" style="width:10%;">Unidade</td>
         <?php

@@ -32,7 +32,7 @@ class EncomendasController extends Controller
                 'users'=>array('@'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions'=>array('create','update','admin','delete', 'pesquisa'),
+                'actions'=>array('create','update','admin','delete', 'pesquisa', 'estatistica', 'getartigos'),
                 'users'=>array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -262,8 +262,8 @@ class EncomendasController extends Controller
             $rows=$command->queryAll();
 
             $sql2 = "SELECT rl.idartigo, rl.inventario, rl.encomenda, rl.idreq, tu2.nome AS 'Unidade Encomenda', tu1.nome AS 'Unidade Stock' FROM requesicao_linha rl ";
-            $sql2 = $sql2 . " LEFT JOIN tipounidade tu1 ON rl.idunidadeenc = tu1.id ";
-            $sql2 = $sql2 . " LEFT JOIN tipounidade tu2 ON rl.idunidadeinv = tu2.id ";
+            $sql2 = $sql2 . " LEFT JOIN tipounidade tu2 ON rl.idunidadeenc = tu2.id ";
+            $sql2 = $sql2 . " LEFT JOIN tipounidade tu1 ON rl.idunidadeinv = tu1.id ";
             $sql2 = $sql2 . " WHERE idreq = (SELECT MAX(id) FROM requesicao WHERE idloja = ".$req->idloja." AND id < ".$id.");";
             $command2=$connection->createCommand($sql2);
             $rows2=$command2->queryAll();
@@ -799,5 +799,104 @@ class EncomendasController extends Controller
         $mpdf->WriteHTML($html2);
         //$mpdf->WriteHTML("TESTE".strlen($html));
         $mpdf->Output();
+    }
+
+    public function actionEstatistica()
+    {
+        $idLoja = 0;
+        $idArtigo = 0;
+
+        if(isset($_GET["idloja"]) && !empty($_GET["idloja"]) )
+        {
+            $idLoja = $_GET["idloja"];
+        }
+        if(isset($_GET["idartigo"]) && !empty($_GET["idartigo"]))
+        {
+            $idArtigo = $_GET["idartigo"];
+        }
+
+        $lojas = Loja::model()->findAllByAttributes(array("activo" => 1));
+        if($idLoja < 1)
+        {
+            $__loja = $lojas[0];
+            $idLoja = $__loja->id;
+        }
+
+        $_loja = Loja::model()->findByPk($idLoja);
+        $loja = "";
+        if(isset($_loja))
+        {
+            $loja = $_loja->nome;
+        }
+        $connection=Yii::app()->db;
+
+        $sql1 = "SELECT id, descricao from artigos WHERE id IN (SELECT idartigo FROM artigoloja WHERE idloja = ".$idLoja." AND activo = 1) AND activo = 1 ORDER by descricao ASC";
+        $command1=$connection->createCommand($sql1);
+        $rows1=$command1->queryAll();
+        if($idArtigo < 1 && count($rows1) > 0)
+        {
+            $idArtigo = $rows1[0]["id"];
+        }
+
+        $sql = "SELECT  rl.encomenda, rl.inventario,  DATE(r.data) as 'data' FROM requesicao_linha rl  LEFT JOIN requesicao r ON rl.idreq = r.id WHERE rl.idartigo = ".$idArtigo." AND r.idloja = ".$idLoja." LIMIT 0, 1000";
+        $command=$connection->createCommand($sql);
+        $rows=$command->queryAll();
+        $_artigo = Artigos::model()->findByPk($idArtigo);
+        $artigo = "";
+        $unidadeEnc = "";
+        $unidadeInv = "";
+        if(isset($_artigo))
+        {
+            $artigo = $_artigo->descricao;
+            $unidadeEnc = $_artigo->unidadeEnc0->nome;
+            $unidadeInv = $_artigo->unidadeInv0->nome;;
+        }
+
+        $this->render("estatistica",
+            array(
+                "linhas" => $rows,
+                "artigo" => $artigo,
+                "loja" => $loja,
+                "unidadeEnc" => $unidadeEnc,
+                "unidadeInv" => $unidadeInv,
+                "lojas" => $lojas,
+                "artigos" => $rows1,
+                "idloja" => $idLoja,
+                "idartigo" => $idArtigo,
+
+            )
+        );
+
+    }
+
+    public function actionGetartigos()
+    {
+        $idLoja = 0;
+        if(isset($_POST["idloja"]) && !empty($_POST["idloja"]))
+        {
+            $idLoja = $_POST["idloja"];
+        }
+        $connection=Yii::app()->db;
+        $sql1 = "SELECT id, descricao from artigos WHERE id IN (SELECT idartigo FROM artigoloja WHERE idloja = ".$idLoja." AND activo = 1) AND activo = 1 ORDER by descricao ASC";
+        $command1=$connection->createCommand($sql1);
+        $rows1=$command1->queryAll();
+        $print = "";
+        if(isset($rows1) && count($rows1) > 0)
+        {
+            $count = 0;
+            foreach($rows1 as $art)
+            {
+                if($count == 0)
+                {
+                    $print = $print . "<option selected value=\"".$art["id"]."\">".$art["descricao"]."</option>";
+                }
+                else
+                {
+                    $print = $print . "<option  value=\"".$art["id"]."\">".$art["descricao"]."</option>";
+                }
+                $count++;
+            }
+        }
+        echo $print;
     }
 }

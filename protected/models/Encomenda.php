@@ -12,6 +12,7 @@
  *
  * The followings are the available model relations:
  * @property Estadoencomenda $idestado0
+ * @property Fornecedores $idfornecedor0
  */
 class Encomenda extends CActiveRecord
 {
@@ -59,6 +60,7 @@ class Encomenda extends CActiveRecord
 		// class name for the relations automatically generated below.
         return array(
             'idestado0' => array(self::BELONGS_TO, 'Estadoencomenda', 'idestado'),
+            'idfornecedor0' => array(self::BELONGS_TO, 'Fornecedores', 'idfornecedor'),
         );
 	}
 

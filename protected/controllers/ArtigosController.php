@@ -2,13 +2,15 @@
 
 class ArtigosController extends Controller
 {
-	/**
+
+
+    /**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
 
-	/**
+    /**
 	 * @return array action filters
 	 */
 	public function filters()
@@ -19,7 +21,7 @@ class ArtigosController extends Controller
 		);
 	}
 
-	/**
+    /**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
@@ -32,7 +34,7 @@ class ArtigosController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','delete', 'print'),
+				'actions'=>array('create','update','admin','delete', 'print', 'imprimirArtigos', 'imprimirArtigosLista'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -45,7 +47,7 @@ class ArtigosController extends Controller
 		);
 	}
 
-	/**
+    /**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
@@ -56,7 +58,7 @@ class ArtigosController extends Controller
 		));
 	}
 
-	/**
+    /**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
@@ -81,7 +83,7 @@ class ArtigosController extends Controller
 			$_POST['Artigos']['precounidadeinventario']= str_replace(",",".",$_POST['Artigos']['precounidadeinventario']  );
 
 			$model->attributes=$_POST['Artigos'];
-			
+
 
 			if($model->save())
             {
@@ -135,7 +137,7 @@ class ArtigosController extends Controller
 		));
 	}
 
-	/**
+    /**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
@@ -266,7 +268,7 @@ class ArtigosController extends Controller
 		));
 	}
 
-	/**
+    /**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
@@ -280,7 +282,7 @@ class ArtigosController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
-	/**
+    /**
 	 * Lists all models.
 	 */
 	public function actionIndex()
@@ -409,7 +411,7 @@ class ArtigosController extends Controller
 		));
 	}
 
-	/**
+    /**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
@@ -424,7 +426,7 @@ class ArtigosController extends Controller
 		));
 	}
 
-	/**
+    /**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded
@@ -437,7 +439,7 @@ class ArtigosController extends Controller
 		return $model;
 	}
 
-	/**
+    /**
 	 * Performs the AJAX validation.
 	 * @param CModel the model to be validated
 	 */
@@ -611,5 +613,101 @@ class ArtigosController extends Controller
         {
             return false;
         }
+    }
+
+    public function actionImprimirArtigos()
+    {
+        $rows = null;
+        $lojas = "";
+        $fornecedor = "";
+        if(isset($_POST) && $this->validPost($_POST))
+        {
+            foreach($_POST as $key => $val)
+            {
+                if($key == "fornecedor")
+                {
+                    $fornecedor = $val;
+                }
+                if($key != "fornecedor" && $key != "submt")
+                {
+                    if(!empty($lojas))
+                    {
+                        $lojas = $lojas . ",".$val."";
+                    }
+                    else
+                    {
+                        $lojas = $lojas . "".$val."";
+                    }
+                }
+            }
+            if(!empty($lojas) && !empty($fornecedor))
+            {
+                $sql = "SELECT descricao FROM artigos WHERE id IN (SELECT idartigo FROM artigoloja WHERE idloja IN (".$lojas.") AND activo = 1) AND idfornecedor = " . $fornecedor . " ORDER BY descricao ASC";
+                $connection=Yii::app()->db;
+                $command=$connection->createCommand($sql);
+                $rows=$command->queryAll();
+            }
+        }
+        $this->render("printArtigos",array('rows' => $rows , 'lojas_s' => $lojas, 'fornecedorSel' => $fornecedor));
+    }
+
+    private function validPost($arr)
+    {
+        $f = 0;
+        $l = 0;
+        foreach($arr as $key=>$val)
+        {
+            //echo $key . "---" . $val;
+            if($key == "fornecedor")
+            {
+                $f = 1;
+            }
+            if($key != "fornecedor" && $key == "submt")
+            {
+                $l++;
+            }
+        }
+        //echo "(".$l.")";
+        //echo "(".$f.")";
+        if($l > 0 && $f > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public function actionImprimirArtigosLista()
+    {
+        $rows = null;
+        if(isset($_GET["loja"]) && isset($_GET["fornecedor"]))
+        {
+            $loja = $_GET["loja"];
+            $fornecedor = $_GET["fornecedor"];
+            if(!empty($loja) && !empty($fornecedor))
+            {
+                try{
+
+
+                    $sql = "SELECT descricao FROM artigos WHERE id IN (SELECT idartigo FROM artigoloja WHERE idloja IN (".$loja.") AND activo = 1) AND idfornecedor = " . $fornecedor . " ORDER BY descricao ASC";
+                    $connection=Yii::app()->db;
+                    $command=$connection->createCommand($sql);
+                    $rows=$command->queryAll();
+                }
+                catch(Exception $ex)
+                {
+
+                }
+            }
+        }
+        $this->layout = 'none';
+        $mpdf = Yii::app()->ePdf->mpdf();
+        $mpdf->useSubstitutions = false;
+        $mpdf->setAutoTopMargin = 'stretch';
+        $mpdf->setAutoBottomMargin = 'strech';
+        $mpdf->WriteHTML($this->render('_printLista', array('rows'=>$rows), true));
+        $mpdf->Output();
     }
 }
