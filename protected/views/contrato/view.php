@@ -28,5 +28,11 @@ $this->menu=array(
 		'inicio',
 		'fim',
 		'idloja',
+		'idutilizador',
+		'ndperex',
+		'datacontrolo1',
+		'datacontrolo2',
+		'datacontrolo3',
+		'activo',
 	),
 )); ?>

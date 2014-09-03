@@ -63,7 +63,7 @@ class Funcionarios extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nome' => 'Nome',
-			'datanascimento' => 'Datanascimento',
+			'datanascimento' => 'Data Nascimento',
 		);
 	}
 

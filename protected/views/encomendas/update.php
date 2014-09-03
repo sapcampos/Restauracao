@@ -209,8 +209,8 @@
                     echo "<td>".$row["Entrega"]."</td>";
                     echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$inv."\" style=\"width:40px; margin:5px;\" readonly/>".$uinv."</td>";
                     echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$enc."\" style=\"width:40px; margin:5px;\" readonly/>".$uenc."</td>";
-                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"stock".$row["ID"]."\" class=\"inpt\" value=\"".$inv1."\"/>".$uinv1."</td>";
-                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"enc".$row["ID"]."\" class=\"inpt\" value=\"".$enc1."\"/>".$uenc1."</td>";
+                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"stock".$row["ID"]."\" class=\"inpt stock\" value=\"".$inv1."\"/>".$uinv1."</td>";
+                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"enc".$row["ID"]."\" class=\"inpt order\" value=\"".$enc1."\"/>".$uenc1."</td>";
                     echo "</tr>";
                     $i++;
                 }
@@ -278,6 +278,40 @@
         {
             currentElement.val('');
             alert("Tem que usar . para separar as casas decimais");
+        }
+    });
+
+    $('.stock').live("keypress", function(e) {
+        /* ENTER PRESSED*/
+        if (e.keyCode == 13) {
+            /* FOCUS ELEMENT */
+            var inputs = $(this).parents("form").eq(0).find(".stock");
+            var idx = inputs.index(this);
+
+            if (idx == inputs.length - 1) {
+                inputs[0].select()
+            } else {
+                inputs[idx + 1].focus(); //  handles submit buttons
+                inputs[idx + 1].select();
+            }
+            return false;
+        }
+    });
+
+    $('.order').live("keypress", function(e) {
+        /* ENTER PRESSED*/
+        if (e.keyCode == 13) {
+            /* FOCUS ELEMENT */
+            var inputs = $(this).parents("form").eq(0).find(".order");
+            var idx = inputs.index(this);
+
+            if (idx == inputs.length - 1) {
+                inputs[0].select()
+            } else {
+                inputs[idx + 1].focus(); //  handles submit buttons
+                inputs[idx + 1].select();
+            }
+            return false;
         }
     });
 </script>

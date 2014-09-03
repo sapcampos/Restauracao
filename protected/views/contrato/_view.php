@@ -33,5 +33,31 @@
 	<?php echo CHtml::encode($data->idloja); ?>
 	<br />
 
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idutilizador')); ?>:</b>
+	<?php echo CHtml::encode($data->idutilizador); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('ndperex')); ?>:</b>
+	<?php echo CHtml::encode($data->ndperex); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('datacontrolo1')); ?>:</b>
+	<?php echo CHtml::encode($data->datacontrolo1); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('datacontrolo2')); ?>:</b>
+	<?php echo CHtml::encode($data->datacontrolo2); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('datacontrolo3')); ?>:</b>
+	<?php echo CHtml::encode($data->datacontrolo3); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('activo')); ?>:</b>
+	<?php echo CHtml::encode($data->activo); ?>
+	<br />
+
+	*/ ?>
 
 </div>

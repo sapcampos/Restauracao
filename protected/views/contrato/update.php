@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Contrato', 'url'=>array('index')),
-	array('label'=>'Create Contrato', 'url'=>array('create')),
-	array('label'=>'View Contrato', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Contrato', 'url'=>array('admin')),
+	array('label'=>'Listar Contratos', 'url'=>array('index')),
+	array('label'=>'Criar Contrato', 'url'=>array('create')),
+	//array('label'=>'View Contrato', 'url'=>array('view', 'id'=>$model->id)),
+	//array('label'=>'Manage Contrato', 'url'=>array('admin')),
 );
 ?>
 

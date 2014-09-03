@@ -10412,7 +10412,7 @@ function file_get_contents_by_socket($url, &$data) {
 
 function _imageTypeFromString(&$data) {
 	$type = '';
-	if (substr($data, 6, 4)== 'JFIF' || substr($data, 6, 4)== 'Exif') { 
+	if (substr($data, 6, 4)== 'JFIF' || substr($data, 6, 4)== 'Exif' || substr($data, 0, 2)== chr(255).chr(216)) {
 		$type = 'jpeg'; 
 	}
 	else if (substr($data, 0, 6)== "GIF87a" || substr($data, 0, 6)== "GIF89a") { 

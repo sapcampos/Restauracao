@@ -29,7 +29,7 @@ class ContratoController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -37,7 +37,7 @@ class ContratoController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('@'),
+				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -66,12 +66,23 @@ class ContratoController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+        $model->ndperex = 90;
+        $model->idtipofuncionario = 1;
+        $model->inicio = date('Y-m-d H:i:s');
 		if(isset($_POST['Contrato']))
 		{
 			$model->attributes=$_POST['Contrato'];
+            $days1 = intval(($model->ndperex/3));
+            $days2 = intval(($model->ndperex/3))*2;
+            $days3 = intval(($model->ndperex));
+            $date1 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days1 .' days'));
+            $date2 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days2 .' days'));
+            $date3 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days3 .' days'));
+            $model->datacontrolo1 = $date1;
+            $model->datacontrolo2 = $date2;
+            $model->datacontrolo3 = $date3;
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('update','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -95,7 +106,7 @@ class ContratoController extends Controller
 		{
 			$model->attributes=$_POST['Contrato'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('update','id'=>$model->id));
 		}
 
 		$this->render('update',array(

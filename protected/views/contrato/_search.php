@@ -46,6 +46,36 @@
 		<?php echo $form->textField($model,'idloja'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'idutilizador'); ?>
+		<?php echo $form->textField($model,'idutilizador'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'ndperex'); ?>
+		<?php echo $form->textField($model,'ndperex'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'datacontrolo1'); ?>
+		<?php echo $form->textField($model,'datacontrolo1'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'datacontrolo2'); ?>
+		<?php echo $form->textField($model,'datacontrolo2'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'datacontrolo3'); ?>
+		<?php echo $form->textField($model,'datacontrolo3'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'activo'); ?>
+		<?php echo $form->textField($model,'activo'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

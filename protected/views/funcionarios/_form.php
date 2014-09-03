@@ -22,9 +22,15 @@
 	</div>
 
 	<div class="row">
+        <div id="datetimepicker1" class="input-append" style="float:left; padding-right: 15px;padding-left: 15px;">
 		<?php echo $form->labelEx($model,'datanascimento'); ?>
-		<?php echo $form->textField($model,'datanascimento'); ?>
+		<?php echo $form->textField($model,'datanascimento', array("data-format"=>"yyyy-MM-dd")); ?>
+        <span class="add-on">
+              <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+              </i>
+        </span>
 		<?php echo $form->error($model,'datanascimento'); ?>
+        </div>
 	</div>
 
 	<div class="row buttons">
@@ -34,3 +40,13 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+<script>
+$(function() {
+    $.noConflict();
+    $('#datetimepicker1').datetimepicker({
+        language: 'pt-BR',
+        pickTime: false
+    });
+});
+
+</script>

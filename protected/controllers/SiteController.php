@@ -35,11 +35,22 @@ class SiteController extends Controller
         {
             // renders the view file 'protected/views/site/index.php'
             // using the default layout 'protected/views/layouts/main.php'
+            //NOTAS
             $connection=Yii::app()->db;
             $sql = "SELECT e.id, e.data, e.obs, f.nome FROM encomenda e LEFT JOIN fornecedores f ON e.idfornecedor = f.id WHERE e.idestado <> 3 AND e.obs <> '' AND e.obs IS NOT NULL ORDER BY e.data DESC";
             $command=$connection->createCommand($sql);
             $rows=$command->queryAll();
-            $this->render('index', array("notas" => $rows));
+
+            //
+            $sql1 = "SELECT c.id, f.nome, c.datacontrolo1, c.datacontrolo2, c.datacontrolo3, c.fim FROM contrato c ";
+            $sql1 = $sql1 . " LEFT JOIN funcionarios f ON c.idutilizador = f.id ";
+            $sql1 = $sql1 . " WHERE (c.fim IS NULL OR c.fim >= NOW() OR c.fim = '0000-00-00 00:00:00') ";
+            $sql1 = $sql1 . " AND ( c.datacontrolo1 <= DATE_ADD(NOW(),INTERVAL 15 DAY) ";
+            $sql1 = $sql1 . " OR c.datacontrolo2 <= DATE_ADD(NOW(),INTERVAL 15 DAY) ";
+            $sql1 = $sql1 . " OR c.datacontrolo3 <= DATE_ADD(NOW(),INTERVAL 15 DAY) )";
+            $command1=$connection->createCommand($sql1);
+            $rows1=$command1->queryAll();
+            $this->render('index', array("notas" => $rows, "contratos" => $rows1));
         }
 	}
 

@@ -21,7 +21,8 @@ border:1px solid #000000;
 <br/>
 <div style="width=100%;">
     <div style="width:110px;float:left;">
-        <img src="<?php echo Yii::app()->baseUrl."/images/iceitmrpizza.jpeg"; ?>" width="100px" height="75px"/>
+        <img src="images/iceitmrpizza.jpeg" style="width:100px;height:75px"/>
+<?php /*<img src="<?php echo Yii::app()->request->getBaseUrl(true)."/images/iceitmrpizza.jpeg"; ?>" width="100px" height="75px"/>*/?>
     </div>
     <div style="float:left; font-size: 10px; width:300px; font-family: Verdana, Arial, sans-serif;">
         VIVAINFUSÃO, LDA (NIF <i>509010423</i>)

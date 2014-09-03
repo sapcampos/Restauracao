@@ -545,7 +545,7 @@ class EncomendasFornecedorController extends Controller
         $sql2 = "SELECT a.id, a.descricao, tu.nome AS unidade FROM artigos a LEFT JOIN tipounidade tu ON a.tipounidade_enc = tu.id WHERE a.id in (SELECT idartigo FROM encomenda_linha WHERE idencomenda = " . $id . " AND quantidade > 0) ORDER BY a.descricao ASC;";
         $command2=$connection->createCommand($sql2);
         $rows2=$command2->queryAll();
-
+        $mpdf->showImageErrors = true;
         $mpdf->WriteHTML($this->render('print', array("rows" => $rows, "rows1" => $rows1, "rows2" => $rows2, "fornecedor" => $nome, "data" => $data,"rowsUnidades" => $rowsUnidades), true));
         $mpdf->Output();
 

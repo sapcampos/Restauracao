@@ -21,6 +21,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.vendors.phpexcel.Classes.PHPExcel',
 	),
 
 	'modules'=>array(

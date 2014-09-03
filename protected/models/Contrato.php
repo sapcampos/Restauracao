@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "Contrato".
+ * This is the model class for table "contrato".
  *
- * The followings are the available columns in table 'Contrato':
+ * The followings are the available columns in table 'contrato':
  * @property integer $id
  * @property integer $idtipocontrato
  * @property integer $idregimetrabalho
@@ -11,6 +11,12 @@
  * @property string $inicio
  * @property string $fim
  * @property integer $idloja
+ * @property integer $idutilizador
+ * @property integer $ndperex
+ * @property string $datacontrolo1
+ * @property string $datacontrolo2
+ * @property string $datacontrolo3
+ * @property integer $activo
  */
 class Contrato extends CActiveRecord
 {
@@ -40,12 +46,12 @@ class Contrato extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, idtipocontrato, idregimetrabalho, idtipofuncionario, inicio, idloja', 'required'),
-			array('id, idtipocontrato, idregimetrabalho, idtipofuncionario, idloja', 'numerical', 'integerOnly'=>true),
-			array('fim', 'safe'),
+			array('idtipocontrato, idregimetrabalho, idtipofuncionario, inicio, idloja, idutilizador', 'required'),
+			array('idtipocontrato, idregimetrabalho, idtipofuncionario, idloja, idutilizador, ndperex, activo', 'numerical', 'integerOnly'=>true),
+			array('fim, datacontrolo1, datacontrolo2, datacontrolo3', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, idtipocontrato, idregimetrabalho, idtipofuncionario, inicio, fim, idloja', 'safe', 'on'=>'search'),
+			array('id, idtipocontrato, idregimetrabalho, idtipofuncionario, inicio, fim, idloja, idutilizador, ndperex, datacontrolo1, datacontrolo2, datacontrolo3, activo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,12 +73,18 @@ class Contrato extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'idtipocontrato' => 'Idtipocontrato',
-			'idregimetrabalho' => 'Idregimetrabalho',
-			'idtipofuncionario' => 'Idtipofuncionario',
+			'idtipocontrato' => 'Tipo Contrato',
+			'idregimetrabalho' => 'Regime Trabalho',
+			'idtipofuncionario' => 'Tipo Funcionario',
 			'inicio' => 'Inicio',
 			'fim' => 'Fim',
-			'idloja' => 'Idloja',
+			'idloja' => 'Loja',
+			'idutilizador' => 'Utilizador',
+			'ndperex' => 'Num. dias. periodo exp.',
+			'datacontrolo1' => 'Data Controlo1',
+			'datacontrolo2' => 'Data Controlo2',
+			'datacontrolo3' => 'Data Controlo3',
+			'activo' => 'Activo',
 		);
 	}
 
@@ -94,6 +106,12 @@ class Contrato extends CActiveRecord
 		$criteria->compare('inicio',$this->inicio,true);
 		$criteria->compare('fim',$this->fim,true);
 		$criteria->compare('idloja',$this->idloja);
+		$criteria->compare('idutilizador',$this->idutilizador);
+		$criteria->compare('ndperex',$this->ndperex);
+		$criteria->compare('datacontrolo1',$this->datacontrolo1,true);
+		$criteria->compare('datacontrolo2',$this->datacontrolo2,true);
+		$criteria->compare('datacontrolo3',$this->datacontrolo3,true);
+		$criteria->compare('activo',$this->activo);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

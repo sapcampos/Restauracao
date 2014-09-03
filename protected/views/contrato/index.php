@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Contrato', 'url'=>array('create')),
-	array('label'=>'Manage Contrato', 'url'=>array('admin')),
+	array('label'=>'Criar Contrato', 'url'=>array('create')),
+	//array('label'=>'Manage Contrato', 'url'=>array('admin')),
 );
 ?>
 
