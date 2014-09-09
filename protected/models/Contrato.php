@@ -17,6 +17,10 @@
  * @property string $datacontrolo2
  * @property string $datacontrolo3
  * @property integer $activo
+ *
+ * @property integer $funcionario0
+ * @property integer $tipocontrato0
+ * @property integer $regimetrabalho0
  */
 class Contrato extends CActiveRecord
 {
@@ -63,6 +67,9 @@ class Contrato extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'funcionario0'=>array(self::BELONGS_TO, 'Funcionarios', 'idutilizador'),
+            'tipocontrato0'=>array(self::BELONGS_TO, 'TipoContrato', 'idtipocontrato'),
+            'regimetrabalho0'=>array(self::BELONGS_TO, 'RegimeTrabalho', 'idregimetrabalho'),
 		);
 	}
 

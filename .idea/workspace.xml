@@ -2,602 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf33038-ddd5-479b-8667-b2a15d13d765" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/CHANGELOG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSans-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSans-BoldOblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSans-Oblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSans.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSansCondensed-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSansCondensed-BoldOblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSansCondensed-Oblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSansCondensed.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSansMono-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSansMono-BoldOblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSansMono-Oblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSansMono.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSerif-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSerif-BoldItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSerif-Italic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSerif.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSerifCondensed-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSerifCondensed-BoldItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSerifCondensed-Italic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuSerifCondensed.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/Garuda-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/Garuda-BoldOblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/Garuda-Oblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/Garuda.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/Norasi-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/Norasi-BoldOblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/Norasi-Oblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/Norasi.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/iccprofiles/SWOP2006_Coated5v2.icc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/XB Riyaz.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/XB RiyazBd.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/XB RiyazBdIt.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/XB RiyazIt.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/XB Zar Bd.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/XB Zar BdIt.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/XB Zar It.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/XB Zar.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/alpha.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/alpha.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/alpha3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/bayeux1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/bgbarcode.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/bgrock.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/blank.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/borders2FF.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/borders2IE.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/borders3FF.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/borders3IE.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/borders4FF.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/borders4IE.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/bordersFF.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/bordersIE.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/bordersMPDF2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/clematis.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfontdata/dejavusanscondensed.cw.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfontdata/dejavusanscondensedI.cw.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfontdata/dejavuserifcondensed.cw.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfontdata/dejavuserifcondensedB.cw.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_loading.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_nav_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_nav_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_shadow_e.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_shadow_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_shadow_ne.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_shadow_nw.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_shadow_s.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_shadow_se.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_shadow_sw.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_shadow_w.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_title_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_title_main.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_title_over.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancy_title_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancybox-x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancybox-y.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/fancybox.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/file.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/firefox-48.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/flowers-pattern.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/hu/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/goto.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/iceitmrpizza.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/img1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/img2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/img3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/img4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/img5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/ind_bn_1_001.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/ind_gu_1_001.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/ind_hi_1_001.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/ind_kn_1_001.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/ind_ml_1_001.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/ind_or_1_001.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/ind_pa_1_001.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/ind_ta_1_001.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/ind_te_1_001.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/klematis.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/no_image.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/ocrb10.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/php.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/quran282.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/iccprofiles/sRGB_IEC61966-2-1.icc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/sample_basic.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/sample_logoheader2.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/sample_orientation2.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/sample_orientation3.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/sunset.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/sunsetv.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/test.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger.wmf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger2.wmf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger24trns.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger300px300dpi.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger300px300dpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger300px72dpi.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger300px96dpi.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger300px96dpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger8trns.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger8trns.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tigercmyk.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/windmill.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/extensions/yiiexcel/.hg_archival.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/extensions/yiiexcel/.hgignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/APC.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/Abstract.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Abstract.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Cell/AdvancedValueBinder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Style/Alignment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/AutoFilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Autoloader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel5/BIFFwriter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/BaseDrawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE/Blip.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Style/Border.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Style/Borders.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/JAMA/CHANGELOG.TXT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/CHANGELOG.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/CHANGES 5.7.3.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/CJKdata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/CONTACT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/CREDITS.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/CSV.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/CSV.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/CacheBase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorageFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Cell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/CellIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/OLE/ChainedBlockStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/Excel2007/Chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/Chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/JAMA/CholeskyDecomposition.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/CodePage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Style/Color.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/AutoFilter/Column.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/ColumnDimension.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Comment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/Comments.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Style/Conditional.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/ContentTypes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/PDF/Core.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CalcEngine/CyclicReferenceStack.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Chart/DataSeries.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Chart/DataSeriesValues.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Cell/DataType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Cell/DataValidation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/Database.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Date.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/DateTime.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/DefaultReadFilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Cell/DefaultValueBinder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/DejaVuinfo.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Escher/DgContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Escher/DggContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/DiscISAM.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/DocProps.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/DocumentProperties.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/DocumentSecurity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/PDF/DomPDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Drawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/Drawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/Drawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/components/EExcelWriter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/Engineering.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/JAMA/utils/Error.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/Excel5/Escher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Escher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel5/Escher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/Excel2003XML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/Excel2007.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/Excel5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Excel5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Chart/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/ExceptionHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/FAQ" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/FONT INFO.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Style/Fill.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/mpdfi/filters/FilterASCII85.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/mpdfi/filters/FilterLZW.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/Financial.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Style/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel5/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/FormulaParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/FormulaToken.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/Function.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/Functions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/GNUFreeFontinfo.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/Gnumeric.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/HEADER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/HOMEPAGE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/HTML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/HTML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/HashTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/HeaderFooter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/HeaderFooterDrawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Cell/Hyperlink.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/ICache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/IComparable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/IOFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/IReadFilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/IReader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/RichText/ITextElement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Cell/IValueBinder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/IWriter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/Igbinary.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/extensions/yiiexcel/LEEME.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/JAMA/LUDecomposition.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Chart/Layout.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Chart/Legend.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CalcEngine/Logger.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/Logical.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/LookupRef.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/Excel5/MD5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/MathTrig.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/JAMA/utils/Maths.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/JAMA/Matrix.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/Memcache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/Memory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/MemoryDrawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/MemoryGZip.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/MemorySerialized.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/NOTES.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/NamedRange.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Style/NumberFormat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/OLE.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/OLERead.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/OOCalc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/PDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Chart/Renderer/PHP Charting Libraries.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/PHPTemp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/OLE/PPS.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/PageMargins.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/PageSetup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel5/Parser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/PasswordHasher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Chart/PlotArea.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Style/Protection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/Protection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/JAMA/QRDecomposition.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/Excel5/RC4.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/extensions/yiiexcel/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/README.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/ReferenceHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/Rels.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/RelsRibbon.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/RelsVBA.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/RichText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/Root.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/Row.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/RowDimension.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/RowIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/AutoFilter/Column/Rule.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/RichText/Run.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/SQLite.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/SQLite3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/SYLK.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/Drawing/Shadow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet/SheetView.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/JAMA/SingularValueDecomposition.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/extensions/yiiexcel/example/SiteController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Escher/DgContainer/SpgrContainer/SpContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/Escher/DgContainer/SpgrContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/Token/Stack.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/Statistical.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/String.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/StringTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Style.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/Style.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Style/Supervisor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/THANKS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/TODO" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/TextData.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/RichText/TextElement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/Thai Fonts License.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Reader/Excel2007/Theme.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/Theme.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/TimeZone.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Chart/Title.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/utils/UnicodeData.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/utils/UnicodeRanges.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/CachedObjectStorage/Wincache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/Workbook.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel5/Workbook.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Worksheet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/Worksheet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel5/Worksheet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/WorksheetIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel2007/WriterPart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/XMLWriter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/XW Zar Font Info.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/Excel5/Xf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/extensions/yiiexcel/YiiExcel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/ZipArchive.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/ZipStreamWrapper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/barcode.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/trend/bestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/bmp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/ccourier.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/ccourierb.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/ccourierbi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/ccourieri.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/changelog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/chelvetica.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/chelveticab.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/chelveticabi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/chelveticai.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.ole.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.ole_pps.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.ole_pps_dir.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.ole_pps_file.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.ole_pps_root.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.writeexcel_biffwriter.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.writeexcel_format.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.writeexcel_formula.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.writeexcel_olewriter.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.writeexcel_workbook.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.writeexcel_workbookbig.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/class.writeexcel_worksheet.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/compress.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/bg/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/cs/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/da/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/de/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/en/uk/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/es/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/fi/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/fr/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/hu/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/it/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/nl/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/no/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/pl/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/pt/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/pt/br/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/ru/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/sv/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/tr/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/config_cp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/config_fonts.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/cssmgr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/csymbol.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/ctimes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/ctimesb.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/ctimesbi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/ctimesi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/font/czapfdingbats.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/de.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfontdata/dejavusanscondensed.mtx.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfontdata/dejavusanscondensedI.mtx.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfontdata/dejavuserifcondensed.mtx.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfontdata/dejavuserifcondensedB.mtx.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/dictionary.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/directw.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/graph_cache/dummy.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/tmp/dummy.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfontdata/dummy.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/en.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/es.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/example-bigfile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/example-colors.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/example-demo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/example-merge2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/example-panes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/example-repeat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/example-simple.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/example-stocks.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/example-textwrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example01_basic.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example02_CSS_styles.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example03_backgrounds_and_borders.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example04_images.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example05_tables.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example06_tables_nested.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example07_tables_borders.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example08_lists.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example09_forms.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example10_floating_and_fixed_position_elements.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example11_overflow_auto.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example12_paging_html.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example13_paging_css.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example14_page_numbers_ToC_Index_Bookmarks.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example15_headers_method_1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example16_headers_method_2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example17_headers_method_3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example18_headers_method_4.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example19_page_sizes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example20_justify.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example21_hyphenation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example22_columns.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example23_orientation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example24_orientation_2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example26_RTL.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example27_CJK_using_Adobe_fonts.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example28_CJK_using_embedded_fonts.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example29_multilingual_autofont.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example30_arabic.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example32_indic.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example35_watermarks.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example36_annotations_and_Attached_files.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example37_barcodes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example38_dot_tab.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example39_PDFA_compliance.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example40_MPDFI_thumbnails.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example41_MPDFI_template.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example42_MPDFI_templatedoc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example43_MPDFI_booklet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example44_MPDFI_yearbook.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example46_progress_bars_simple.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example47_progress_bars_simple_custom.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example48_progress_bars_advanced.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example49_changelog.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example50_new_mPDF_3_features.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example51_new_mPDF_4_features.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example52_lineheight.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example52_new_mPDF_4-2_features.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example53_new_mPDF_v5-0_fonts.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example54_new_mPDF_v5-1_features_gradients_and_images.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example55_new_mPDF_v5-1_color_and_other_features.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example56_new_mPDF_v5-1_features_grayscale.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example57_new_mPDF_v5-3_active_forms.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example57_new_mPDF_v5-3_active_forms_b.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example58_new_mPDF_v5-4_features.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example59_new_mPDF_v5-6_features.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/example60_new_mPDF_v5-7_features.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/trend/exponentialBestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/fi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/utils/font_collections.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/utils/font_coverage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/utils/font_dump.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/utils/font_names.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/form.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/formsubmit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/mpdfi/fpdi_pdf_parser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/fr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Calculation/functionlist.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/functions.ole.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/functions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/excelwriter/functions.writeexcel_utility.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/cs/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/da/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/de/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/es/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/fi/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/fr/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/it/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/nl/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/no/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/pl/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/pt/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/pt/br/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/ru/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/sv/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/locale/tr/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/gif.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/PCLZip/gnu-lgpl.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/grad.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/graph.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/css/ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/ind_bn_1_001.volt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/ind_gu_1_001.volt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/ind_hi_1_001.volt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/ind_kn_1_001.volt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/ind_ml_1_001.volt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/ind_or_1_001.volt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/ind_pa_1_001.volt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/ind_ta_1_001.volt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/ind_te_1_001.volt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/utils/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/indic.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/install.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/it.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Chart/Renderer/jpgraph.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/jquery.fancybox-1.3.1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/fancybox/jquery.fancybox-1.3.1.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/jquery.tooltip-1.2.6.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/trend/linearBestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/trend/logarithmicBestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/PDF/mPDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/meter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/mpdf.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/mpdf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/mpdfstyleA4.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/mpdfstylePaged.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/mpdfstyletables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/nl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/ttfonts/ocrbinfo.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/out.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/PCLZip/pclzip.lib.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/mpdfi/pdf_context.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/mpdfi/pdf_parser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/pl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/trend/polynomialBestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/trend/powerBestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/css/print.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/progbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/PCLZip/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/ru.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fa390f29/css/screen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/show_code.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/subs_core.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/subs_win-1252.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/patterns/sv.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/svg.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Writer/PDF/tcPDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tiger.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/tocontents.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/phpexcel/Classes/PHPExcel/Shared/trend/trendClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/ttfontsuni.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/ttfontsuni_analysis.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/examples/tux.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/includes/upperCase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/vendors/mpdf_/classes/wmf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticasCusto.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticasCustoPrint.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Contrato.php" afterPath="$PROJECT_DIR$/protected/models/Contrato.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/ContratoController.php" afterPath="$PROJECT_DIR$/protected/controllers/ContratoController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" afterPath="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Funcionarios.php" afterPath="$PROJECT_DIR$/protected/models/Funcionarios.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/LojaController.php" afterPath="$PROJECT_DIR$/protected/controllers/LojaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/SiteController.php" afterPath="$PROJECT_DIR$/protected/controllers/SiteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/contrato/_form.php" afterPath="$PROJECT_DIR$/protected/views/contrato/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/funcionarios/_form.php" afterPath="$PROJECT_DIR$/protected/views/funcionarios/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/contrato/_search.php" afterPath="$PROJECT_DIR$/protected/views/contrato/_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/contrato/_view.php" afterPath="$PROJECT_DIR$/protected/views/contrato/_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/contrato/admin.php" afterPath="$PROJECT_DIR$/protected/views/contrato/admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="$PROJECT_DIR$/protected/runtime/application.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/contrato/create.php" afterPath="$PROJECT_DIR$/protected/views/contrato/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/funcionarios/create.php" afterPath="$PROJECT_DIR$/protected/views/funcionarios/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/encomenda.php" afterPath="$PROJECT_DIR$/protected/views/site/encomenda.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/contrato/index.php" afterPath="$PROJECT_DIR$/protected/views/contrato/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/funcionarios/index.php" afterPath="$PROJECT_DIR$/protected/views/funcionarios/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/site/index.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/site/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/vendors/mpdf/mpdf.php" afterPath="$PROJECT_DIR$/protected/vendors/mpdf/mpdf.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php" afterPath="$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/contrato/update.php" afterPath="$PROJECT_DIR$/protected/views/contrato/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/encomendas/update.php" afterPath="$PROJECT_DIR$/protected/views/encomendas/update.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/funcionarios/update.php" afterPath="$PROJECT_DIR$/protected/views/funcionarios/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/loja/update.php" afterPath="$PROJECT_DIR$/protected/views/loja/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/contrato/view.php" afterPath="$PROJECT_DIR$/protected/views/contrato/view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Restauracao.iws" />
@@ -626,113 +40,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ContratoController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/ContratoController.php">
+      <file leaf-file-name="EncomendasFornecedorController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="7" selection-start="3686" selection-end="3686" vertical-scroll-proportion="0.0" vertical-offset="1980" max-vertical-offset="2820">
+            <state line="870" column="217" selection-start="33418" selection-end="33418" vertical-scroll-proportion="-1.56" vertical-offset="12972" max-vertical-offset="15450">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SiteController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <file leaf-file-name="application.log" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/application.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="34" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="6840">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="4222" max-vertical-offset="4665">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estatisticasCusto.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticasCusto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="43" selection-start="3429" selection-end="3429" vertical-scroll-proportion="0.33333334" vertical-offset="1084" max-vertical-offset="3810">
+              <folding>
+                <marker date="1410294032000" expanded="false" signature="4335:4359" placeholder="..." />
+                <marker date="1410294032000" expanded="false" signature="5116:5134" placeholder="..." />
+                <marker date="1410294032000" expanded="false" signature="6774:6814" placeholder="..." />
+                <marker date="1410294032000" expanded="false" signature="6971:6986" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/funcionarios/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="12" selection-start="305" selection-end="305" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="705">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/funcionarios/create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="345">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contrato.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/Contrato.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="29" selection-start="407" selection-end="415" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="1980">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Artigos.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/Artigos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="2" selection-start="446" selection-end="479" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="1980">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/site/index.php">
+        <entry file="file://$PROJECT_DIR$/protected/views/loja/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="64" selection-start="3614" selection-end="3614" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="1680">
-              <folding>
-                <marker date="1404949035000" expanded="false" signature="411:429" placeholder="..." />
-                <marker date="1404949035000" expanded="true" signature="1519:1537" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EncomendasFornecedorController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="547" column="8" selection-start="21135" selection-end="21135" vertical-scroll-proportion="-10.625" vertical-offset="7950" max-vertical-offset="11070">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="print.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="42" selection-start="452" selection-end="452" vertical-scroll-proportion="-13.083333" vertical-offset="31" max-vertical-offset="1875">
-              <folding>
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-                <marker date="1409695836000" expanded="true" signature="3596:3636" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="encomenda.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/site/encomenda.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="4" selection-start="5740" selection-end="6774" vertical-scroll-proportion="-4.375" vertical-offset="2415" max-vertical-offset="3105">
-              <folding>
-                <marker date="1409778106000" expanded="false" signature="1887:1911" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="update.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/views/encomendas/update.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="0" selection-start="7232" selection-end="7232" vertical-scroll-proportion="0.4988067" vertical-offset="2851" max-vertical-offset="4770">
-              <folding>
-                <marker date="1409778212000" expanded="false" signature="4694:4718" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CHANGELOG.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/vendors/mpdf/CHANGELOG.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mpdf.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/vendors/mpdf/mpdf.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10414" column="69" selection-start="384527" selection-end="384527" vertical-scroll-proportion="-3.22" vertical-offset="156019" max-vertical-offset="491595">
+            <state line="19" column="3" selection-start="389" selection-end="1325" vertical-scroll-proportion="-4.375" vertical-offset="180" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="update.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/update.php">
+        <entry file="file://$PROJECT_DIR$/protected/views/funcionarios/update.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="0" selection-start="2988" selection-end="2988" vertical-scroll-proportion="-13.708333" vertical-offset="946" max-vertical-offset="1365">
-              <folding>
-                <marker date="1409692094000" expanded="false" signature="789:813" placeholder="..." />
-              </folding>
+            <state line="5" column="17" selection-start="118" selection-end="118" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="390">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/contrato/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="45" selection-start="1494" selection-end="1494" vertical-scroll-proportion="-16.125" vertical-offset="423" max-vertical-offset="1170">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -761,22 +159,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/models/Funcionarios.php" />
-        <option value="$PROJECT_DIR$/protected/views/funcionarios/create.php" />
-        <option value="$PROJECT_DIR$/protected/views/funcionarios/update.php" />
-        <option value="$PROJECT_DIR$/protected/views/funcionarios/index.php" />
-        <option value="$PROJECT_DIR$/protected/views/funcionarios/_form.php" />
-        <option value="$PROJECT_DIR$/protected/views/contrato/_form.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/ContratoController.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/themes/bootstrap/views/site/index.php" />
         <option value="$PROJECT_DIR$/protected/vendors/mpdf/mpdf.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendasFornecedor/update.php" />
         <option value="$PROJECT_DIR$/protected/vendors/mpdf/CHANGELOG.txt" />
-        <option value="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php" />
         <option value="$PROJECT_DIR$/protected/views/site/encomenda.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendas/update.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticasCustoPrint.php" />
+        <option value="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/views/funcionarios/index.php" />
+        <option value="$PROJECT_DIR$/protected/views/funcionarios/update.php" />
+        <option value="$PROJECT_DIR$/protected/models/Contrato.php" />
+        <option value="$PROJECT_DIR$/protected/views/contrato/index.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
+        <option value="$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticasCusto.php" />
       </list>
     </option>
   </component>
@@ -870,6 +268,72 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="protected" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -910,7 +374,109 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="encomendas" />
+              <option name="myItemId" value="loja" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encomendasFornecedor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contrato" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -943,6 +509,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/protected/views/encomendasFornecedor" />
       <recent name="$PROJECT_DIR$/protected/views/encomendas" />
     </key>
   </component>
@@ -1030,22 +597,22 @@
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32936507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6005291" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32936507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29411766" sideWeight="0.6706349" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39814815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.6005291" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32734275" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.6005291" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6005291" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29411766" sideWeight="0.6706349" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32734275" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32936507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1087,131 +654,145 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticas.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticasCustoPrint.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="39" selection-start="996" selection-end="1020" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="2085">
+        <state line="17" column="20" selection-start="425" selection-end="425" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="2730">
           <folding>
-            <marker date="1403213291000" expanded="false" signature="-1:-1" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#1;n#thead#0;n#table#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#thead#0;n#table#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#thead#0;n#table#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#1;n#thead#0;n#table#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#1;n#thead#0;n#table#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1410216971000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1410216971000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1410216971000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1410216971000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/funcionarios/_form.php">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/ContratoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="94" selection-start="863" selection-end="863" vertical-scroll-proportion="0.4493392" vertical-offset="84" max-vertical-offset="855" />
+        <state line="80" column="20" selection-start="2344" selection-end="2344" vertical-scroll-proportion="-15.375" vertical-offset="831" max-vertical-offset="2820">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Funcionarios.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/column2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="39" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1410">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="6" selection-start="37" selection-end="1096" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="107" selection-start="3466" selection-end="3466" vertical-scroll-proportion="-8.125" vertical-offset="600" max-vertical-offset="1965">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/funcionarios/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="17" selection-start="118" selection-end="118" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/funcionarios/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="237" selection-end="237" vertical-scroll-proportion="0.24229075" vertical-offset="0" max-vertical-offset="681" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/contrato/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="57" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1680">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="433">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/ContratoController.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/EncomendaLinha.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="7" selection-start="3686" selection-end="3686" vertical-scroll-proportion="0.0" vertical-offset="1455" max-vertical-offset="2820">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/Artigos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="34" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="6840">
+        <state line="15" column="2" selection-start="446" selection-end="479" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="1980">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/site/index.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/loja/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="64" selection-start="3614" selection-end="3614" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="1680">
-          <folding>
-            <marker date="1404949035000" expanded="false" signature="411:429" placeholder="..." />
-            <marker date="1404949035000" expanded="true" signature="1519:1537" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/vendors/mpdf/mpdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10414" column="69" selection-start="384527" selection-end="384527" vertical-scroll-proportion="-3.22" vertical-offset="156019" max-vertical-offset="491595">
+        <state line="19" column="3" selection-start="389" selection-end="1325" vertical-scroll-proportion="-4.375" vertical-offset="180" max-vertical-offset="810">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/update.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/funcionarios/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="0" selection-start="2988" selection-end="2988" vertical-scroll-proportion="-13.708333" vertical-offset="946" max-vertical-offset="1365">
-          <folding>
-            <marker date="1409692094000" expanded="false" signature="789:813" placeholder="..." />
-          </folding>
+        <state line="14" column="12" selection-start="305" selection-end="305" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="705">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/vendors/mpdf/CHANGELOG.txt">
+    <entry file="file://$PROJECT_DIR$/protected/models/Contrato.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+        <state line="14" column="29" selection-start="407" selection-end="415" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="1980">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/contrato/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="45" selection-start="1494" selection-end="1494" vertical-scroll-proportion="-16.125" vertical-offset="423" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/application.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="4222" max-vertical-offset="4665">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="547" column="8" selection-start="21135" selection-end="21135" vertical-scroll-proportion="-10.625" vertical-offset="7950" max-vertical-offset="11070">
+        <state line="870" column="217" selection-start="33418" selection-end="33418" vertical-scroll-proportion="-1.56" vertical-offset="12972" max-vertical-offset="15450">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/estatisticasCusto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="42" selection-start="452" selection-end="452" vertical-scroll-proportion="-13.083333" vertical-offset="31" max-vertical-offset="1875">
+        <state line="81" column="43" selection-start="3429" selection-end="3429" vertical-scroll-proportion="0.33333334" vertical-offset="1084" max-vertical-offset="3810">
           <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-            <marker date="1409695836000" expanded="true" signature="3596:3636" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/encomenda.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="4" selection-start="5740" selection-end="6774" vertical-scroll-proportion="-4.375" vertical-offset="2415" max-vertical-offset="3105">
-          <folding>
-            <marker date="1409778106000" expanded="false" signature="1887:1911" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="0" selection-start="7232" selection-end="7232" vertical-scroll-proportion="0.4988067" vertical-offset="2851" max-vertical-offset="4770">
-          <folding>
-            <marker date="1409778212000" expanded="false" signature="4694:4718" placeholder="..." />
+            <marker date="1410294032000" expanded="false" signature="4335:4359" placeholder="..." />
+            <marker date="1410294032000" expanded="false" signature="5116:5134" placeholder="..." />
+            <marker date="1410294032000" expanded="false" signature="6774:6814" placeholder="..." />
+            <marker date="1410294032000" expanded="false" signature="6971:6986" placeholder="..." />
           </folding>
         </state>
       </provider>

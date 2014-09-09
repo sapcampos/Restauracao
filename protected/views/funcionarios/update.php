@@ -3,7 +3,7 @@
 /* @var $model Funcionarios */
 
 $this->breadcrumbs=array(
-	'Funcionarioses'=>array('index'),
+	'Funcionarios'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
 	'Update',
 );

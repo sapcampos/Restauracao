@@ -32,7 +32,7 @@ class EncomendasFornecedorController extends Controller
                 'users'=>array('@'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions'=>array('create','update','admin','delete', 'print', 'estatisticas','indexUrl', 'index2'),
+                'actions'=>array('create','update','admin','delete', 'print', 'estatisticas','estatisticasCusto', 'estatisticasCustoPrint','indexUrl', 'index2'),
                 'users'=>array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -652,7 +652,7 @@ class EncomendasFornecedorController extends Controller
             $dataFim = $_POST["dataFim"];
         }
         $sql = "SELECT el.idartigo, a.descricao AS 'Descricao', el.idloja, SUM(el.quantidade) as 'Quantidade', tu.nome AS 'Unidade', ";
-        $sql .= " f.nome AS 'Fornecedor' FROM encomendalinha el ";
+        $sql .= "  el.precounitario as 'P.U', (SUM(el.quantidade)*el.precounitario) as 'Custo',f.nome AS 'Fornecedor' FROM encomendalinha el ";
         $sql .= " LEFT JOIN encomenda e ON el.idencomenda = e.id ";
         $sql .= " LEFT JOIN artigos a ON el.idartigo = a.id ";
         $sql .= " LEFT JOIN tipounidade tu ON el.idunidadeenc = tu.id ";
@@ -728,6 +728,298 @@ class EncomendasFornecedorController extends Controller
         $rows=$command->queryAll();
         $this->render("estatisticas", array('rows' => $rows, 'loja' => $loja, 'fornecedor' => $fornecedor, 'dataI' => $dataInicio, 'dataF' => $dataFim, 'artigo' => $artigo));
 
+    }
+
+    public function actionEstatisticasCusto($loja = 0, $fornecedor = 0, $dataInicio = '', $dataFim = '', $artigo = '')
+    {
+        if(isset($_POST["loja"]) && !empty($_POST["loja"]))
+        {
+            $loja = $_POST["loja"];
+        }
+        if(isset($_POST["artigo"]) && !empty($_POST["artigo"]))
+        {
+            $artigo = $_POST["artigo"];
+        }
+        if(isset($_POST["fornecedor"]) && !empty($_POST["fornecedor"]))
+        {
+            $fornecedor = $_POST["fornecedor"];
+        }
+        if(isset($_POST["dataInicio"]) && !empty($_POST["dataInicio"]))
+        {
+            $dataInicio = $_POST["dataInicio"];
+        }
+        if(isset($_POST["dataFim"]) && !empty($_POST["dataFim"]))
+        {
+            $dataFim = $_POST["dataFim"];
+        }
+        $lojaArray = array();
+        $sql2 = "";
+        $sql = "SELECT el.idartigo, a.descricao AS 'Descricao', el.idloja, SUM(el.quantidade) as 'Quantidade', tu.nome AS 'Unidade', ";
+        $sql .= " el.precounitario as 'P.U', (SUM(el.quantidade)*el.precounitario) as 'Custo', el.precounitario as 'pun', (SUM(el.quantidade)*el.precounitario) as 'custo',f.nome AS 'Fornecedor' FROM encomendalinha el ";
+        $sql .= " LEFT JOIN encomenda e ON el.idencomenda = e.id ";
+        $sql .= " LEFT JOIN artigos a ON el.idartigo = a.id ";
+        $sql .= " LEFT JOIN tipounidade tu ON el.idunidadeenc = tu.id ";
+        $sql .= " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
+        if($loja > 0 || $fornecedor > 0 || !empty($dataInicio) || !empty($dataFim))
+        {
+            $sql .= " WHERE ";
+            $sql1 = "";
+            if($loja > 0)
+            {
+                $sql1 .= " el.idloja = " . $loja;
+            }
+            if($fornecedor > 0)
+            {
+                if(empty($sql1))
+                {
+                    $sql1 .= " f.id = " . $fornecedor;
+                }
+                else
+                {
+                    $sql1 .= " AND f.id = " . $fornecedor;
+                }
+            }
+            if(!empty($dataInicio))
+            {
+                if(empty($sql1))
+                {
+                    $sql1 .= " e.data >= '" . $dataInicio ." 00:00:00' ";
+                }
+                else
+                {
+                    $sql1 .= " AND e.data >= '" . $dataInicio ." 00:00:00' ";
+                }
+                //$sql .= " e.data > '" . $dataInicio ." 00:00:00' ";
+            }
+            if(!empty($dataFim))
+            {
+                //$sql .= " e.data > '" . $dataFim ." 23:59:59' ";
+                if(empty($sql1))
+                {
+                    $sql1 .= " e.data <= '" . $dataFim ." 23:59:59' ";
+                }
+                else
+                {
+                    $sql1 .= " AND e.data <= '" . $dataFim ." 23:59:59' ";
+                }
+            }
+            if(!empty($artigo))
+            {
+                //$sql .= " e.data > '" . $dataFim ." 23:59:59' ";
+                if(empty($sql1))
+                {
+                    $sql1 .= " a.descricao like '%" . $artigo ."%' ";
+                }
+                else
+                {
+                    $sql1 .= " AND a.descricao like '%" . $artigo ."%' ";
+                }
+            }
+            $sql .= $sql1;
+        }
+        if($loja > 0)
+        {
+            $sql .= " GROUP BY idartigo,idloja,idunidadeenc ";
+        }
+        else
+        {
+            //$lojas = Loja::model()->findAllByAttributes(array("activo" => 1));
+            $sql2 = $sql . " GROUP BY idartigo, idunidadeenc";
+            $sql .= " GROUP BY idartigo,idloja, idunidadeenc";
+        }
+        $sql .= " ORDER BY f.nome ASC, a.descricao ASC";
+        if($sql2 != "")
+        {
+            $sql2 .= " ORDER BY f.nome ASC, a.descricao ASC";
+        }
+        $connection=Yii::app()->db;
+        $command=$connection->createCommand($sql);
+        $rows=$command->queryAll();
+        $q = array();
+        $c = array();
+        if($loja == 0)
+        {
+            $lojaS = " ";
+            foreach($rows as $r)
+            {
+                $q[$r["idloja"]."-".$r["idartigo"]] = $r["Quantidade"];
+                $c[$r["idloja"]."-".$r["idartigo"]] = $r["Custo"];
+                if($lojaS == " ")
+                {
+                    $lojaS = $lojaS . '['.$r["idloja"].']';
+                }
+                else
+                {
+                    //echo strpos($lojaS,'['.$r["idloja"].']') . "-";
+                    if (strpos($lojaS,'['.$r["idloja"].']') < 0 || strpos($lojaS,'['.$r["idloja"].']') === false) {
+                        $lojaS = $lojaS . '['.$r["idloja"].']';
+                    }
+                }
+
+            }
+            //$lojaArray = array();
+            //echo $lojaS;
+            $lojaS = str_replace("][", ",",$lojaS);
+            $lojaS = str_replace("]", "",$lojaS);
+            $lojaS = str_replace("[", "",$lojaS);
+            $lojaArray = explode(",",$lojaS);
+            $connection1=Yii::app()->db;
+            $command1=$connection1->createCommand($sql2);
+            $rowsN=$command1->queryAll();
+            $rows = $rowsN;
+        }
+        $this->render("estatisticasCusto", array('rows' => $rows, 'loja' => $loja, 'fornecedor' => $fornecedor, 'dataI' => $dataInicio, 'dataF' => $dataFim, 'artigo' => $artigo, "q" => $q, "c" => $c, "lojasLL" => $lojaArray));
+
+    }
+
+    public function actionEstatisticasCustoPrint($loja = 0, $fornecedor = 0, $dataInicio = '', $dataFim = '', $artigo = '')
+    {
+        if(isset($_GET["loja"]) && !empty($_GET["loja"]) && $_GET["loja"] != "0")
+        {
+            $loja = $_GET["loja"];
+        }
+        if(isset($_GET["artigo"]) && !empty($_GET["artigo"]))
+        {
+            $artigo = $_GET["artigo"];
+        }
+        if(isset($_GET["fornecedor"]) && !empty($_GET["fornecedor"]))
+        {
+            $fornecedor = $_GET["fornecedor"];
+        }
+        if(isset($_GET["dataInicio"]) && !empty($_GET["dataInicio"]))
+        {
+            $dataInicio = $_GET["dataInicio"];
+        }
+        if(isset($_GET["dataFim"]) && !empty($_GET["dataFim"]))
+        {
+            $dataFim = $_GET["dataFim"];
+        }
+        $sql = "";
+        $sql2 = "";
+        $sql = "SELECT el.idartigo, a.descricao AS 'Descricao', el.idloja, SUM(el.quantidade) as 'Quantidade', tu.nome AS 'Unidade', ";
+        $sql .= "  	 el.precounitario as 'P.U',	(SUM(el.quantidade)*el.precounitario) as 'Custo', el.precounitario as 'pun', (SUM(el.quantidade)*el.precounitario) as 'custo',f.nome AS 'Fornecedor' FROM encomendalinha el ";
+        $sql .= " LEFT JOIN encomenda e ON el.idencomenda = e.id ";
+        $sql .= " LEFT JOIN artigos a ON el.idartigo = a.id ";
+        $sql .= " LEFT JOIN tipounidade tu ON el.idunidadeenc = tu.id ";
+        $sql .= " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
+        if($loja > 0 || $fornecedor > 0 || !empty($dataInicio) || !empty($dataFim))
+        {
+            $sql .= " WHERE ";
+            $sql1 = "";
+            if($loja > 0)
+            {
+                $sql1 .= " el.idloja = " . $loja;
+            }
+            if($fornecedor > 0)
+            {
+                if(empty($sql1))
+                {
+                    $sql1 .= " f.id = " . $fornecedor;
+                }
+                else
+                {
+                    $sql1 .= " AND f.id = " . $fornecedor;
+                }
+            }
+            if(!empty($dataInicio))
+            {
+                if(empty($sql1))
+                {
+                    $sql1 .= " e.data >= '" . $dataInicio ." 00:00:00' ";
+                }
+                else
+                {
+                    $sql1 .= " AND e.data >= '" . $dataInicio ." 00:00:00' ";
+                }
+                //$sql .= " e.data > '" . $dataInicio ." 00:00:00' ";
+            }
+            if(!empty($dataFim))
+            {
+                //$sql .= " e.data > '" . $dataFim ." 23:59:59' ";
+                if(empty($sql1))
+                {
+                    $sql1 .= " e.data <= '" . $dataFim ." 23:59:59' ";
+                }
+                else
+                {
+                    $sql1 .= " AND e.data <= '" . $dataFim ." 23:59:59' ";
+                }
+            }
+            if(!empty($artigo))
+            {
+                //$sql .= " e.data > '" . $dataFim ." 23:59:59' ";
+                if(empty($sql1))
+                {
+                    $sql1 .= " a.descricao like '%" . $artigo ."%' ";
+                }
+                else
+                {
+                    $sql1 .= " AND a.descricao like '%" . $artigo ."%' ";
+                }
+            }
+            $sql .= $sql1;
+        }
+        if($loja > 0)
+        {
+            $sql .= " GROUP BY idartigo,idloja,idunidadeenc ";
+        }
+        else
+        {
+            //$lojas = Loja::model()->findAllByAttributes(array("activo" => 1));
+            $sql2 = $sql . " GROUP BY idartigo, idunidadeenc";
+            $sql .= " GROUP BY idartigo,idloja, idunidadeenc";
+        }
+        $sql .= " ORDER BY f.nome ASC, a.descricao ASC";
+        if($sql2 != "")
+        {
+            $sql2 .= " ORDER BY f.nome ASC, a.descricao ASC";
+        }
+        $connection=Yii::app()->db;
+        $command=$connection->createCommand($sql);
+        $rows=$command->queryAll();
+        $q = array();
+        $c = array();
+        if($loja == 0)
+        {
+            $lojaS = " ";
+            foreach($rows as $r)
+            {
+                $q[$r["idloja"]."-".$r["idartigo"]] = $r["Quantidade"];
+                $c[$r["idloja"]."-".$r["idartigo"]] = $r["Custo"];
+                if($lojaS == " ")
+                {
+                    $lojaS = $lojaS . '['.$r["idloja"].']';
+                }
+                else
+                {
+                    //echo strpos($lojaS,'['.$r["idloja"].']') . "-";
+                    if (strpos($lojaS,'['.$r["idloja"].']') < 0 || strpos($lojaS,'['.$r["idloja"].']') === false) {
+                        $lojaS = $lojaS . '['.$r["idloja"].']';
+                    }
+                }
+
+            }
+            $lojaArray = array();
+            //echo $lojaS;
+            $lojaS = str_replace("][", ",",$lojaS);
+            $lojaS = str_replace("]", "",$lojaS);
+            $lojaS = str_replace("[", "",$lojaS);
+            $lojaArray = explode(",",$lojaS);
+            $connection1=Yii::app()->db;
+            $command1=$connection1->createCommand($sql2);
+            $rowsN=$command1->queryAll();
+            $rows = $rowsN;
+        }
+        $this->layout = 'none';
+        $mpdf = Yii::app()->ePdf->mpdf();
+        $mpdf->useSubstitutions = false;
+        $mpdf->setAutoTopMargin = 'stretch';
+        $mpdf->setAutoBottomMargin = 'stretch';
+        $mpdf->showImageErrors = true;
+        $mpdf->WriteHTML($this->renderPartial("estatisticasCustoPrint", array('rows' => $rows, 'loja' => $loja, 'fornecedor' => $fornecedor, 'dataI' => $dataInicio, 'dataF' => $dataFim, 'artigo' => $artigo, "q" => $q, "c" => $c, "lojasLL" => $lojaArray), true));
+        //$this->renderPartial("estatisticasCustoPrint", array('rows' => $rows, 'loja' => $loja, 'fornecedor' => $fornecedor, 'dataI' => $dataInicio, 'dataF' => $dataFim, 'artigo' => $artigo, "q" => $q, "c" => $c, "lojasLL" => $lojaArray));
+        //$mpdf->WriteHTML($this->render('print', array("rows" => $rows, "rows1" => $rows1, "rows2" => $rows2, "fornecedor" => $nome, "data" => $data,"rowsUnidades" => $rowsUnidades), true));
+        $mpdf->Output();
     }
 
 }
