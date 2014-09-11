@@ -26,6 +26,7 @@
     <div style="float:left; padding-right: 15px;padding-left: 15px;">
         <select name="loja">
             <?php
+
             $lojas = Loja::model()->findAllByAttributes(array('activo' => 1));
             $sel = "";
             if(!isset($loja) || empty($loja))
@@ -41,6 +42,8 @@
 
                 if($loja == $l->id)
                     $sel = " SELECTED ";
+                else
+                    $sel = "";
                 echo "<option value=\"".$l->id."\" $sel>".$l->nome."</option>";
             }
             ?>
@@ -64,6 +67,8 @@
                 $sel = "";
                 if($fornecedor == $l->id)
                     $sel = " SELECTED ";
+                else
+                    $sel = "";
                 echo "<option value=\"".$l->id."\" $sel>".$l->nome."</option>";
             }
             ?>

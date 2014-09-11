@@ -90,6 +90,7 @@ else if(Yii::app()->user->id > 1)
                         array('label'=>'Documentos', 'url'=>array('/site/documentos')),
                         array('label'=>'Listas Artigos', 'url'=>array('/artigos/imprimirArtigos')),
                         array('label'=>'Estatisticas', 'url'=>array('/encomendasFornecedor/estatisticas')),
+                        array('label'=>'Estatisticas Custos', 'url'=>array('/encomendasFornecedor/estatisticasCusto')),
                         array('label'=>'Graficos Encomendas', 'url'=>array('/encomendas/estatistica')),
                     )),
 

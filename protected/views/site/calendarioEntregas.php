@@ -55,6 +55,67 @@
                             }
                         }
                     }
+                    $counter = 0;
+                    if(count($contratos) > 0)
+                    {
+                        foreach($contratos as $marc1)
+                        {
+                            if(isset($marc1))
+                            {
+                                if(isset($marc1["fim"]) && $marc1["fim"] != "0000-00-00 00:00:00")
+                                {
+                                    $d = new DateTime($marc1["fim"]);
+                                    echo "{";
+                                    echo "title:'Fim Contrato:".$marc1["nome"]."',";
+                                    echo "id:'".($counter * -1)."',";
+                                    echo "start: new Date(".$d->format('Y').", ".(intval($d->format('m'))-1).", ".$d->format('d').", ".$d->format('H').", ".$d->format('i')."),";
+                                    echo "color: '#FFA500',";
+                                    echo "allDay: true";
+                                    echo "},";
+                                    $counter++;
+                                }
+
+                                if(isset($marc1["datacontrolo1"]) && $marc1["datacontrolo1"] != "0000-00-00 00:00:00")
+                                {
+                                    $d = new DateTime($marc1["datacontrolo1"]);
+                                    echo "{";
+                                    echo "title:'1º P.Exp:".$marc1["nome"]."',";
+                                    echo "id:'".($counter * -1)."',";
+                                    echo "start: new Date(".$d->format('Y').", ".(intval($d->format('m'))-1).", ".$d->format('d').", ".$d->format('H').", ".$d->format('i')."),";
+                                    echo "color: '#FFA500',";
+                                    echo "allDay: true";
+                                    echo "},";
+                                    $counter++;
+                                }
+
+                                if(isset($marc1["datacontrolo2"]) && $marc1["datacontrolo2"] != "0000-00-00 00:00:00")
+                                {
+                                    $d = new DateTime($marc1["datacontrolo2"]);
+                                    echo "{";
+                                    echo "title:'2º P.Exp:".$marc1["nome"]."',";
+                                    echo "id:'".($counter * -1)."',";
+                                    echo "start: new Date(".$d->format('Y').", ".(intval($d->format('m'))-1).", ".$d->format('d').", ".$d->format('H').", ".$d->format('i')."),";
+                                    echo "color: '#FFA500',";
+                                    echo "allDay: true";
+                                    echo "},";
+                                    $counter++;
+                                }
+
+                                if(isset($marc1["datacontrolo3"]) && $marc1["datacontrolo3"] != "0000-00-00 00:00:00")
+                                {
+                                    $d = new DateTime($marc1["datacontrolo3"]);
+                                    echo "{";
+                                    echo "title:'3º P.Exp:".$marc1["nome"]."',";
+                                    echo "id:'".($counter * -1)."',";
+                                    echo "start: new Date(".$d->format('Y').", ".(intval($d->format('m'))-1).", ".$d->format('d').", ".$d->format('H').", ".$d->format('i')."),";
+                                    echo "color: '#FFA500',";
+                                    echo "allDay: true";
+                                    echo "},";
+                                    $counter++;
+                                }
+                            }
+                        }
+                    }
                 ?>
             ],
             timeFormat: {

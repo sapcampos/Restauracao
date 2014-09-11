@@ -378,10 +378,14 @@ class SiteController extends Controller
         $command=$connection->createCommand($sql);
         $rows=$command->queryAll();
 
+        $sql1 = "SELECT f.nome, c.fim, c.datacontrolo1, c.datacontrolo2, c.datacontrolo3 FROM contrato c LEFT JOIN funcionarios f ON c.idutilizador = f.id;";
+        $command1=$connection->createCommand($sql1);
+        $rows1=$command1->queryAll();
+
         $sql = "SELECT l.corloja, l.nome FROM loja l";
         $command=$connection->createCommand($sql);
         $rows2=$command->queryAll();
-        $this->render("calendarioEntregas", array("marcacoes" => $rows, "lojas" => $rows2));
+        $this->render("calendarioEntregas", array("marcacoes" => $rows, "lojas" => $rows2, "contratos" => $rows1));
     }
 
     public function actionDocumentos()

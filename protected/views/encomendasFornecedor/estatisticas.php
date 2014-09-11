@@ -40,6 +40,8 @@
                 }
                 if($loja == $l->id)
                     $sel = " SELECTED ";
+                else
+                    $sel = "";
                 echo "<option value=\"".$l->id."\" $sel>".$l->nome."</option>";
             }
             ?>
@@ -63,6 +65,8 @@
                 $sel = "";
                 if($fornecedor == $l->id)
                     $sel = " SELECTED ";
+                else
+                    $sel = "";
                 echo "<option value=\"".$l->id."\" $sel>".$l->nome."</option>";
             }
             ?>
