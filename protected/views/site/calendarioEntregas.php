@@ -123,7 +123,7 @@
                 day: 'H:mm{ - H:mm}',
                 '': 'H(:mm)'
             },
-            weekends: false,
+            weekends: true,
             firstDay:1,
             dayClick: function(date, allDay, jsEvent, view) {
                 $('#calendar').fullCalendar( 'gotoDate', date);

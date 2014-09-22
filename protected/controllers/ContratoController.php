@@ -74,9 +74,9 @@ class ContratoController extends Controller
 			$model->attributes=$_POST['Contrato'];
             $model->inicio=$_POST['Contrato']['inicio'];
             $model->fim=$_POST['Contrato']['fim'];
-            $days1 = intval(($model->ndperex/3));
-            $days2 = intval(($model->ndperex/3))*2;
-            $days3 = intval(($model->ndperex));
+            $days1 = intval(($model->ndperex/3)) -1 ;
+            $days2 = (intval(($model->ndperex/3))*2) - 1;
+            $days3 = (intval(($model->ndperex))) - 1;
             $date1 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days1 .' days'));
             $date2 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days2 .' days'));
             $date3 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days3 .' days'));
@@ -112,9 +112,9 @@ class ContratoController extends Controller
             $model->fim=$_POST['Contrato']['fim'];
             //$model->inicio = $model->inicio + ' 00:00:00';
             //echo "---".$model->inicio."---";
-            $days1 = intval(($model->ndperex/3));
-            $days2 = intval(($model->ndperex/3))*2;
-            $days3 = intval(($model->ndperex));
+            $days1 = intval(($model->ndperex/3)) -1 ;
+            $days2 = (intval(($model->ndperex/3))*2) - 1;
+            $days3 = (intval(($model->ndperex))) - 1;
             $date1 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days1 .' days'));
             $date2 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days2 .' days'));
             $date3 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days3 .' days'));
