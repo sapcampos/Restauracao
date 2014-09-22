@@ -37,6 +37,9 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
 <div style="width:100%;float: left; margin: 20px;">
     <strong>NOTA:</strong>&nbsp;<comment>Deve usar . para as casas décimais.</comment>
 </div>
+<div style="float:left;width:100%; padding-top: 25px; padding-bottom: 30px;">
+    <input type="button" value="Encomendar" onclick="javascript:validate();"/>
+</div>
 <div style="float:left">
 <table style="float:left;width:100%; font-size: 12px;" cellspacing=5>
     <thead style="margin-bottom:10px;">
@@ -173,13 +176,14 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
         if (e.keyCode == 13) {
             /* FOCUS ELEMENT */
             var inputs = $(this).parents("form").eq(0).find(".stock");
+            var inputs1 = $(this).parents("form").eq(0).find(".order");
             var idx = inputs.index(this);
 
             if (idx == inputs.length - 1) {
-                inputs[0].select()
+                inputs1[idx].select()
             } else {
-                inputs[idx + 1].focus(); //  handles submit buttons
-                inputs[idx + 1].select();
+                inputs1[idx].focus(); //  handles submit buttons
+                inputs1[idx].select();
             }
             return false;
         }
@@ -190,13 +194,14 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
         if (e.keyCode == 13) {
             /* FOCUS ELEMENT */
             var inputs = $(this).parents("form").eq(0).find(".order");
+            var inputs1 = $(this).parents("form").eq(0).find(".stock");
             var idx = inputs.index(this);
 
             if (idx == inputs.length - 1) {
-                inputs[0].select()
+                inputs1[0].select()
             } else {
-                inputs[idx + 1].focus(); //  handles submit buttons
-                inputs[idx + 1].select();
+                inputs1[idx + 1].focus(); //  handles submit buttons
+                inputs1[idx + 1].select();
             }
             return false;
         }

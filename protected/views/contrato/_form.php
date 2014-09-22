@@ -42,13 +42,55 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'inicio'); ?>
-		<?php echo $form->textField($model,'inicio'); ?>
+		<?php //echo $form->textField($model,'inicio'); ?>
+        <div id="datetimepicker1" class="input-append" style="float:left; padding-right: 15px;padding-left: 15px;">
+
+            <input data-format="yyyy-MM-dd" type="text" name="Contrato[inicio]" style="width:100px;" value="<?php try
+            {
+                $vars = explode(" ",$model->inicio);
+                if(count($vars)>0)
+                {
+                    if($vars[0] != "0000-00-00")
+                        echo $vars[0];
+                }
+            }
+            catch(Exception $ex)
+            {
+                echo "";
+            }?>"/>
+            <span class="add-on" id="Contrato_inicio">
+              <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+              </i>
+            </span>
+        </div>
 		<?php echo $form->error($model,'inicio'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fim'); ?>
-		<?php echo $form->textField($model,'fim'); ?>
+		<?php //echo $form->textField($model,'fim'); ?>
+        <div id="datetimepicker2" class="input-append" style="float:left; padding-right: 15px;padding-left: 15px;">
+
+            <input data-format="yyyy-MM-dd" type="text" name="Contrato[fim]" style="width:100px;" value="<?php
+            try
+            {
+                $vars = explode(" ",$model->fim);
+                if(count($vars)>0)
+                {
+                    if($vars[0] != "0000-00-00")
+                        echo $vars[0];
+                }
+            }
+            catch(Exception $ex)
+            {
+                echo "";
+            }
+            ?>" id="Contrato_fim"/>
+                <span class="add-on">
+                  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                  </i>
+                </span>
+        </div>
 		<?php echo $form->error($model,'fim'); ?>
 	</div>
 
@@ -105,3 +147,18 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+<script>
+    $(document).ready(function(){
+        $.noConflict();
+        $('#datetimepicker1').datetimepicker({
+            language: 'pt-BR',
+            pickTime: false
+
+        });
+        $('#datetimepicker2').datetimepicker({
+            pickTime: false,
+            language: 'pt-BR'
+        });
+    });
+
+</script>

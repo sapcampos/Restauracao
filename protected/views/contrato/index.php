@@ -30,17 +30,17 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'name' => 'Funcionario',
             'type' => 'raw',
-            'value' => 'CHtml::encode($data->funcionario0->nome)',
+            'value' => 'CHtml::encode((isset($data->funcionario0)) ? $data->funcionario0->nome : "")',
         ),
         array(
             'name' => 'Contrato',
             'type' => 'raw',
-            'value' => 'CHtml::encode($data->tipocontrato0->nome)',
+            'value' => 'CHtml::encode((isset($data->tipocontrato0)) ? $data->tipocontrato0->nome : "" )',
         ),
         array(
             'name' => 'Regime',
             'type' => 'raw',
-            'value' => 'CHtml::encode($data->regimetrabalho0->nome)',
+            'value' => 'CHtml::encode((isset($data->regimetrabalho0)) ? $data->regimetrabalho0->nome : "")',
         ),
 
         array(

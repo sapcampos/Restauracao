@@ -58,7 +58,10 @@
 <div style="width:100%">
     <strong>NOTA:</strong>&nbsp;<comment>Deve usar . para as casas décimais.</comment>
 </div>
+    <div style="float:left;width:100%; padding-top: 25px; padding-bottom: 30px;">
+        <input type="button" value="Encomendar" style="padding-left: 30px;" onclick="javascript:validate();"/>
 
+    </div>
 <form method="post">
     <div style="width:100%;">
         <h4>Data:</h4><?php echo $req->data;?>
@@ -286,13 +289,14 @@
         if (e.keyCode == 13) {
             /* FOCUS ELEMENT */
             var inputs = $(this).parents("form").eq(0).find(".stock");
+            var inputs1 = $(this).parents("form").eq(0).find(".order");
             var idx = inputs.index(this);
 
             if (idx == inputs.length - 1) {
-                inputs[0].select()
+                inputs1[idx].select()
             } else {
-                inputs[idx + 1].focus(); //  handles submit buttons
-                inputs[idx + 1].select();
+                inputs1[idx].focus(); //  handles submit buttons
+                inputs1[idx].select();
             }
             return false;
         }
@@ -303,13 +307,14 @@
         if (e.keyCode == 13) {
             /* FOCUS ELEMENT */
             var inputs = $(this).parents("form").eq(0).find(".order");
+            var inputs1 = $(this).parents("form").eq(0).find(".stock");
             var idx = inputs.index(this);
 
             if (idx == inputs.length - 1) {
-                inputs[0].select()
+                inputs1[0].select()
             } else {
-                inputs[idx + 1].focus(); //  handles submit buttons
-                inputs[idx + 1].select();
+                inputs1[idx + 1].focus(); //  handles submit buttons
+                inputs1[idx + 1].select();
             }
             return false;
         }

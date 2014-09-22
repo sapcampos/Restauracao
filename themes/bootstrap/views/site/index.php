@@ -102,6 +102,18 @@ if(isset($notas) && count($notas) > 0)
                 <td style="width:20%; border-right: 1px solid #000; padding-left: 5px;"><?php echo $c["nome"] . $msg;?></td>
             </tr>
         <?php } ?>
+        <?php
+        if(isset($aniversarios))
+        {
+        foreach($aniversarios as $c)
+        {?>
+            <tr style="border-bottom: 1px solid #000;">
+                <td style="width:10%; border-right: 1px solid #000; padding-left: 5px;"><?php
+
+                    echo  $c["data1"];?></td>
+                <td style="width:20%; border-right: 1px solid #000; padding-left: 5px;"><?php echo "Aniversário: " .$c["nome"];?></td>
+            </tr>
+        <?php } }?>
         </tbody>
     </table>
 <?php } ?>

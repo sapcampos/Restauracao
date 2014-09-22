@@ -50,7 +50,11 @@ class SiteController extends Controller
             $sql1 = $sql1 . " OR c.datacontrolo3 <= DATE_ADD(NOW(),INTERVAL 15 DAY) )";
             $command1=$connection->createCommand($sql1);
             $rows1=$command1->queryAll();
-            $this->render('index', array("notas" => $rows, "contratos" => $rows1));
+
+            $sql2 = "SELECT nome, DATE_FORMAT(datanascimento,'%d-%m') as data1 FROM funcionarios WHERE  DAYOFYEAR(curdate()) <= DAYOFYEAR(`datanascimento`) + 30 AND DAYOFYEAR(`datanascimento`) >= dayofyear(curdate()) LIMIT 300;";
+            $command2=$connection->createCommand($sql2);
+            $rows2=$command2->queryAll();
+            $this->render('index', array("notas" => $rows, "contratos" => $rows1, "aniversarios" => $rows2));
         }
 	}
 
@@ -131,6 +135,7 @@ class SiteController extends Controller
 
     public function actionEncomenda()
     {
+        $idreq = 0;
         if(isset($_POST) && count($_POST))
         {
             $count = 0;
@@ -173,7 +178,7 @@ class SiteController extends Controller
                                 }
                                 if($reql->save())
                                 {
-                                    echo "-->";
+                                    //echo "-->";
                                     $ok = $ok && true;
                                     if($reql->encomenda > 0)
                                     {
@@ -206,7 +211,7 @@ class SiteController extends Controller
                                 }
                                 else
                                 {
-                                    print_r( $reql->getErrors());
+                                    //print_r( $reql->getErrors());
                                     $ok = $ok && false;
                                 }
                             }
@@ -216,6 +221,7 @@ class SiteController extends Controller
                             }
                         }
                     }
+                    $idreq = $req->id;
                 }
                 else
                 {
@@ -243,6 +249,7 @@ class SiteController extends Controller
             {
                 $transaction->commit();
                 Yii::app()->user->setFlash('success', "Encomenda criada com sucesso!");
+                $this->redirect(array('encomendas/update','id'=>$idreq));
             }
             else
             {

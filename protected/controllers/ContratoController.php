@@ -68,10 +68,12 @@ class ContratoController extends Controller
 		// $this->performAjaxValidation($model);
         $model->ndperex = 90;
         $model->idtipofuncionario = 1;
-        $model->inicio = date('Y-m-d H:i:s');
+        $model->inicio = date('Y-m-d') + ' 00:00:00';
 		if(isset($_POST['Contrato']))
 		{
 			$model->attributes=$_POST['Contrato'];
+            $model->inicio=$_POST['Contrato']['inicio'];
+            $model->fim=$_POST['Contrato']['fim'];
             $days1 = intval(($model->ndperex/3));
             $days2 = intval(($model->ndperex/3))*2;
             $days3 = intval(($model->ndperex));
@@ -104,9 +106,27 @@ class ContratoController extends Controller
 
 		if(isset($_POST['Contrato']))
 		{
+            //print_r($_POST['Contrato']);
 			$model->attributes=$_POST['Contrato'];
+            $model->inicio=$_POST['Contrato']['inicio'];
+            $model->fim=$_POST['Contrato']['fim'];
+            //$model->inicio = $model->inicio + ' 00:00:00';
+            //echo "---".$model->inicio."---";
+            $days1 = intval(($model->ndperex/3));
+            $days2 = intval(($model->ndperex/3))*2;
+            $days3 = intval(($model->ndperex));
+            $date1 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days1 .' days'));
+            $date2 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days2 .' days'));
+            $date3 = date('Y-m-d', strtotime($model->inicio. ' + ' . $days3 .' days'));
+            $model->datacontrolo1 = $date1;
+            $model->datacontrolo2 = $date2;
+            $model->datacontrolo3 = $date3;
 			if($model->save())
 				$this->redirect(array('update','id'=>$model->id));
+            else
+            {
+                print_r($model->getErrors());
+            }
 		}
 
 		$this->render('update',array(
