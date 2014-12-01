@@ -1214,3 +1214,720 @@ Stack trace:
 REQUEST_URI=/restauracao/contrato/update/1
 in /Users/sapc/Sites/restauracao/protected/controllers/ContratoController.php (122)
 in /Users/sapc/Sites/restauracao/index.php (31)
+2014/10/05 22:53:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(39): CModule->__get('db')
+#5 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('')
+#10 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#11 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#13 {main}
+REQUEST_URI=/restauracao/
+---
+2014/10/05 23:11:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2013] Lost connection to MySQL server at 'reading authorization packet', system error: 0' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(39): CModule->__get('db')
+#5 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('')
+#10 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#11 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#13 {main}
+REQUEST_URI=/restauracao/
+---
+2014/10/16 01:20:22 [error] [php] Undefined variable: msg (/Users/sapc/Sites/restauracao/themes/bootstrap/views/site/index.php:103)
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CController.php(870): SiteController->renderFile()
+#1 /Users/sapc/Sites/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#2 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(58): SiteController->render()
+#3 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#4 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(287): SiteController->runAction()
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#7 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): SiteController->run()
+#8 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/sapc/Sites/restauracao/index.php(31): CWebApplication->run()
+REQUEST_URI=/restauracao/index.php
+in /Users/sapc/Sites/restauracao/themes/bootstrap/views/site/index.php (103)
+in /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php (58)
+in /Users/sapc/Sites/restauracao/index.php (31)
+2014/10/16 01:21:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2013] Lost connection to MySQL server at 'reading authorization packet', system error: 0' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(39): CModule->__get('db')
+#5 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('')
+#10 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#11 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#13 {main}
+REQUEST_URI=/restauracao/index.php
+HTTP_REFERER=http://localhost:8888/restauracao/
+---
+2014/10/29 23:41:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Utilizadores))
+#7 /Users/sapc/Sites/restauracao/protected/models/Utilizadores.php(22): CActiveRecord::model('Utilizadores')
+#8 /Users/sapc/Sites/restauracao/protected/components/UserIdentity.php(26): Utilizadores::model()
+#9 /Users/sapc/Sites/restauracao/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#10 /Users/sapc/Sites/yii/framework/validators/CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#11 /Users/sapc/Sites/yii/framework/validators/CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 /Users/sapc/Sites/yii/framework/base/CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#13 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(121): CModel->validate()
+#14 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(32): SiteController->actionLogin()
+#15 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#16 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#18 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('')
+#20 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#21 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#23 {main}
+REQUEST_URI=/restauracao/
+HTTP_REFERER=http://localhost:8888/restauracao/
+---
+2014/10/29 23:50:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2013] Lost connection to MySQL server at 'reading authorization packet', system error: 0' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/yii/framework/web/CActiveDataProvider.php(75): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(401): CActiveDataProvider->__construct('Loja')
+#9 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionDocumentos()
+#10 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('documentos')
+#14 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/documentos')
+#15 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#17 {main}
+REQUEST_URI=/restauracao/site/documentos
+HTTP_REFERER=http://localhost:8888/restauracao/encomendas/estatistica
+---
+2014/10/30 00:08:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:09:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (61)' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:34:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2013] Lost connection to MySQL server at 'reading authorization packet', system error: 0' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/restauracao/protected/models/Loja.php(25): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(466): Loja::model()
+#9 [internal function]: SiteController->actionXlsInv('2')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#17 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#19 {main}
+REQUEST_URI=/restauracao/site/xlsinv/2
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 00:59:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2013] Lost connection to MySQL server at 'reading authorization packet', system error: 0' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Loja))
+#7 /Users/sapc/Sites/yii/framework/web/CActiveDataProvider.php(75): CActiveRecord::model('Loja')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(401): CActiveDataProvider->__construct('Loja')
+#9 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionDocumentos()
+#10 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('documentos')
+#14 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/documentos')
+#15 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#17 {main}
+REQUEST_URI=/restauracao/site/documentos
+HTTP_REFERER=http://localhost:8888/restauracao/
+---
+2014/10/30 00:59:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2013] Lost connection to MySQL server at 'reading authorization packet', system error: 0' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(496): CModule->__get('db')
+#5 [internal function]: SiteController->actionXlsInv('0')
+#6 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#7 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#8 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#10 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#12 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#13 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#15 {main}
+REQUEST_URI=/restauracao/site/xlsinv/0
+HTTP_REFERER=http://localhost:8888/restauracao/site/documentos
+---
+2014/10/30 01:00:51 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM artigos a  LEFT JOIN fornecedores f ON a.idfornecedor = f.id  LEFT JOIN tip' at line 1. A declaração SQL executada foi: SELECT a.id AS 'Artigo ID', a.descricao AS 'Descricao', REPLACE(precounidadeencomenda,'.',',') as 'P.Encomenda', tu1.nome AS 'Unidade Encomenda', REPLACE(precounidadeinventario,'.',',') as 'P.Inventario', tu2.nome AS 'Unidade Stock', f.nome AS 'Fornecedor',   FROM artigos a  LEFT JOIN fornecedores f ON a.idfornecedor = f.id  LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id  LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id  WHERE a.activo = 1  AND a.activo = 1 ORDER BY f.nome ASC, a.descricao ASC .
+in /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php (498)
+in /Users/sapc/Sites/restauracao/index.php (31)
+2014/10/30 01:00:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM artigos a  LEFT JOIN fornecedores f ON a.idfornecedor = f.id  LEFT JOIN tip' at line 1. The SQL statement executed was: SELECT a.id AS 'Artigo ID', a.descricao AS 'Descricao', REPLACE(precounidadeencomenda,'.',',') as 'P.Encomenda', tu1.nome AS 'Unidade Encomenda', REPLACE(precounidadeinventario,'.',',') as 'P.Inventario', tu2.nome AS 'Unidade Stock', f.nome AS 'Fornecedor',   FROM artigos a  LEFT JOIN fornecedores f ON a.idfornecedor = f.id  LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id  LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id  WHERE a.activo = 1  AND a.activo = 1 ORDER BY f.nome ASC, a.descricao ASC ' in /Users/sapc/Sites/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(498): CDbCommand->queryAll()
+#2 [internal function]: SiteController->actionXlsInv('0')
+#3 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('xlsinv')
+#9 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/xlsinv')
+#10 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#12 {main}
+REQUEST_URI=/restauracao/site/xlsinv/0
+---
+2014/10/31 00:31:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2013] Lost connection to MySQL server at 'reading authorization packet', system error: 0' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /Users/sapc/Sites/restauracao/protected/controllers/EncomendasController.php(905): CModule->__get('db')
+#5 [internal function]: EncomendasController->actionCreateXls('118')
+#6 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(EncomendasController), Array)
+#7 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(EncomendasController), Object(ReflectionMethod), Array)
+#8 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 /Users/sapc/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /Users/sapc/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 /Users/sapc/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#15 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('createXls')
+#17 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('encomendas/crea...')
+#18 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#20 {main}
+REQUEST_URI=/restauracao/encomendas/createXls/118
+---
+2014/10/31 00:35:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2013] Lost connection to MySQL server at 'reading authorization packet', system error: 0' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Requesicao))
+#7 /Users/sapc/Sites/restauracao/protected/models/Requesicao.php(21): CActiveRecord::model('Requesicao')
+#8 /Users/sapc/Sites/restauracao/protected/controllers/EncomendasController.php(69): Requesicao::model()
+#9 [internal function]: EncomendasController->actionUpdate('118')
+#10 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(EncomendasController), Array)
+#11 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(EncomendasController), Object(ReflectionMethod), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /Users/sapc/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /Users/sapc/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /Users/sapc/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /Users/sapc/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#19 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('updATE')
+#21 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('encomendas/updA...')
+#22 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#24 {main}
+REQUEST_URI=/restauracao/encomendas/updATE/118
+---

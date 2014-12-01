@@ -12,13 +12,22 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'name' => 'Requisição Inventario',
             'type' => 'raw',
-            'value' => 'CHtml::link("Abrir", array("site/printInv", "id" => $data->id), array("target" => "_BLANK"))',
+            'value' => 'CHtml::link("Abrir", array("site/printInv", "id" => $data->id), array("target" => "_BLANK")) ',
         ),
         array(
             'name' => 'Requisição Encomenda',
             'type' => 'raw',
             'value' => 'CHtml::link("Abrir", array("site/printEnc", "id" => $data->id), array("target" => "_BLANK"))',
         ),
+        array(
+            'name' => 'Inventario',
+            'type' => 'raw',
+            'value' => 'CHtml::link("Abrir", array("site/xlsinv", "id" => $data->id), array("target" => "_BLANK")) ',
+        ),
     ),
 ));
+?>
+<br/>
+<?php
+echo CHtml::link("Inventario Geral", array("site/xlsinv", "id" => 0), array("target" => "_BLANK"))
 ?>

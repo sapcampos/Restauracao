@@ -44,11 +44,8 @@ echo "<h3 style='text-align: right;'>Notas</h3>";
             <?php } ?>
     </tbody>
 </table>
-<?php } ?>
+<?php }
 
-<?php
-if(isset($notas) && count($notas) > 0)
-{
     echo "<br/>";
     echo "<br/>";
     echo "<h3 style='text-align: right;'>Notas Administrativas</h3>";
@@ -61,48 +58,63 @@ if(isset($notas) && count($notas) > 0)
         </tr>
         </thead>
         <tbody>
-        <?php
+<?php
+if(isset($contratos) && count($contratos) > 0)
+{
+        $msg = "";
         foreach($contratos as $c)
-        {?>
+        {
+            if($c["fim"] != '0000-00-00 00:00:00')
+            {
+
+            }else
+            {
+                $msg = "";
+                $date = new DateTime();
+                $date->add(new DateInterval('P15D'));
+                $controlDate = $date->format('Y-m-d');
+                $date = new DateTime($controlDate);
+                $d1 = new DateTime($c["datacontrolo1"]);
+                $d2 = new DateTime($c["datacontrolo2"]);
+                $d3 = new DateTime($c["datacontrolo3"]);
+                $dataregistar = $controlDate;
+                $msg = "";
+                //print_r($d2);
+                //print_r($date);
+                if($d1 >= $date)
+                {
+                    $dataregistar = $c["datacontrolo1"];
+                    $msg = " 1ª mês periodo experimental";
+
+                }
+                elseif($d2 >= $date)
+                {
+                    $dataregistar = $c["datacontrolo2"];
+                    $msg = " 2ª mês periodo experimental";
+                }
+                elseif($d3 >= $date)
+                {
+                    $dataregistar = $c["datacontrolo3"];
+                    $msg = " 3ª mês periodo experimental";
+                }
+                $loja_ = $c["loja"];
+                $_dataamostrar = new DateTime($dataregistar);
+                $_dataamostrar = $_dataamostrar->format('Y-m-d');
+            }
+            if($msg != "")
+            {
+            ?>
             <tr style="border-bottom: 1px solid #000;">
                 <td style="width:10%; border-right: 1px solid #000; padding-left: 5px;"><?php
-                    if($c["fim"] != '0000-00-00 00:00:00')
-                    {
 
-                    }else
-                    {
-                        $msg = "";
-                        $date = new DateTime();
-                        $date->add(new DateInterval('P15D'));
-                        $controlDate = $date->format('Y-m-d');
-                        $d1 = new DateTime($c["datacontrolo1"]);
-                        $d2 = new DateTime($c["datacontrolo2"]);
-                        $d3 = new DateTime($c["datacontrolo3"]);
-                        $dataregistar = $controlDate;
-                        $msg = "";
-                        if($d3 < $controlDate)
-                        {
-                            $dataregistar = $c["datacontrolo3"];
-                            $msg = " 3ª mês periodo experimental";
-                        }
-                        elseif($d2 < $controlDate)
-                        {
-                            $dataregistar = $c["datacontrolo2"];
-                            $msg = " 2ª mês periodo experimental";
-                        }
-                        else
-                        {
-                            $dataregistar = $c["datacontrolo1"];
-                            $msg = " 1ª mês periodo experimental";
-                        }
-                        $_dataamostrar = new DateTime($dataregistar);
-                        $_dataamostrar = $_dataamostrar->format('Y-m-d');
-                    }
                     echo "<a href=\"".$this->createUrl("contrato/update",array("id"=>$c["id"]))."\">".$_dataamostrar."</a>";?></td>
-                <td style="width:20%; border-right: 1px solid #000; padding-left: 5px;"><?php echo $c["nome"] . $msg;?></td>
+                <td style="width:20%; border-right: 1px solid #000; padding-left: 5px;"><?php echo $c["nome"] . " (".$loja_ .") " . $msg;?></td>
             </tr>
-        <?php } ?>
-        <?php
+<?php   }
+        }
+}
+if(isset($aniversarios) && count($aniversarios) > 0)
+{
         if(isset($aniversarios))
         {
         foreach($aniversarios as $c)
@@ -113,7 +125,9 @@ if(isset($notas) && count($notas) > 0)
                     echo  $c["data1"];?></td>
                 <td style="width:20%; border-right: 1px solid #000; padding-left: 5px;"><?php echo "Aniversário: " .$c["nome"];?></td>
             </tr>
-        <?php } }?>
+<?php   }
+        }
+}?>
         </tbody>
     </table>
-<?php } ?>
+<?php  ?>

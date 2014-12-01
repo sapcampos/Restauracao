@@ -42,8 +42,9 @@ class SiteController extends Controller
             $rows=$command->queryAll();
 
             //
-            $sql1 = "SELECT c.id, f.nome, c.datacontrolo1, c.datacontrolo2, c.datacontrolo3, c.fim FROM contrato c ";
+            $sql1 = "SELECT c.id, f.nome, c.datacontrolo1, c.datacontrolo2, c.datacontrolo3, c.fim, l.nome as 'loja' FROM contrato c ";
             $sql1 = $sql1 . " LEFT JOIN funcionarios f ON c.idutilizador = f.id ";
+            $sql1 = $sql1 . " LEFT JOIN loja l ON c.idloja = l.id ";
             $sql1 = $sql1 . " WHERE (c.fim IS NULL OR c.fim >= NOW() OR c.fim = '0000-00-00 00:00:00') ";
             $sql1 = $sql1 . " AND ( c.datacontrolo1 <= DATE_ADD(NOW(),INTERVAL 15 DAY) ";
             $sql1 = $sql1 . " OR c.datacontrolo2 <= DATE_ADD(NOW(),INTERVAL 15 DAY) ";
@@ -51,7 +52,7 @@ class SiteController extends Controller
             $command1=$connection->createCommand($sql1);
             $rows1=$command1->queryAll();
 
-            $sql2 = "SELECT nome, DATE_FORMAT(datanascimento,'%d-%m') as data1 FROM funcionarios WHERE  DAYOFYEAR(curdate()) <= DAYOFYEAR(`datanascimento`) + 30 AND DAYOFYEAR(`datanascimento`) >= dayofyear(curdate()) LIMIT 300;";
+            $sql2 = "SELECT nome, DATE_FORMAT(datanascimento,'%d-%m') as data1 FROM funcionarios WHERE  DAYOFYEAR(`datanascimento`) <= DAYOFYEAR(curdate()) + 30 AND DAYOFYEAR(`datanascimento`) >= dayofyear(curdate()) LIMIT 300;";
             $command2=$connection->createCommand($sql2);
             $rows2=$command2->queryAll();
             $this->render('index', array("notas" => $rows, "contratos" => $rows1, "aniversarios" => $rows2));
@@ -458,5 +459,46 @@ class SiteController extends Controller
         $mpdf->SetFooter('{PAGENO}');
         $mpdf->WriteHTML($this->render("printEnc",array("loja" => $loja, "artigos" => $rows), true));
         $mpdf->Output();
+    }
+
+    public function actionXlsInv($id)
+    {
+        if($id>0)
+        {
+            $loja_ = Loja::model()->findByPk($id);
+            $loja = $loja_->nome;
+        }
+        else
+        {
+            $loja = "Geral";
+        }
+        $sql = "SELECT a.id AS 'Artigo ID', a.descricao AS 'Descricao', REPLACE(precounidadeencomenda,'.',',') as 'P.Encomenda', tu1.nome AS 'Unidade Encomenda', REPLACE(precounidadeinventario,'.',',') as 'P.Inventario', tu2.nome AS 'Unidade Stock', f.nome AS 'Fornecedor'  ";
+        if($id > 0) {
+            $sql = $sql . ", ee.nome AS 'Encomenda', een.nome AS 'Entrega' ";
+        }
+        $sql = $sql . " , ta.nome as 'Familia' ";
+        $sql = $sql . " FROM artigos a ";
+        if($id > 0) {
+            $sql = $sql . " LEFT JOIN artigoloja al ON a.id = al.idartigo ";
+            $sql = $sql . " LEFT JOIN entidadeencomenda ee ON al.idencomenda = ee.id ";
+            $sql = $sql . " LEFT JOIN entidadeentrega een ON al.identrega = een.id ";
+        }
+        $sql = $sql . " LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id ";
+        $sql = $sql . " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
+        $sql = $sql . " LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id ";
+        $sql = $sql . " LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id ";
+        $sql = $sql . " WHERE a.activo = 1 ";
+        if($id > 0)
+        {
+            $sql = $sql . " AND al.idloja = " . $id;
+            $sql = $sql . " AND al.activo = 1";
+        }
+        $sql = $sql . " ORDER BY f.nome ASC, a.descricao ASC ";
+        $this->layout = "none";
+        $connection=Yii::app()->db;
+        $command=$connection->createCommand($sql);
+        $rows=$command->queryAll();
+        $this->layout = null;
+        $this->render("excel", array("loja" => $loja, "data" => $rows));
     }
 }

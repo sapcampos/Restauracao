@@ -92,7 +92,7 @@
         <a href="<?php echo $this->createUrl("print4", array("id" => $req->id, 'not' => 1));?>" target="_BLANK">Imprimir Restantes Compras</a>
 
     </div>
-    <div style="width:60%; float:left;">
+    <div style="width:40%; float:left;">
         <strong>Outras</strong>
         <br/>
         <a href="<?php echo $this->createUrl("print", array("id" => $req->id));?>" target="_BLANK">Imprimir S/Inventário</a>
@@ -101,7 +101,13 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
 
+    <div style="width:15%; float:left;">
+        <strong>Excel</strong>
+        <br/>
+        <a href="<?php echo $this->createUrl("createXls", array("id" => $req->id));?>" target="_BLANK">Imprimir Inventário</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+    </div>
 
     <br/><br/>
     <?php /*<div style="width: 100%">

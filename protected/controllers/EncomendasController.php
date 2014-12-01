@@ -28,7 +28,7 @@ class EncomendasController extends Controller
     {
         return array(
             array('allow',  // allow all users to perform 'index' and 'view' actions
-                'actions'=>array('index','view', 'print', 'print2', 'print3', 'print4'),
+                'actions'=>array('index','view', 'print', 'print2', 'print3', 'print4', 'createXls'),
                 'users'=>array('@'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -898,5 +898,32 @@ class EncomendasController extends Controller
             }
         }
         echo $print;
+    }
+
+    public function actionCreateXls($id)
+    {
+        $connection=Yii::app()->db;
+        $sql = "SELECT rl.id AS 'ReqLinhaID', f.nome AS 'Fornecedor', a.id AS idArtigo, a.descricao, REPLACE(a.precounidadeinventario,'.',',') AS 'Preço', REPLACE(rl.inventario,'.',',')  AS 'Inventario', tu2.nome AS 'Unidade Stock' FROM requesicao_linha rl ";
+        $sql = $sql . " LEFT JOIN requesicao r ON rl.idreq = r.id ";
+        $sql = $sql . " LEFT JOIN artigos a ON rl.idartigo = a.id ";
+        $sql = $sql . " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
+        $sql = $sql . " LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja ";
+        $sql = $sql . " LEFT JOIN entidadeentrega ee ON al.identrega = ee.id ";
+        $sql = $sql . " LEFT JOIN entidadeencomenda een ON al.idencomenda = een.id ";
+        $sql = $sql . "LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id";
+        $sql = $sql . " WHERE r.id = " . $id;
+        $command=$connection->createCommand($sql);
+        $req = Requesicao::model()->findByPk($id);
+        $loja = "";
+        if(isset($req))
+        {
+            $l = Loja::model()->findByPk($req->idloja);
+            if(isset($l))
+            {
+                $loja = $l->nome;
+            }
+        }
+        $rows=$command->queryAll();
+        $this->render("excel", array("loja" => $loja, "data" => $rows));
     }
 }
