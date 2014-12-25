@@ -493,7 +493,7 @@ class SiteController extends Controller
             $sql = $sql . " AND al.idloja = " . $id;
             $sql = $sql . " AND al.activo = 1";
         }
-        $sql = $sql . " ORDER BY f.nome ASC, a.descricao ASC ";
+        $sql = $sql . " ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC ";
         $this->layout = "none";
         $connection=Yii::app()->db;
         $command=$connection->createCommand($sql);

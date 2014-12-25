@@ -903,15 +903,18 @@ class EncomendasController extends Controller
     public function actionCreateXls($id)
     {
         $connection=Yii::app()->db;
-        $sql = "SELECT rl.id AS 'ReqLinhaID', f.nome AS 'Fornecedor', a.id AS idArtigo, a.descricao, REPLACE(a.precounidadeinventario,'.',',') AS 'Preço', REPLACE(rl.inventario,'.',',')  AS 'Inventario', tu2.nome AS 'Unidade Stock' FROM requesicao_linha rl ";
+        $sql = "SELECT rl.id AS 'ReqLinhaID', f.nome AS 'Fornecedor', a.id AS idArtigo, a.descricao, REPLACE(a.precounidadeinventario,'.',',') AS 'Preço', REPLACE(rl.inventario,'.',',')  AS 'Inventario', tu2.nome AS 'Unidade Stock', ";
+        $sql = $sql . " ta.nome AS 'Tipo Artigo' FROM requesicao_linha rl ";
         $sql = $sql . " LEFT JOIN requesicao r ON rl.idreq = r.id ";
         $sql = $sql . " LEFT JOIN artigos a ON rl.idartigo = a.id ";
         $sql = $sql . " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
         $sql = $sql . " LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja ";
         $sql = $sql . " LEFT JOIN entidadeentrega ee ON al.identrega = ee.id ";
         $sql = $sql . " LEFT JOIN entidadeencomenda een ON al.idencomenda = een.id ";
-        $sql = $sql . "LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id";
+        $sql = $sql . " LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id";
+        $sql = $sql . " LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id ";
         $sql = $sql . " WHERE r.id = " . $id;
+        $sql = $sql . " ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC ";
         $command=$connection->createCommand($sql);
         $req = Requesicao::model()->findByPk($id);
         $loja = "";

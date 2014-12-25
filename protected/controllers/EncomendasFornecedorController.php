@@ -461,9 +461,13 @@ class EncomendasFornecedorController extends Controller
         $command3=$connection->createCommand($sql3);
         $rows3=$command3->queryAll();
 
+        $isAviludo = false;
+        if($fornecedor == 5)
+        {
+            $isAviludo = true;
+        }
 
-
-        $this->render("update", array("rows" => $rows, "rows1" => $rows1, "rows2" => $rows2, "id" => $id, "ids" => $ids, "nome" => $nome, "data" => $data, "rows3" => $rows3, "obs" => $obs, "idestado" => $idestado) );
+        $this->render("update", array("rows" => $rows, "rows1" => $rows1, "rows2" => $rows2, "id" => $id, "ids" => $ids, "nome" => $nome, "data" => $data, "rows3" => $rows3, "obs" => $obs, "idestado" => $idestado, "isAviludo" => $isAviludo) );
 
     }
 
@@ -546,7 +550,14 @@ class EncomendasFornecedorController extends Controller
         $command2=$connection->createCommand($sql2);
         $rows2=$command2->queryAll();
         $mpdf->showImageErrors = true;
-        $mpdf->WriteHTML($this->render('print', array("rows" => $rows, "rows1" => $rows1, "rows2" => $rows2, "fornecedor" => $nome, "data" => $data,"rowsUnidades" => $rowsUnidades), true));
+
+        $isAviludo = false;
+        if($fornecedor == 5)
+        {
+            $isAviludo = true;
+        }
+
+        $mpdf->WriteHTML($this->render('print', array("rows" => $rows, "rows1" => $rows1, "rows2" => $rows2, "fornecedor" => $nome, "data" => $data,"rowsUnidades" => $rowsUnidades, "isAviludo" => $isAviludo), true));
         $mpdf->Output();
 
 

@@ -17,7 +17,34 @@
             <?php
             foreach($rows1 as $r1)
             {
-                echo "<td>".$r1["nome"]."</td>";
+                $codeAviludo = "";
+                if($isAviludo)
+                {
+                    switch($r1["id"])
+                    {
+                        case 1:
+                            $codeAviludo = "(401927 M2)";
+                            break;
+                        case 2:
+                            $codeAviludo = "(401927 M1)";
+                            break;
+                        case 3:
+                            $codeAviludo = "(403630 M1)";
+                            break;
+                        case 5:
+                            $codeAviludo = "(402467 M1)";
+                            break;
+                        case 9:
+                            $codeAviludo = "(402467 M3)";
+                            break;
+                    }
+                }
+                echo "<td>".$r1["nome"]."";
+                if($codeAviludo != "")
+                {
+                    echo "<br/>".$codeAviludo;
+                }
+                echo "</td>";
             }
             ?>
         </tr>

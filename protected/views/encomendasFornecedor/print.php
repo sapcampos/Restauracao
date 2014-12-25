@@ -21,7 +21,7 @@ border:1px solid #000000;
 <br/>
 <div style="width=100%;">
     <div style="width:110px;float:left;">
-        <img src="images/iceitmrpizza.jpeg" style="width:100px;height:75px"/>
+        <img src="images/iceitmrpizza1.jpg" style="width:100px;height:75px"/>
 <?php /*<img src="<?php echo Yii::app()->request->getBaseUrl(true)."/images/iceitmrpizza.jpeg"; ?>" width="100px" height="75px"/>*/?>
     </div>
     <div style="float:left; font-size: 10px; width:300px; font-family: Verdana, Arial, sans-serif;">
@@ -82,7 +82,35 @@ border:1px solid #000000;
         $width = 60/count($rows1);
         foreach($rows1 as $r1)
         {
-            echo "<td class=\"title\" style=\"width:".$width."%;text-align:center;\">".$r1["nome"]."</td>";
+            $codeAviludo = "";
+            if($isAviludo)
+            {
+                switch($r1["id"])
+                {
+                    case 1:
+                        $codeAviludo = "Cliente:<br/> 401927 M2";
+                        break;
+                    case 2:
+                        $codeAviludo = "Cliente:<br/> 401927 M1";
+                        break;
+                    case 3:
+                        $codeAviludo = "Cliente:<br/> 403630 M1";
+                        break;
+                    case 5:
+                        $codeAviludo = "Cliente:<br/> 402467 M1";
+                        break;
+                    case 9:
+                        $codeAviludo = "Cliente:<br/> 402467 M3";
+                        break;
+                }
+            }
+
+            if($codeAviludo != "")
+            {
+                $codeAviludo = "<br/><span style=\"font-size:12px;\">".$codeAviludo."</span>";
+            }
+
+            echo "<td class=\"title\" style=\"width:".$width."%;text-align:center;\">".$r1["nome"] . $codeAviludo . "</td>";
         }
         ?>
     </tr>
