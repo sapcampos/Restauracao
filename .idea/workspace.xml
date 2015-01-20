@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf33038-ddd5-479b-8667-b2a15d13d765" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/encomendas/geraInventario.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Artigos.php" afterPath="$PROJECT_DIR$/protected/models/Artigos.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/EncomendasController.php" afterPath="$PROJECT_DIR$/protected/controllers/EncomendasController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" afterPath="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/SiteController.php" afterPath="$PROJECT_DIR$/protected/controllers/SiteController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/artigos/_form.php" afterPath="$PROJECT_DIR$/protected/views/artigos/_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="$PROJECT_DIR$/protected/runtime/application.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/encomendas/excel.php" afterPath="$PROJECT_DIR$/protected/views/encomendas/excel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/site/index.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/site/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php" afterPath="$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/encomendasFornecedor/update.php" afterPath="$PROJECT_DIR$/protected/views/encomendasFornecedor/update.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Restauracao.iws" />
@@ -37,52 +44,164 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <file leaf-file-name="EncomendasController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.708334" vertical-offset="6904" max-vertical-offset="7635">
-              <caret line="495" column="75" selection-start-line="495" selection-start-column="24" selection-end-line="495" selection-end-column="75" />
+            <state vertical-scroll-proportion="-6.375" vertical-offset="14532" max-vertical-offset="15240">
+              <caret line="979" column="57" selection-start-line="979" selection-start-column="57" selection-end-line="979" selection-end-column="57" />
               <folding>
-                <marker date="1418081643000" expanded="true" signature="1009:1191" placeholder="SELECT e.id,..encomenda..." />
-                <marker date="1418081643000" expanded="true" signature="1326:1437" placeholder="SELECT c.id,..." />
-                <marker date="1418081643000" expanded="true" signature="2085:2290" placeholder="SELECT nome,..funcionarios..." />
-                <marker date="1418081643000" expanded="true" signature="10840:10970" placeholder="SELECT idart..requesicao_linha..." />
-                <marker date="1418081643000" expanded="true" signature="10916:10962" placeholder="SELECT MAX(i..requesicao..." />
-                <marker date="1418081643000" expanded="true" signature="14769:14919" placeholder="SELECT ef.id..entregafornecedor..." />
-                <marker date="1418081643000" expanded="true" signature="15090:15227" placeholder="SELECT f.nom..contrato..." />
-                <marker date="1418081643000" expanded="true" signature="15339:15394" placeholder="SELECT l.cor..loja..." />
+                <marker date="1421793595000" expanded="true" signature="1814:1895" placeholder="SELECT r.id ..requesicao..." />
+                <marker date="1421793595000" expanded="true" signature="9787:10016" placeholder="SELECT rl.id..." />
+                <marker date="1421793595000" expanded="true" signature="12587:12731" placeholder="SELECT rl.id..." />
+                <marker date="1421793595000" expanded="true" signature="13958:14038" placeholder="SELECT nome,..reqlog..." />
+                <marker date="1421793595000" expanded="true" signature="15824:15910" placeholder="SELECT id FR..requesicao..." />
+                <marker date="1421793595000" expanded="true" signature="16092:16210" placeholder="SELECT rl.id..." />
+                <marker date="1421793595000" expanded="true" signature="19259:19391" placeholder="SELECT a.des..." />
+                <marker date="1421793595000" expanded="true" signature="20387:20519" placeholder="SELECT a.des..." />
+                <marker date="1421793595000" expanded="true" signature="22837:22923" placeholder="SELECT id FR..requesicao..." />
+                <marker date="1421793595000" expanded="true" signature="23105:23224" placeholder="SELECT rl.id..." />
+                <marker date="1421793595000" expanded="true" signature="28775:29003" placeholder="SELECT rl.id..." />
+                <marker date="1421793595000" expanded="true" signature="31397:31560" placeholder="SELECT idart..requesicao_linha..." />
+                <marker date="1421793595000" expanded="true" signature="31480:31546" placeholder="SELECT MAX(i..requesicao..." />
+                <marker date="1421793595000" expanded="true" signature="32338:32418" placeholder="SELECT nome,..reqlog..." />
+                <marker date="1421793595000" expanded="true" signature="34967:35126" placeholder="SELECT id, d..artigos..." />
+                <marker date="1421793595000" expanded="true" signature="35014:35076" placeholder="SELECT idart..artigoloja..." />
+                <marker date="1421793595000" expanded="true" signature="35345:35548" placeholder="SELECT rl.en..." />
+                <marker date="1421793595000" expanded="true" signature="36651:36810" placeholder="SELECT id, d..artigos..." />
+                <marker date="1421793595000" expanded="true" signature="36698:36760" placeholder="SELECT idart..artigoloja..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EncomendasController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasController.php">
+      <file leaf-file-name="excel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/encomendas/excel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41723666" vertical-offset="13270" max-vertical-offset="14055">
-              <caret line="905" column="232" selection-start-line="905" selection-start-column="232" selection-end-line="905" selection-end-column="232" />
+            <state vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="930">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Artigos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/Artigos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="2070">
+              <caret line="96" column="41" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
               <folding>
-                <marker date="1418171551000" expanded="true" signature="1757:1838" placeholder="SELECT r.id ..requesicao..." />
-                <marker date="1418171551000" expanded="true" signature="9730:9959" placeholder="SELECT rl.id..." />
-                <marker date="1418171551000" expanded="true" signature="12530:12674" placeholder="SELECT rl.id..." />
-                <marker date="1418171551000" expanded="true" signature="13901:13981" placeholder="SELECT nome,..reqlog..." />
-                <marker date="1418171551000" expanded="true" signature="15767:15853" placeholder="SELECT id FR..requesicao..." />
-                <marker date="1418171551000" expanded="true" signature="16035:16153" placeholder="SELECT rl.id..." />
-                <marker date="1418171551000" expanded="true" signature="19202:19334" placeholder="SELECT a.des..." />
-                <marker date="1418171551000" expanded="true" signature="20330:20462" placeholder="SELECT a.des..." />
-                <marker date="1418171551000" expanded="true" signature="22780:22866" placeholder="SELECT id FR..requesicao..." />
-                <marker date="1418171551000" expanded="true" signature="23048:23167" placeholder="SELECT rl.id..." />
-                <marker date="1418171551000" expanded="true" signature="28718:28946" placeholder="SELECT rl.id..." />
-                <marker date="1418171551000" expanded="true" signature="31340:31503" placeholder="SELECT idart..requesicao_linha..." />
-                <marker date="1418171551000" expanded="true" signature="31423:31489" placeholder="SELECT MAX(i..requesicao..." />
-                <marker date="1418171551000" expanded="true" signature="32281:32361" placeholder="SELECT nome,..reqlog..." />
-                <marker date="1418171551000" expanded="true" signature="34910:35069" placeholder="SELECT id, d..artigos..." />
-                <marker date="1418171551000" expanded="true" signature="34957:35019" placeholder="SELECT idart..artigoloja..." />
-                <marker date="1418171551000" expanded="true" signature="35288:35491" placeholder="SELECT rl.en..." />
-                <marker date="1418171551000" expanded="true" signature="36594:36753" placeholder="SELECT id, d..artigos..." />
-                <marker date="1418171551000" expanded="true" signature="36641:36703" placeholder="SELECT idart..artigoloja..." />
-                <marker date="1418171551000" expanded="true" signature="37521:37814" placeholder="SELECT rl.id..." />
+                <marker date="1421273744000" expanded="true" signature="4134:4215" placeholder="Select count..artigoloja..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/artigos/_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1815">
+              <caret line="69" column="58" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
+              <folding>
+                <marker date="1421274541000" expanded="false" signature="3873:3895" placeholder="..." />
+                <marker date="1421274541000" expanded="false" signature="3940:3971" placeholder="..." />
+                <marker date="1421274541000" expanded="false" signature="4329:4360" placeholder="..." />
+                <marker date="1421274541000" expanded="false" signature="4866:4897" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2205">
+              <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="372" max-vertical-offset="2010">
+              <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/site/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1797" max-vertical-offset="2565">
+              <caret line="131" column="57" selection-start-line="131" selection-start-column="57" selection-end-line="131" selection-end-column="57" />
+              <folding>
+                <marker date="1421361695000" expanded="true" signature="411:429" placeholder="..." />
+                <marker date="1421361695000" expanded="true" signature="1469:1487" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EncomendasFornecedorController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="322.375" vertical-offset="14562" max-vertical-offset="15615">
+              <caret line="455" column="95" selection-start-line="455" selection-start-column="95" selection-end-line="455" selection-end-column="95" />
+              <folding>
+                <marker date="1421708634000" expanded="true" signature="2056:2226" placeholder="SELECT e.id,..." />
+                <marker date="1421708634000" expanded="true" signature="3752:3922" placeholder="SELECT e.id,..." />
+                <marker date="1421708634000" expanded="true" signature="5511:5681" placeholder="SELECT e.id,..." />
+                <marker date="1421708634000" expanded="true" signature="10197:10281" placeholder="UPDATE encom..." />
+                <marker date="1421708634000" expanded="true" signature="10975:11108" placeholder="SELECT id, n..fornecedores..." />
+                <marker date="1421708634000" expanded="true" signature="11022:11107" placeholder="SELECT idfor..encomenda_linha..." />
+                <marker date="1421708634000" expanded="true" signature="11585:11746" placeholder="SELECT quant..." />
+                <marker date="1421708634000" expanded="true" signature="12438:12614" placeholder="SELECT quant..." />
+                <marker date="1421708634000" expanded="true" signature="12787:12865" placeholder="SELECT id, n..loja..." />
+                <marker date="1421708634000" expanded="true" signature="12923:13003" placeholder="SELECT id, n..loja..." />
+                <marker date="1421708634000" expanded="true" signature="13223:13403" placeholder="SELECT id, d..artigos..." />
+                <marker date="1421708634000" expanded="true" signature="15998:16142" placeholder="SELECT quant..." />
+                <marker date="1421708634000" expanded="true" signature="16818:16946" placeholder="SELECT f.nom..encomenda..." />
+                <marker date="1421708634000" expanded="true" signature="17397:17475" placeholder="SELECT id, n..loja..." />
+                <marker date="1421708634000" expanded="true" signature="17588:17746" placeholder="SELECT id, d..artigos..." />
+                <marker date="1421708634000" expanded="true" signature="17635:17707" placeholder="SELECT idart..encomenda_linha..." />
+                <marker date="1421708634000" expanded="true" signature="17859:17895" placeholder="SELECT id, n..estadoencomenda..." />
+                <marker date="1421708634000" expanded="true" signature="20118:20279" placeholder="SELECT id, n..loja..." />
+                <marker date="1421708634000" expanded="true" signature="20190:20253" placeholder="SELECT disti..encomendalinha..." />
+                <marker date="1421708634000" expanded="true" signature="20392:20520" placeholder="SELECT f.nom..encomenda..." />
+                <marker date="1421708634000" expanded="true" signature="20970:21211" placeholder="SELECT a.id,..artigos..." />
+                <marker date="1421708634000" expanded="true" signature="21099:21170" placeholder="SELECT idart..encomenda_linha..." />
+                <marker date="1421708634000" expanded="true" signature="22719:22782" placeholder="SELECT disti..encomendalinha..." />
+                <marker date="1421708634000" expanded="true" signature="24419:24472" placeholder="SELECT idloj..sql..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="print.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1572" max-vertical-offset="2280">
+              <caret line="125" column="77" selection-start-line="125" selection-start-column="77" selection-end-line="125" selection-end-column="77" />
+              <folding>
+                <marker date="1421707697000" expanded="false" signature="3397:3412" placeholder="..." />
+                <marker date="1421707697000" expanded="false" signature="3727:3765" placeholder="..." />
+                <marker date="1421707697000" expanded="false" signature="3931:3969" placeholder="..." />
+                <marker date="1421707697000" expanded="true" signature="4036:4074" placeholder="..." />
+                <marker date="1421707697000" expanded="false" signature="4382:4422" placeholder="..." />
+                <marker date="1421707697000" expanded="false" signature="4655:4695" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geraInventario.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/views/encomendas/geraInventario.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7033898" vertical-offset="177" max-vertical-offset="1620">
+              <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,17 +241,21 @@
         <option value="$PROJECT_DIR$/protected/views/contrato/_form.php" />
         <option value="$PROJECT_DIR$/protected/controllers/ContratoController.php" />
         <option value="$PROJECT_DIR$/protected/views/site/calendarioEntregas.php" />
-        <option value="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/themes/bootstrap/views/site/index.php" />
-        <option value="$PROJECT_DIR$/protected/config/main.php" />
         <option value="$PROJECT_DIR$/protected/views/site/documentos.php" />
         <option value="$PROJECT_DIR$/protected/views/site/excel.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendas/update.php" />
         <option value="$PROJECT_DIR$/protected/views/encomendasFornecedor/update.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
-        <option value="$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php" />
         <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/models/Artigos.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/views/artigos/_form.php" />
+        <option value="$PROJECT_DIR$/themes/bootstrap/views/site/index.php" />
+        <option value="$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php" />
+        <option value="$PROJECT_DIR$/protected/views/encomendas/excel.php" />
         <option value="$PROJECT_DIR$/protected/controllers/EncomendasController.php" />
+        <option value="$PROJECT_DIR$/protected/views/encomendas/geraInventario.php" />
       </list>
     </option>
   </component>
@@ -184,6 +307,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -199,6 +323,112 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,6 +522,72 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encomendas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contrato" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artigos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restauracao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="runtime" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -334,7 +630,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -431,7 +726,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -440,8 +735,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6005291" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36695278" sideWeight="0.6706349" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.6005291" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39914164" sideWeight="0.6706349" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32832617" sideWeight="0.6005291" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -505,6 +800,34 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3555" max-vertical-offset="13605">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2205">
+          <caret line="68" column="89" selection-start-line="68" selection-start-column="89" selection-end-line="68" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3600" max-vertical-offset="7005">
+          <caret line="391" column="71" selection-start-line="391" selection-start-column="71" selection-end-line="391" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/column2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
@@ -516,7 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1995">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -566,16 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3600" max-vertical-offset="7005">
           <caret line="391" column="71" selection-start-line="391" selection-start-column="71" selection-end-line="391" selection-end-column="71" />
-          <folding>
-            <marker date="1418081643000" expanded="true" signature="1009:1191" placeholder="SELECT e.id,..encomenda..." />
-            <marker date="1418081643000" expanded="true" signature="1326:1437" placeholder="SELECT c.id,..." />
-            <marker date="1418081643000" expanded="true" signature="2085:2290" placeholder="SELECT nome,..funcionarios..." />
-            <marker date="1418081643000" expanded="true" signature="10840:10970" placeholder="SELECT idart..requesicao_linha..." />
-            <marker date="1418081643000" expanded="true" signature="10916:10962" placeholder="SELECT MAX(i..requesicao..." />
-            <marker date="1418081643000" expanded="true" signature="14769:14919" placeholder="SELECT ef.id..entregafornecedor..." />
-            <marker date="1418081643000" expanded="true" signature="15090:15227" placeholder="SELECT f.nom..contrato..." />
-            <marker date="1418081643000" expanded="true" signature="15339:15394" placeholder="SELECT l.cor..loja..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -597,88 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1995">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/calendarioEntregas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2011" max-vertical-offset="2430">
-          <caret line="125" column="26" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/ContratoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="3120">
-          <caret line="78" column="53" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/contrato/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="2535">
-          <caret line="87" column="32" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/pesquisa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="2280">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3555" max-vertical-offset="13605">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2205">
-          <caret line="68" column="89" selection-start-line="68" selection-start-column="89" selection-end-line="68" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3600" max-vertical-offset="7005">
-          <caret line="391" column="71" selection-start-line="391" selection-start-column="71" selection-end-line="391" selection-end-column="71" />
-          <folding>
-            <marker date="1418081643000" expanded="true" signature="1009:1191" placeholder="SELECT e.id,..encomenda..." />
-            <marker date="1418081643000" expanded="true" signature="1326:1437" placeholder="SELECT c.id,..." />
-            <marker date="1418081643000" expanded="true" signature="2085:2290" placeholder="SELECT nome,..funcionarios..." />
-            <marker date="1418081643000" expanded="true" signature="10840:10970" placeholder="SELECT idart..requesicao_linha..." />
-            <marker date="1418081643000" expanded="true" signature="10916:10962" placeholder="SELECT MAX(i..requesicao..." />
-            <marker date="1418081643000" expanded="true" signature="14769:14919" placeholder="SELECT ef.id..entregafornecedor..." />
-            <marker date="1418081643000" expanded="true" signature="15090:15227" placeholder="SELECT f.nom..contrato..." />
-            <marker date="1418081643000" expanded="true" signature="15339:15394" placeholder="SELECT l.cor..loja..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/column2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1995">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,31 +968,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/pesquisa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="2280">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/contrato/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="2535">
-          <caret line="87" column="32" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/ContratoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="3120">
           <caret line="78" column="53" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/calendarioEntregas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2011" max-vertical-offset="2430">
-          <caret line="125" column="26" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -780,19 +989,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1242" max-vertical-offset="1995">
-          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/runtime/application.log">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="10200" max-vertical-offset="29085">
           <caret line="680" column="0" selection-start-line="680" selection-start-column="0" selection-end-line="680" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/documentos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="570">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375" vertical-offset="1125" max-vertical-offset="4935">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/EntregaFornecedorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2655">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.84131324" vertical-offset="0" max-vertical-offset="1830">
+          <caret line="46" column="29" selection-start-line="19" selection-start-column="16" selection-end-line="46" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="7635">
+          <caret line="50" column="78" selection-start-line="50" selection-start-column="78" selection-end-line="50" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/contrato/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.5" vertical-offset="1827" max-vertical-offset="2535">
+          <caret line="161" column="7" selection-start-line="150" selection-start-column="4" selection-end-line="161" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/pesquisa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="51.125" vertical-offset="1572" max-vertical-offset="2280">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/calendarioEntregas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.25" vertical-offset="1437" max-vertical-offset="2430">
+          <caret line="125" column="26" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/printEnc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="732">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/printInv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="732">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="732">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -803,179 +1080,153 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/excel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="318" max-vertical-offset="1050">
+          <caret line="64" column="39" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Artigos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="2070">
+          <caret line="96" column="41" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
+          <folding>
+            <marker date="1421273744000" expanded="true" signature="4134:4215" placeholder="Select count..artigoloja..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2205">
-          <caret line="68" column="89" selection-start-line="68" selection-start-column="79" selection-end-line="68" selection-end-column="89" />
+          <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/artigos/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1815">
+          <caret line="69" column="58" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
+          <folding>
+            <marker date="1421274541000" expanded="false" signature="3873:3895" placeholder="..." />
+            <marker date="1421274541000" expanded="false" signature="3940:3971" placeholder="..." />
+            <marker date="1421274541000" expanded="false" signature="4329:4360" placeholder="..." />
+            <marker date="1421274541000" expanded="false" signature="4866:4897" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="372" max-vertical-offset="2010">
+          <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/bootstrap/views/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="821" max-vertical-offset="2040">
-          <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1797" max-vertical-offset="2565">
+          <caret line="131" column="57" selection-start-line="131" selection-start-column="57" selection-end-line="131" selection-end-column="57" />
           <folding>
-            <marker date="1413415290000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1413415290000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/documentos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="570">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/excel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1170">
-          <caret line="64" column="39" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
-          <folding>
-            <element signature="e#7#510#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/excel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="1020">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375" vertical-offset="1125" max-vertical-offset="4935">
-          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
-          <folding>
-            <marker date="1414712111000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1414712111000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1414712111000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1414712111000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/EntregaFornecedorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2655">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0" vertical-offset="7905" max-vertical-offset="15615">
-          <caret line="559" column="206" selection-start-line="559" selection-start-column="206" selection-end-line="559" selection-end-column="206" />
-          <folding>
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT e.id,..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT e.id,..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT e.id,..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="UPDATE encom..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..fornecedores..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT idfor..encomenda_linha..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT quant..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT quant..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..loja..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..loja..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT id, d..artigos..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT quant..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT f.nom..encomenda..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..loja..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT id, d..artigos..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT idart..encomenda_linha..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..estadoencomenda..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..loja..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT disti..encomendalinha..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT f.nom..encomenda..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT a.id,..artigos..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT idart..encomenda_linha..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT disti..encomendalinha..." />
-            <marker date="1417735378000" expanded="true" signature="-1:-1" placeholder="SELECT idloj..sql..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84131324" vertical-offset="0" max-vertical-offset="1830">
-          <caret line="46" column="29" selection-start-line="19" selection-start-column="16" selection-end-line="46" selection-end-column="29" />
-          <folding>
-            <element signature="e#3421#3670#0#PHP" expanded="true" />
-            <marker date="1417735225000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417735225000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417735225000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417735225000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417735225000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417735225000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1421361695000" expanded="true" signature="411:429" placeholder="..." />
+            <marker date="1421361695000" expanded="true" signature="1469:1487" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/encomendasFornecedor/print.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15868673" vertical-offset="229" max-vertical-offset="2295">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1572" max-vertical-offset="2280">
+          <caret line="125" column="77" selection-start-line="125" selection-start-column="77" selection-end-line="125" selection-end-column="77" />
           <folding>
-            <marker date="1417739035000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417739035000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1417739035000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417739035000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417739035000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1417739035000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1421707697000" expanded="false" signature="3397:3412" placeholder="..." />
+            <marker date="1421707697000" expanded="false" signature="3727:3765" placeholder="..." />
+            <marker date="1421707697000" expanded="false" signature="3931:3969" placeholder="..." />
+            <marker date="1421707697000" expanded="true" signature="4036:4074" placeholder="..." />
+            <marker date="1421707697000" expanded="false" signature="4382:4422" placeholder="..." />
+            <marker date="1421707697000" expanded="false" signature="4655:4695" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/excel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.708334" vertical-offset="6904" max-vertical-offset="7635">
-          <caret line="495" column="75" selection-start-line="495" selection-start-column="24" selection-end-line="495" selection-end-column="75" />
+        <state vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="930">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasFornecedorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="322.375" vertical-offset="14562" max-vertical-offset="15615">
+          <caret line="455" column="95" selection-start-line="455" selection-start-column="95" selection-end-line="455" selection-end-column="95" />
           <folding>
-            <marker date="1418081643000" expanded="true" signature="1009:1191" placeholder="SELECT e.id,..encomenda..." />
-            <marker date="1418081643000" expanded="true" signature="1326:1437" placeholder="SELECT c.id,..." />
-            <marker date="1418081643000" expanded="true" signature="2085:2290" placeholder="SELECT nome,..funcionarios..." />
-            <marker date="1418081643000" expanded="true" signature="10840:10970" placeholder="SELECT idart..requesicao_linha..." />
-            <marker date="1418081643000" expanded="true" signature="10916:10962" placeholder="SELECT MAX(i..requesicao..." />
-            <marker date="1418081643000" expanded="true" signature="14769:14919" placeholder="SELECT ef.id..entregafornecedor..." />
-            <marker date="1418081643000" expanded="true" signature="15090:15227" placeholder="SELECT f.nom..contrato..." />
-            <marker date="1418081643000" expanded="true" signature="15339:15394" placeholder="SELECT l.cor..loja..." />
+            <marker date="1421708634000" expanded="true" signature="2056:2226" placeholder="SELECT e.id,..." />
+            <marker date="1421708634000" expanded="true" signature="3752:3922" placeholder="SELECT e.id,..." />
+            <marker date="1421708634000" expanded="true" signature="5511:5681" placeholder="SELECT e.id,..." />
+            <marker date="1421708634000" expanded="true" signature="10197:10281" placeholder="UPDATE encom..." />
+            <marker date="1421708634000" expanded="true" signature="10975:11108" placeholder="SELECT id, n..fornecedores..." />
+            <marker date="1421708634000" expanded="true" signature="11022:11107" placeholder="SELECT idfor..encomenda_linha..." />
+            <marker date="1421708634000" expanded="true" signature="11585:11746" placeholder="SELECT quant..." />
+            <marker date="1421708634000" expanded="true" signature="12438:12614" placeholder="SELECT quant..." />
+            <marker date="1421708634000" expanded="true" signature="12787:12865" placeholder="SELECT id, n..loja..." />
+            <marker date="1421708634000" expanded="true" signature="12923:13003" placeholder="SELECT id, n..loja..." />
+            <marker date="1421708634000" expanded="true" signature="13223:13403" placeholder="SELECT id, d..artigos..." />
+            <marker date="1421708634000" expanded="true" signature="15998:16142" placeholder="SELECT quant..." />
+            <marker date="1421708634000" expanded="true" signature="16818:16946" placeholder="SELECT f.nom..encomenda..." />
+            <marker date="1421708634000" expanded="true" signature="17397:17475" placeholder="SELECT id, n..loja..." />
+            <marker date="1421708634000" expanded="true" signature="17588:17746" placeholder="SELECT id, d..artigos..." />
+            <marker date="1421708634000" expanded="true" signature="17635:17707" placeholder="SELECT idart..encomenda_linha..." />
+            <marker date="1421708634000" expanded="true" signature="17859:17895" placeholder="SELECT id, n..estadoencomenda..." />
+            <marker date="1421708634000" expanded="true" signature="20118:20279" placeholder="SELECT id, n..loja..." />
+            <marker date="1421708634000" expanded="true" signature="20190:20253" placeholder="SELECT disti..encomendalinha..." />
+            <marker date="1421708634000" expanded="true" signature="20392:20520" placeholder="SELECT f.nom..encomenda..." />
+            <marker date="1421708634000" expanded="true" signature="20970:21211" placeholder="SELECT a.id,..artigos..." />
+            <marker date="1421708634000" expanded="true" signature="21099:21170" placeholder="SELECT idart..encomenda_linha..." />
+            <marker date="1421708634000" expanded="true" signature="22719:22782" placeholder="SELECT disti..encomendalinha..." />
+            <marker date="1421708634000" expanded="true" signature="24419:24472" placeholder="SELECT idloj..sql..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/EncomendasController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41723666" vertical-offset="13270" max-vertical-offset="14055">
-          <caret line="905" column="232" selection-start-line="905" selection-start-column="232" selection-end-line="905" selection-end-column="232" />
+        <state vertical-scroll-proportion="-6.375" vertical-offset="14532" max-vertical-offset="15240">
+          <caret line="979" column="57" selection-start-line="979" selection-start-column="57" selection-end-line="979" selection-end-column="57" />
           <folding>
-            <marker date="1418171551000" expanded="true" signature="1757:1838" placeholder="SELECT r.id ..requesicao..." />
-            <marker date="1418171551000" expanded="true" signature="9730:9959" placeholder="SELECT rl.id..." />
-            <marker date="1418171551000" expanded="true" signature="12530:12674" placeholder="SELECT rl.id..." />
-            <marker date="1418171551000" expanded="true" signature="13901:13981" placeholder="SELECT nome,..reqlog..." />
-            <marker date="1418171551000" expanded="true" signature="15767:15853" placeholder="SELECT id FR..requesicao..." />
-            <marker date="1418171551000" expanded="true" signature="16035:16153" placeholder="SELECT rl.id..." />
-            <marker date="1418171551000" expanded="true" signature="19202:19334" placeholder="SELECT a.des..." />
-            <marker date="1418171551000" expanded="true" signature="20330:20462" placeholder="SELECT a.des..." />
-            <marker date="1418171551000" expanded="true" signature="22780:22866" placeholder="SELECT id FR..requesicao..." />
-            <marker date="1418171551000" expanded="true" signature="23048:23167" placeholder="SELECT rl.id..." />
-            <marker date="1418171551000" expanded="true" signature="28718:28946" placeholder="SELECT rl.id..." />
-            <marker date="1418171551000" expanded="true" signature="31340:31503" placeholder="SELECT idart..requesicao_linha..." />
-            <marker date="1418171551000" expanded="true" signature="31423:31489" placeholder="SELECT MAX(i..requesicao..." />
-            <marker date="1418171551000" expanded="true" signature="32281:32361" placeholder="SELECT nome,..reqlog..." />
-            <marker date="1418171551000" expanded="true" signature="34910:35069" placeholder="SELECT id, d..artigos..." />
-            <marker date="1418171551000" expanded="true" signature="34957:35019" placeholder="SELECT idart..artigoloja..." />
-            <marker date="1418171551000" expanded="true" signature="35288:35491" placeholder="SELECT rl.en..." />
-            <marker date="1418171551000" expanded="true" signature="36594:36753" placeholder="SELECT id, d..artigos..." />
-            <marker date="1418171551000" expanded="true" signature="36641:36703" placeholder="SELECT idart..artigoloja..." />
-            <marker date="1418171551000" expanded="true" signature="37521:37814" placeholder="SELECT rl.id..." />
+            <marker date="1421793595000" expanded="true" signature="1814:1895" placeholder="SELECT r.id ..requesicao..." />
+            <marker date="1421793595000" expanded="true" signature="9787:10016" placeholder="SELECT rl.id..." />
+            <marker date="1421793595000" expanded="true" signature="12587:12731" placeholder="SELECT rl.id..." />
+            <marker date="1421793595000" expanded="true" signature="13958:14038" placeholder="SELECT nome,..reqlog..." />
+            <marker date="1421793595000" expanded="true" signature="15824:15910" placeholder="SELECT id FR..requesicao..." />
+            <marker date="1421793595000" expanded="true" signature="16092:16210" placeholder="SELECT rl.id..." />
+            <marker date="1421793595000" expanded="true" signature="19259:19391" placeholder="SELECT a.des..." />
+            <marker date="1421793595000" expanded="true" signature="20387:20519" placeholder="SELECT a.des..." />
+            <marker date="1421793595000" expanded="true" signature="22837:22923" placeholder="SELECT id FR..requesicao..." />
+            <marker date="1421793595000" expanded="true" signature="23105:23224" placeholder="SELECT rl.id..." />
+            <marker date="1421793595000" expanded="true" signature="28775:29003" placeholder="SELECT rl.id..." />
+            <marker date="1421793595000" expanded="true" signature="31397:31560" placeholder="SELECT idart..requesicao_linha..." />
+            <marker date="1421793595000" expanded="true" signature="31480:31546" placeholder="SELECT MAX(i..requesicao..." />
+            <marker date="1421793595000" expanded="true" signature="32338:32418" placeholder="SELECT nome,..reqlog..." />
+            <marker date="1421793595000" expanded="true" signature="34967:35126" placeholder="SELECT id, d..artigos..." />
+            <marker date="1421793595000" expanded="true" signature="35014:35076" placeholder="SELECT idart..artigoloja..." />
+            <marker date="1421793595000" expanded="true" signature="35345:35548" placeholder="SELECT rl.en..." />
+            <marker date="1421793595000" expanded="true" signature="36651:36810" placeholder="SELECT id, d..artigos..." />
+            <marker date="1421793595000" expanded="true" signature="36698:36760" placeholder="SELECT idart..artigoloja..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/encomendas/geraInventario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7033898" vertical-offset="177" max-vertical-offset="1620">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

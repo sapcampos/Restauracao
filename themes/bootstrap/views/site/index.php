@@ -59,40 +59,64 @@ echo "<h3 style='text-align: right;'>Notas</h3>";
         </thead>
         <tbody>
 <?php
+$datesToShow = array();
+$datesToShow1 = array();
 if(isset($contratos) && count($contratos) > 0)
 {
         $msg = "";
         foreach($contratos as $c)
         {
+            $endDate = false;
             if($c["fim"] != '0000-00-00 00:00:00')
             {
-
-            }else
+                $dateNow = new DateTime();
+                $d_ = $date->format('Y-m-d');
+                $d0 = new DateTime($c["fim"]);
+                $date = new DateTime();
+                $date->add(new DateInterval('P15D'));
+                $controlDate = $date->format('Y-m-d');
+                if($d0 >= $controlDate && $d_ <= $controlDate)
+                {
+                    $endDate = true;
+                }
+            }
+            if($endDate == true)
+            {
+                $dataregistar = $c["fim"];
+                $_dataamostrar = new DateTime($dataregistar);
+                $_dataamostrar = $_dataamostrar->format('Y-m-d');
+            }
+            else
             {
                 $msg = "";
                 $date = new DateTime();
-                $date->add(new DateInterval('P15D'));
+                $date->add(new DateInterval('P30D'));
                 $controlDate = $date->format('Y-m-d');
                 $date = new DateTime($controlDate);
                 $d1 = new DateTime($c["datacontrolo1"]);
                 $d2 = new DateTime($c["datacontrolo2"]);
                 $d3 = new DateTime($c["datacontrolo3"]);
+                $controlDate1 = new DateTime();
                 $dataregistar = $controlDate;
+                /*echo "[".$date->format('Y-m-d')."||";
+                echo $d1->format('Y-m-d')."||";
+                echo $d2->format('Y-m-d')."||";
+                echo $d3->format('Y-m-d')."]";*/
                 $msg = "";
                 //print_r($d2);
                 //print_r($date);
-                if($d1 >= $date)
+                if($d1 >= $controlDate1 && $d1 <= $date)
                 {
                     $dataregistar = $c["datacontrolo1"];
                     $msg = " 1ª mês periodo experimental";
 
                 }
-                elseif($d2 >= $date)
+                elseif($d2 >= $controlDate1 && $d2 <= $date)
                 {
                     $dataregistar = $c["datacontrolo2"];
                     $msg = " 2ª mês periodo experimental";
                 }
-                elseif($d3 >= $date)
+                elseif($d3 >= $controlDate1 && $d3 <= $date)
                 {
                     $dataregistar = $c["datacontrolo3"];
                     $msg = " 3ª mês periodo experimental";
@@ -103,15 +127,26 @@ if(isset($contratos) && count($contratos) > 0)
             }
             if($msg != "")
             {
-            ?>
-            <tr style="border-bottom: 1px solid #000;">
-                <td style="width:10%; border-right: 1px solid #000; padding-left: 5px;"><?php
+                $msg = $c["nome"] . " (". $loja_ .") " . $msg;
+                $datesToShow[ $_dataamostrar] = $msg;
+                $datesToShow1[ $_dataamostrar] = $c["id"];
 
-                    echo "<a href=\"".$this->createUrl("contrato/update",array("id"=>$c["id"]))."\">".$_dataamostrar."</a>";?></td>
-                <td style="width:20%; border-right: 1px solid #000; padding-left: 5px;"><?php echo $c["nome"] . " (".$loja_ .") " . $msg;?></td>
-            </tr>
-<?php   }
+            }
         }
+        //print_r($datesToShow);
+        ksort($datesToShow);
+        ksort($datesToShow1);
+        //print_r($datesToShow);
+
+    foreach($datesToShow as $k => $v) {
+        ?>
+        <tr style="border-bottom: 1px solid #000;">
+        <td style="width:10%; border-right: 1px solid #000; padding-left: 5px;"><?php
+
+            echo "<a href=\"" . $this->createUrl("contrato/update", array("id" => $datesToShow1[$k])) . "\">" . $k . "</a>";?></td>
+        <td style="width:20%; border-right: 1px solid #000; padding-left: 5px;"><?php echo $v; ?></td>
+        </tr><?php
+    }
 }
 if(isset($aniversarios) && count($aniversarios) > 0)
 {

@@ -53,6 +53,7 @@ $this->widget('bootstrap.widgets.TbNavbar',array(
                     array('label'=>'Estatisticas', 'url'=>array('/encomendasFornecedor/estatisticas')),
                     array('label'=>'Estatisticas Custos', 'url'=>array('/encomendasFornecedor/estatisticasCusto')),
                     array('label'=>'Graficos Encomendas', 'url'=>array('/encomendas/estatistica')),
+                    array('label'=>'Gerador Inventario', 'url'=>array('/encomendas/gerarInventario')),
                 )),
                 array('label'=>'Enc. a Fornecedor', 'url'=>'#', 'items' => array(
                     array('label'=>'Criar Enc. Forn.', 'url'=>array('/encomendasFornecedor/create')),

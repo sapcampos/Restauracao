@@ -13,6 +13,8 @@
  * @property integer $tipounidade_stock
  * @property float $precounitarioencomenda
  * @property float $precounitarioinventario
+ * @property string $tipo
+ * @property string $referencia
  *
  * @property float $fornecedor0;
  * @property float $tipoartigo0;
@@ -51,9 +53,11 @@ class Artigos extends CActiveRecord
 			array('idfornecedor, tipoartigo, activo, tipounidade_enc, tipounidade_stock, tipoartigo', 'numerical', 'integerOnly'=>true),
             array('precounidadeencomenda, precounidadeinventario', 'numerical'),
 			array('descricao', 'length', 'max'=>256),
+            array('tipo', 'length', 'max' => 2),
+            array('referencia', 'length', 'max' => 60),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, descricao, idfornecedor, activo, tipounidade_enc, tipounidade_stock', 'safe', 'on'=>'search'),
+			array('id, descricao, idfornecedor, activo, tipounidade_enc, tipounidade_stock, tipo, referencia', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -89,6 +93,8 @@ class Artigos extends CActiveRecord
             'tipoartigo' => 'Tipo Artigo',
             'precounidadeencomenda' => 'Preço Unidade Encomenda',
             'precounidadeinventario' => 'Preço Unidade Inventário',
+            'tipo' => 'Tipo',
+            'referencia' => 'Referência',
 		);
 	}
 

@@ -1931,3 +1931,253 @@ Stack trace:
 #24 {main}
 REQUEST_URI=/restauracao/encomendas/updATE/118
 ---
+2015/01/08 23:09:36 [error] [php] Object of class DateTime could not be converted to string (/Users/sapc/Sites/restauracao/themes/bootstrap/views/site/index.php:100)
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CController.php(870): SiteController->renderFile()
+#1 /Users/sapc/Sites/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#2 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(58): SiteController->render()
+#3 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#4 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(287): SiteController->runAction()
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#7 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): SiteController->run()
+#8 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/sapc/Sites/restauracao/index.php(31): CWebApplication->run()
+REQUEST_URI=/restauracao/
+in /Users/sapc/Sites/restauracao/themes/bootstrap/views/site/index.php (100)
+in /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php (58)
+in /Users/sapc/Sites/restauracao/index.php (31)
+2015/01/08 23:09:47 [error] [php] Object of class DateTime could not be converted to string (/Users/sapc/Sites/restauracao/themes/bootstrap/views/site/index.php:100)
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CController.php(870): SiteController->renderFile()
+#1 /Users/sapc/Sites/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#2 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(58): SiteController->render()
+#3 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#4 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(287): SiteController->runAction()
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#7 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): SiteController->run()
+#8 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/sapc/Sites/restauracao/index.php(31): CWebApplication->run()
+REQUEST_URI=/restauracao/
+in /Users/sapc/Sites/restauracao/themes/bootstrap/views/site/index.php (100)
+in /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php (58)
+in /Users/sapc/Sites/restauracao/index.php (31)
+2015/01/08 23:10:15 [error] [php] Object of class DateTime could not be converted to string (/Users/sapc/Sites/restauracao/themes/bootstrap/views/site/index.php:100)
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CController.php(870): SiteController->renderFile()
+#1 /Users/sapc/Sites/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#2 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(58): SiteController->render()
+#3 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#4 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(287): SiteController->runAction()
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#7 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): SiteController->run()
+#8 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/sapc/Sites/restauracao/index.php(31): CWebApplication->run()
+REQUEST_URI=/restauracao/
+in /Users/sapc/Sites/restauracao/themes/bootstrap/views/site/index.php (100)
+in /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php (58)
+in /Users/sapc/Sites/restauracao/index.php (31)
+2015/01/13 00:32:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "geraInventario" solicitada.' in /Users/sapc/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CController.php(271): CController->missingAction('geraInventario')
+#1 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('geraInventario')
+#2 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('encomendas/gera...')
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#5 {main}
+REQUEST_URI=/restauracao/encomendas/geraInventario
+---
+2015/01/13 00:32:21 [error] [php] Undefined variable: lojas (/Users/sapc/Sites/restauracao/protected/views/encomendas/geraInventario.php:3)
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CController.php(870): EncomendasController->renderFile()
+#1 /Users/sapc/Sites/yii/framework/web/CController.php(783): EncomendasController->renderPartial()
+#2 /Users/sapc/Sites/restauracao/protected/controllers/EncomendasController.php(939): EncomendasController->render()
+#3 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): EncomendasController->actionGerarInventario()
+#4 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(134): EncomendasController->runAction()
+#6 /Users/sapc/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Users/sapc/Sites/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Users/sapc/Sites/yii/framework/web/filters/CInlineFilter.php(59): EncomendasController->filterAccessControl()
+#9 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/sapc/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Users/sapc/Sites/yii/framework/web/CController.php(266): EncomendasController->runActionWithFilters()
+#12 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): EncomendasController->run()
+#13 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/sapc/Sites/restauracao/index.php(31): CWebApplication->run()
+REQUEST_URI=/restauracao/encomendas/gerarInventario
+in /Users/sapc/Sites/restauracao/protected/views/encomendas/geraInventario.php (3)
+in /Users/sapc/Sites/restauracao/protected/controllers/EncomendasController.php (939)
+in /Users/sapc/Sites/restauracao/index.php (31)
+2015/01/13 01:24:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in /Users/sapc/Sites/yii/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 /Users/sapc/Sites/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/sapc/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Users/sapc/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('inventarioXls')
+#8 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('encomendas/inve...')
+#9 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#11 {main}
+REQUEST_URI=/restauracao/encomendas/inventarioXls/?id=1,2&inicio=2014-12-28&fim=2015-01-03
+HTTP_REFERER=http://localhost:8888/restauracao/encomendas/gerarInventario
+---
+2015/01/13 01:24:50 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'data > '2014-12-28' and data < '2015-01-03' GROUP BY idloja) max  ON r.data = ma' at line 1. A declaração SQL executada foi: SELECT rl.id AS 'ReqLinhaID', f.nome AS 'Fornecedor', a.id AS idArtigo, a.descricao, REPLACE(a.precounidadeinventario,'.',',') AS 'Preço', REPLACE(rl.inventario,'.',',')  AS 'Inventario', tu2.nome AS 'Unidade Stock',  ta.nome AS 'Tipo Artigo' FROM requesicao_linha rl  LEFT JOIN requesicao r ON rl.idreq = r.id  LEFT JOIN artigos a ON rl.idartigo = a.id  LEFT JOIN fornecedores f ON a.idfornecedor = f.id  LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja  LEFT JOIN entidadeentrega ee ON al.identrega = ee.id  LEFT JOIN entidadeencomenda een ON al.idencomenda = een.id  LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id  WHERE r.id in (SELECT r.id FROM requesicao r JOIN (SELECT idloja, max(data) as data FROM requesicao WHERE idloja in (1,2)  data > '2014-12-28' and data < '2015-01-03' GROUP BY idloja) max  ON r.data = max.data AND r.idloja = max.idloja GROUP BY r.idloja, r.data)  ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC .
+in /Users/sapc/Sites/restauracao/protected/controllers/EncomendasController.php (972)
+in /Users/sapc/Sites/restauracao/index.php (31)
+2015/01/13 01:24:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'data > '2014-12-28' and data < '2015-01-03' GROUP BY idloja) max  ON r.data = ma' at line 1. The SQL statement executed was: SELECT rl.id AS 'ReqLinhaID', f.nome AS 'Fornecedor', a.id AS idArtigo, a.descricao, REPLACE(a.precounidadeinventario,'.',',') AS 'Preço', REPLACE(rl.inventario,'.',',')  AS 'Inventario', tu2.nome AS 'Unidade Stock',  ta.nome AS 'Tipo Artigo' FROM requesicao_linha rl  LEFT JOIN requesicao r ON rl.idreq = r.id  LEFT JOIN artigos a ON rl.idartigo = a.id  LEFT JOIN fornecedores f ON a.idfornecedor = f.id  LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja  LEFT JOIN entidadeentrega ee ON al.identrega = ee.id  LEFT JOIN entidadeencomenda een ON al.idencomenda = een.id  LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id  WHERE r.id in (SELECT r.id FROM requesicao r JOIN (SELECT idloja, max(data) as data FROM requesicao WHERE idloja in (1,2)  data > '2014-12-28' and data < '2015-01-03' GROUP BY idloja) max  ON r.data = max.data AND r.idloja = max.idloja GROUP BY r.idloja, r.data)  ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC ' in /Users/sapc/Sites/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/sapc/Sites/restauracao/protected/controllers/EncomendasController.php(972): CDbCommand->queryAll()
+#2 [internal function]: EncomendasController->actionInventarioXls('1,2', '2014-12-28', '2015-01-03')
+#3 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(EncomendasController), Array)
+#4 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(EncomendasController), Object(ReflectionMethod), Array)
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /Users/sapc/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /Users/sapc/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /Users/sapc/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Users/sapc/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('inventarioXls')
+#14 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('encomendas/inve...')
+#15 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#17 {main}
+REQUEST_URI=/restauracao/encomendas/inventarioXls/?id=1,2&inicio=2014-12-28&fim=2015-01-03
+HTTP_REFERER=http://localhost:8888/restauracao/encomendas/gerarInventario
+---
+2015/01/13 01:25:42 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'data > '2014-12-28' and data < '2015-01-03' GROUP BY idloja) max  ON r1.data = m' at line 1. A declaração SQL executada foi: SELECT rl.id AS 'ReqLinhaID', f.nome AS 'Fornecedor', a.id AS idArtigo, a.descricao, REPLACE(a.precounidadeinventario,'.',',') AS 'Preço', REPLACE(rl.inventario,'.',',')  AS 'Inventario', tu2.nome AS 'Unidade Stock',  ta.nome AS 'Tipo Artigo' FROM requesicao_linha rl  LEFT JOIN requesicao r ON rl.idreq = r.id  LEFT JOIN artigos a ON rl.idartigo = a.id  LEFT JOIN fornecedores f ON a.idfornecedor = f.id  LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja  LEFT JOIN entidadeentrega ee ON al.identrega = ee.id  LEFT JOIN entidadeencomenda een ON al.idencomenda = een.id  LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id  WHERE r.id in (SELECT r1.id FROM requesicao r1 JOIN (SELECT idloja, max(data) as data FROM requesicao WHERE idloja in (1,2)  data > '2014-12-28' and data < '2015-01-03' GROUP BY idloja) max  ON r1.data = max.data AND r1.idloja = max.idloja GROUP BY r1.idloja, r1.data)  ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC .
+in /Users/sapc/Sites/restauracao/protected/controllers/EncomendasController.php (972)
+in /Users/sapc/Sites/restauracao/index.php (31)
+2015/01/13 01:25:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'data > '2014-12-28' and data < '2015-01-03' GROUP BY idloja) max  ON r1.data = m' at line 1. The SQL statement executed was: SELECT rl.id AS 'ReqLinhaID', f.nome AS 'Fornecedor', a.id AS idArtigo, a.descricao, REPLACE(a.precounidadeinventario,'.',',') AS 'Preço', REPLACE(rl.inventario,'.',',')  AS 'Inventario', tu2.nome AS 'Unidade Stock',  ta.nome AS 'Tipo Artigo' FROM requesicao_linha rl  LEFT JOIN requesicao r ON rl.idreq = r.id  LEFT JOIN artigos a ON rl.idartigo = a.id  LEFT JOIN fornecedores f ON a.idfornecedor = f.id  LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja  LEFT JOIN entidadeentrega ee ON al.identrega = ee.id  LEFT JOIN entidadeencomenda een ON al.idencomenda = een.id  LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id  WHERE r.id in (SELECT r1.id FROM requesicao r1 JOIN (SELECT idloja, max(data) as data FROM requesicao WHERE idloja in (1,2)  data > '2014-12-28' and data < '2015-01-03' GROUP BY idloja) max  ON r1.data = max.data AND r1.idloja = max.idloja GROUP BY r1.idloja, r1.data)  ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC ' in /Users/sapc/Sites/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/sapc/Sites/restauracao/protected/controllers/EncomendasController.php(972): CDbCommand->queryAll()
+#2 [internal function]: EncomendasController->actionInventarioXls('1,2', '2014-12-28', '2015-01-03')
+#3 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(EncomendasController), Array)
+#4 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(EncomendasController), Object(ReflectionMethod), Array)
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /Users/sapc/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /Users/sapc/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /Users/sapc/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Users/sapc/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('inventarioXls')
+#14 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('encomendas/inve...')
+#15 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#17 {main}
+REQUEST_URI=/restauracao/encomendas/inventarioXls/?id=1,2&inicio=2014-12-28&fim=2015-01-03
+HTTP_REFERER=http://localhost:8888/restauracao/encomendas/gerarInventario
+---
+2015/01/13 01:26:43 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'r1.idloja' in 'where clause'. A declaração SQL executada foi: SELECT rl.id AS 'ReqLinhaID', f.nome AS 'Fornecedor', a.id AS idArtigo, a.descricao, REPLACE(a.precounidadeinventario,'.',',') AS 'Preço', REPLACE(rl.inventario,'.',',')  AS 'Inventario', tu2.nome AS 'Unidade Stock',  ta.nome AS 'Tipo Artigo' FROM requesicao_linha rl  LEFT JOIN requesicao r ON rl.idreq = r.id  LEFT JOIN artigos a ON rl.idartigo = a.id  LEFT JOIN fornecedores f ON a.idfornecedor = f.id  LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja  LEFT JOIN entidadeentrega ee ON al.identrega = ee.id  LEFT JOIN entidadeencomenda een ON al.idencomenda = een.id  LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id  WHERE r.id in ( SELECT r1.id FROM requesicao r1 JOIN (SELECT idloja, max(data) as data FROM requesicao WHERE r1.idloja in (1,2) AND  data > '2014-12-28' and data < '2015-01-03' GROUP BY idloja) max  ON r1.data = max.data AND r1.idloja = max.idloja GROUP BY r1.idloja, r1.data )  ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC .
+in /Users/sapc/Sites/restauracao/protected/controllers/EncomendasController.php (972)
+in /Users/sapc/Sites/restauracao/index.php (31)
+2015/01/13 01:26:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'r1.idloja' in 'where clause'. The SQL statement executed was: SELECT rl.id AS 'ReqLinhaID', f.nome AS 'Fornecedor', a.id AS idArtigo, a.descricao, REPLACE(a.precounidadeinventario,'.',',') AS 'Preço', REPLACE(rl.inventario,'.',',')  AS 'Inventario', tu2.nome AS 'Unidade Stock',  ta.nome AS 'Tipo Artigo' FROM requesicao_linha rl  LEFT JOIN requesicao r ON rl.idreq = r.id  LEFT JOIN artigos a ON rl.idartigo = a.id  LEFT JOIN fornecedores f ON a.idfornecedor = f.id  LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja  LEFT JOIN entidadeentrega ee ON al.identrega = ee.id  LEFT JOIN entidadeencomenda een ON al.idencomenda = een.id  LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id  WHERE r.id in ( SELECT r1.id FROM requesicao r1 JOIN (SELECT idloja, max(data) as data FROM requesicao WHERE r1.idloja in (1,2) AND  data > '2014-12-28' and data < '2015-01-03' GROUP BY idloja) max  ON r1.data = max.data AND r1.idloja = max.idloja GROUP BY r1.idloja, r1.data )  ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC ' in /Users/sapc/Sites/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/sapc/Sites/restauracao/protected/controllers/EncomendasController.php(972): CDbCommand->queryAll()
+#2 [internal function]: EncomendasController->actionInventarioXls('1,2', '2014-12-28', '2015-01-03')
+#3 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(EncomendasController), Array)
+#4 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(EncomendasController), Object(ReflectionMethod), Array)
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /Users/sapc/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /Users/sapc/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /Users/sapc/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Users/sapc/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#12 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('inventarioXls')
+#14 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('encomendas/inve...')
+#15 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#17 {main}
+REQUEST_URI=/restauracao/encomendas/inventarioXls/?id=1,2&inicio=2014-12-28&fim=2015-01-03
+HTTP_REFERER=http://localhost:8888/restauracao/encomendas/gerarInventario
+---
+2015/01/14 23:28:07 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'c32_restauracao.utilizadores' doesn't exist. A declaração SQL executada foi: SHOW COLUMNS FROM `utilizadores`.
+in /Users/sapc/Sites/restauracao/protected/models/Utilizadores.php (22)
+in /Users/sapc/Sites/restauracao/protected/components/UserIdentity.php (26)
+in /Users/sapc/Sites/restauracao/protected/models/LoginForm.php (52)
+2015/01/14 23:28:07 [error] [exception.CDbException] exception 'CDbException' with message 'A tabela "utilizadores" da classe de active record "Utilizadores", não pôde ser encontrada no banco de dados.' in /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Utilizadores))
+#1 /Users/sapc/Sites/restauracao/protected/models/Utilizadores.php(22): CActiveRecord::model('Utilizadores')
+#2 /Users/sapc/Sites/restauracao/protected/components/UserIdentity.php(26): Utilizadores::model()
+#3 /Users/sapc/Sites/restauracao/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#4 /Users/sapc/Sites/yii/framework/validators/CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 /Users/sapc/Sites/yii/framework/validators/CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 /Users/sapc/Sites/yii/framework/base/CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(121): CModel->validate()
+#8 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#9 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#13 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#14 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#16 {main}
+REQUEST_URI=/restauracao/site/login
+HTTP_REFERER=http://localhost:8888/restauracao/site/login
+---
+2015/01/14 23:28:33 [error] [php] Missing argument 2 for CHtml::listData(), called in /Users/sapc/Sites/restauracao/protected/views/artigos/_form.php on line 70 and defined (/Users/sapc/Sites/yii/framework/web/helpers/CHtml.php:1765)
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CBaseController.php(96): ArtigosController->renderInternal()
+#1 /Users/sapc/Sites/yii/framework/web/CController.php(870): ArtigosController->renderFile()
+#2 /Users/sapc/Sites/restauracao/protected/views/artigos/update.php(18): ArtigosController->renderPartial()
+#3 /Users/sapc/Sites/yii/framework/web/CBaseController.php(127): require()
+#4 /Users/sapc/Sites/yii/framework/web/CBaseController.php(96): ArtigosController->renderInternal()
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(870): ArtigosController->renderFile()
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(783): ArtigosController->renderPartial()
+#7 /Users/sapc/Sites/restauracao/protected/controllers/ArtigosController.php(268): ArtigosController->render()
+#8 unknown(0): ArtigosController->actionUpdate()
+#9 /Users/sapc/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#10 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(134): ArtigosController->runAction()
+#13 /Users/sapc/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Users/sapc/Sites/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /Users/sapc/Sites/yii/framework/web/filters/CInlineFilter.php(59): ArtigosController->filterAccessControl()
+#16 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /Users/sapc/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /Users/sapc/Sites/yii/framework/web/CController.php(266): ArtigosController->runActionWithFilters()
+#19 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): ArtigosController->run()
+#20 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#21 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Users/sapc/Sites/restauracao/index.php(31): CWebApplication->run()
+REQUEST_URI=/restauracao/artigos/update/7
+in /Users/sapc/Sites/restauracao/protected/views/artigos/_form.php (70)
+in /Users/sapc/Sites/restauracao/protected/views/artigos/update.php (18)
+in /Users/sapc/Sites/restauracao/protected/controllers/ArtigosController.php (268)
+2015/01/15 23:41:09 [error] [php] Undefined offset: 0 (/Users/sapc/Sites/restauracao/themes/bootstrap/views/site/index.php:146)
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CController.php(870): SiteController->renderFile()
+#1 /Users/sapc/Sites/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#2 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(58): SiteController->render()
+#3 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#4 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(287): SiteController->runAction()
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#7 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): SiteController->run()
+#8 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/sapc/Sites/restauracao/index.php(31): CWebApplication->run()
+REQUEST_URI=/restauracao/
+in /Users/sapc/Sites/restauracao/themes/bootstrap/views/site/index.php (146)
+in /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php (58)
+in /Users/sapc/Sites/restauracao/index.php (31)

@@ -64,6 +64,18 @@
             <?php echo $form->checkbox($model,'activo'); ?>
             <?php echo $form->error($model,'activo'); ?>
         </div>
+
+        <div class="row row2">
+            <?php echo $form->labelEx($model,'tipo'); ?>
+            <?php echo $form->dropDownList($model,'tipo', array("M" => "M", "P" => "P", "A" => "A", "S" => "S", "T" => "T")); ?>
+            <?php echo $form->error($model,'tipo'); ?>
+        </div>
+
+        <div class="row row2">
+            <?php echo $form->labelEx($model,'referencia'); ?>
+            <?php echo $form->textField($model,'referencia'); ?>
+            <?php echo $form->error($model,'referencia'); ?>
+        </div>
     </div>
     <div>&nbsp;</div>
     <div class="row" style="width:100%; padding-top: 10px; padding-left: 20px;">

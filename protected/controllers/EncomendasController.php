@@ -28,7 +28,7 @@ class EncomendasController extends Controller
     {
         return array(
             array('allow',  // allow all users to perform 'index' and 'view' actions
-                'actions'=>array('index','view', 'print', 'print2', 'print3', 'print4', 'createXls'),
+                'actions'=>array('index','view', 'print', 'print2', 'print3', 'print4', 'createXls', 'gerarInventario', 'inventarioXls', 'inventarioXlsTemp'),
                 'users'=>array('@'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -914,6 +914,85 @@ class EncomendasController extends Controller
         $sql = $sql . " LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id";
         $sql = $sql . " LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id ";
         $sql = $sql . " WHERE r.id = " . $id;
+        $sql = $sql . " ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC ";
+        $command=$connection->createCommand($sql);
+        $req = Requesicao::model()->findByPk($id);
+        $loja = "";
+        if(isset($req))
+        {
+            $l = Loja::model()->findByPk($req->idloja);
+            if(isset($l))
+            {
+                $loja = $l->nome;
+            }
+        }
+        $rows=$command->queryAll();
+        $this->render("excel", array("loja" => $loja, "data" => $rows));
+    }
+
+    public function actionGerarInventario()
+    {
+        $lojas = Loja::model()->findAll(array(
+            'condition' => 'activo=1',
+
+        ));
+        $this->render("geraInventario", array("lojas" => $lojas));
+    }
+
+    public function actionInventarioXls($id,$inicio,$fim)
+    {
+        $connection=Yii::app()->db;
+        $sql = "SELECT a.tipo, a.referencia, a.descricao, REPLACE(a.precounidadeinventario,'.',',') AS 'Preço', REPLACE(SUM(rl.inventario),'.',',')  AS 'Inventario', tu2.nome AS 'Unidade Stock' ";
+        $sql = $sql . "  FROM requesicao_linha rl ";
+        $sql = $sql . " LEFT JOIN requesicao r ON rl.idreq = r.id ";
+        $sql = $sql . " LEFT JOIN artigos a ON rl.idartigo = a.id ";
+        $sql = $sql . " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
+        $sql = $sql . " LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja ";
+        $sql = $sql . " LEFT JOIN entidadeentrega ee ON al.identrega = ee.id ";
+        $sql = $sql . " LEFT JOIN entidadeencomenda een ON al.idencomenda = een.id ";
+        $sql = $sql . " LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id";
+        $sql = $sql . " LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id ";
+        $sql = $sql . " WHERE r.id in (";
+        $sql = $sql . " SELECT r1.id FROM requesicao r1 JOIN (SELECT idloja, max(data) as data FROM requesicao  WHERE idloja in (" . $id . ") AND ";
+        $sql = $sql . " data > '" . $inicio . " 00:00:00' and data < '" . $fim . " 23:59:99' GROUP BY idloja) max ";
+        $sql = $sql . " ON r1.data = max.data AND r1.idloja = max.idloja GROUP BY r1.idloja, r1.data";
+        $sql = $sql . " ) ";
+        $sql = $sql . " GROUP BY a.descricao ";
+        $sql = $sql . " ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC ";
+        $command=$connection->createCommand($sql);
+        $req = Requesicao::model()->findByPk($id);
+        $loja = "";
+        if(isset($req))
+        {
+            $l = Loja::model()->findByPk($req->idloja);
+            if(isset($l))
+            {
+                $loja = $l->nome;
+            }
+        }
+        $rows=$command->queryAll();
+        $this->render("excel", array("loja" => $loja, "data" => $rows));
+    }
+
+    public function actionInventarioXlsTemp($id,$inicio,$fim)
+    {
+        $connection=Yii::app()->db;
+        $sql = "SELECT a.tipo, a.referencia, a.descricao, REPLACE(SUM(rl.inventario),'.',',')  AS 'Inventario', tu2.nome AS 'Unidade Stock' ";
+        $sql = $sql . "  FROM requesicao_linha rl ";
+        $sql = $sql . " LEFT JOIN requesicao r ON rl.idreq = r.id ";
+        $sql = $sql . " LEFT JOIN artigos a ON rl.idartigo = a.id ";
+        $sql = $sql . " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
+        $sql = $sql . " LEFT JOIN artigoloja al ON a.id = al.idartigo AND r.idloja = al.idloja ";
+        $sql = $sql . " LEFT JOIN entidadeentrega ee ON al.identrega = ee.id ";
+        $sql = $sql . " LEFT JOIN entidadeencomenda een ON al.idencomenda = een.id ";
+        $sql = $sql . " LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id";
+        $sql = $sql . " LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id ";
+        $sql = $sql . " WHERE r.id in (";
+        $sql = $sql . " SELECT r1.id FROM requesicao r1 JOIN (SELECT idloja, max(data) as data FROM requesicao  WHERE idloja in (" . $id . ") AND ";
+        $sql = $sql . " data > '" . $inicio . " 00:00:00' and data < '" . $fim . " 23:59:99' GROUP BY idloja) max ";
+        $sql = $sql . " ON r1.data = max.data AND r1.idloja = max.idloja GROUP BY r1.idloja, r1.data";
+        $sql = $sql . " ) ";
+        $sql = $sql . " GROUP BY a.descricao ";
         $sql = $sql . " ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC ";
         $command=$connection->createCommand($sql);
         $req = Requesicao::model()->findByPk($id);

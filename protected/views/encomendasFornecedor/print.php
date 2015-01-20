@@ -122,7 +122,8 @@ border:1px solid #000000;
         echo "<tr>";
         echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$r2["descricao"]."</td>";
         //echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$r2["unidade"]."</td>";
-        echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$rows["u".$r2["id"]]."</td>";
+        //echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$rows["u".$r2["id"]]."</td>";
+        echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$r2["unidade"]."</td>";
         foreach($rows1 as $r1)
         {
 
@@ -141,8 +142,6 @@ border:1px solid #000000;
         echo "</tr>";
         $i++;
     }
-    echo "--->";
-    print_r($rowsUnidades);
     ?>
     </tbody>
 </table>

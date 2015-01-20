@@ -46,9 +46,9 @@ class SiteController extends Controller
             $sql1 = $sql1 . " LEFT JOIN funcionarios f ON c.idutilizador = f.id ";
             $sql1 = $sql1 . " LEFT JOIN loja l ON c.idloja = l.id ";
             $sql1 = $sql1 . " WHERE (c.fim IS NULL OR c.fim >= NOW() OR c.fim = '0000-00-00 00:00:00') ";
-            $sql1 = $sql1 . " AND ( c.datacontrolo1 <= DATE_ADD(NOW(),INTERVAL 15 DAY) ";
-            $sql1 = $sql1 . " OR c.datacontrolo2 <= DATE_ADD(NOW(),INTERVAL 15 DAY) ";
-            $sql1 = $sql1 . " OR c.datacontrolo3 <= DATE_ADD(NOW(),INTERVAL 15 DAY) )";
+            $sql1 = $sql1 . " AND ( c.datacontrolo1 <= DATE_ADD(NOW(),INTERVAL 30 DAY) ";
+            $sql1 = $sql1 . " OR c.datacontrolo2 <= DATE_ADD(NOW(),INTERVAL 30 DAY) ";
+            $sql1 = $sql1 . " OR c.datacontrolo3 <= DATE_ADD(NOW(),INTERVAL 30 DAY) )";
             $command1=$connection->createCommand($sql1);
             $rows1=$command1->queryAll();
 
