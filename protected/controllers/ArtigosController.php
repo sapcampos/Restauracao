@@ -130,7 +130,13 @@ class ArtigosController extends Controller
 				$this->redirect(array('update','id'=>$model->id));
             }
 		}
-
+        $sql = "SELECT MAX(CAST(referencia as UNSIGNED)) as 'MaxRef' FROM artigos";
+        $connection=Yii::app()->db;
+        $command=$connection->createCommand($sql);
+        $maxVal=$command->select("MaxRef")->queryRow();
+        if($model->referencia == "") {
+            $model->referencia = (int)$maxVal["MaxRef"] + 1;
+        }
 		$this->render('create',array(
 			'model'=>$model,
             'arr' => $arr,
