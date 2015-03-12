@@ -2373,3 +2373,59 @@ REQUEST_URI=/restauracao/encomendas/evolucaoFornecedor/?id=17&idloja=2&inicio=20
 in /Users/sapc/Sites/restauracao/protected/views/encomendas/excel2.php (7)
 in /Users/sapc/Sites/restauracao/protected/controllers/EncomendasController.php (1077)
 in /Users/sapc/Sites/restauracao/index.php (31)
+2015/02/11 23:58:45 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Sua requisição é inválida.' in /Users/sapc/Sites/yii/framework/web/CController.php:337
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/sapc/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /Users/sapc/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /Users/sapc/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#7 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('getEvFornecedor')
+#9 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('encomendas/getE...')
+#10 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#12 {main}
+REQUEST_URI=/restauracao/encomendas/getEvFornecedor
+HTTP_REFERER=http://localhost:8888/restauracao/index.php
+---
+2015/02/11 23:59:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "geraFornecedor" solicitada.' in /Users/sapc/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CController.php(271): CController->missingAction('geraFornecedor')
+#1 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('geraFornecedor')
+#2 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('encomendas/gera...')
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#5 {main}
+REQUEST_URI=/restauracao/encomendas/geraFornecedor/?id=13&loja=1
+HTTP_REFERER=http://localhost:8888/restauracao/encomendas/getEvFornecedor
+---
+2015/02/12 00:00:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "geraFornecedor" solicitada.' in /Users/sapc/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CController.php(271): CController->missingAction('geraFornecedor')
+#1 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('geraFornecedor')
+#2 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('encomendas/gera...')
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#5 {main}
+REQUEST_URI=/restauracao/encomendas/geraFornecedor/?id=13&loja=1
+HTTP_REFERER=http://localhost:8888/restauracao/encomendas/getEvFornecedor
+---
+2015/03/12 23:37:34 [error] [php] Undefined variable: criteria (/Users/sapc/Sites/restauracao/protected/controllers/ArtigosController.php:394)
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(134): ArtigosController->runAction()
+#1 /Users/sapc/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Users/sapc/Sites/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /Users/sapc/Sites/yii/framework/web/filters/CInlineFilter.php(59): ArtigosController->filterAccessControl()
+#4 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(266): ArtigosController->runActionWithFilters()
+#7 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): ArtigosController->run()
+#8 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/sapc/Sites/restauracao/index.php(31): CWebApplication->run()
+REQUEST_URI=/restauracao/artigos/index
+in /Users/sapc/Sites/restauracao/protected/controllers/ArtigosController.php (394)
+in /Users/sapc/Sites/restauracao/index.php (31)

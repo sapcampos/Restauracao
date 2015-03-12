@@ -273,7 +273,7 @@ class SiteController extends Controller
         $sql = $sql . " LEFT JOIN entidadeentrega een ON al.identrega = een.id ";
         $sql = $sql . " LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id ";
         $sql = $sql . " LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id ";
-        $sql = $sql . " WHERE a.activo = 1 AND al.idloja = " . $id . " AND al.activo = 1";
+        $sql = $sql . " WHERE a.activo = 1 AND a.deleted = 0 AND al.idloja = " . $id . " AND al.activo = 1";
         $sql = $sql . " ORDER BY f.nome ASC, a.descricao ASC ";
 
         $connection=Yii::app()->db;

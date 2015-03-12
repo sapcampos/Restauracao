@@ -281,8 +281,10 @@ class ArtigosController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
-
+		//$this->loadModel($id)->delete();
+        $model = $this->loadModel($id);
+        $model->deleted = true;
+        $model->save();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
@@ -383,6 +385,16 @@ class ArtigosController extends Controller
                 $criteria = " descricao like '%" . $_POST["pesq"] . "%' ";
             }
         }
+        if(!empty($criteria))
+        {
+            $criteria = $criteria . " AND deleted = 0 ";
+        }
+        else
+        {
+            $criteria = " deleted = 0 ";
+        }
+
+
         if(!empty($criteria))
         {
 

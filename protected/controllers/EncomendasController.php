@@ -1009,11 +1009,75 @@ class EncomendasController extends Controller
         $this->render("excel", array("loja" => $loja, "data" => $rows));
     }
 
-    public function actionGetEvFornecedor()
+    public function actionGetEvFornecedor($id = 0,$inicio = "",$fim = "", $loja = 0)
     {
         $fornecedores = Fornecedores::model()->findAll();
         $lojas = Loja::model()->findAll();
-        $this->render("geraFornecedor", array("fornecedores" => $fornecedores, "lojas" => $lojas));
+        $fornecedor = null;
+        $rows0 = null;
+        $rows1 = null;
+        $rows2 = null;
+        $fornecedor = null;
+
+        if($_REQUEST != null && $id > 0)
+        {
+            $connection=Yii::app()->db;
+            $sql = "SELECT YEAR(e.data) AS 'ano', MONTH(e.data) AS 'mes', el.idartigo as 'artigo', ";
+            $sql .= " SUM(el.quantidade) as 'Qt', AVG(el.quantidade) as 'AVG' ";
+            $sql .= " FROM encomendalinha el";
+            $sql .= " LEFT JOIN encomenda e ON el.idencomenda = e.id";
+            $sql .= " LEFT JOIN artigos a ON el.idartigo = a.id";
+            $sql .= " WHERE e.id IN (SELECT id FROM encomenda ) AND el.idfornecedor = " . $id . " ";
+            if($inicio != "")
+            {
+                $sql .= " AND  e.data > '" . $inicio . " 00:00:00' ";
+            }
+            if($fim != "")
+            {
+                $sql .= " AND  e.data < '" . $fim . " 23:59:99' ";
+            }
+            if($loja > 0)
+            {
+                $sql .= " AND  el.idloja =" . $loja . " ";
+            }
+            $sql .= " GROUP BY  YEAR(e.data) DESC, MONTH(e.data) DESC, idartigo LIMIT 0,100000;";
+            $command=$connection->createCommand($sql);
+            $rows2=$command->queryAll();
+
+            $sql1 = "SELECT a.id as 'id', a.descricao as 'artigo', tu.nome as 'unidade' from artigos a ";
+            $sql1 .= " LEFT JOIN tipounidade tu ON a.tipounidade_enc = tu.id ";
+            $sql1 .= " WHERE a.idfornecedor = " . $id . " ";
+            if($loja > 0)
+            {
+                $sql1 .= " AND a.id IN (SELECT idartigo FROM artigoloja WHERE idloja = " . $loja . " AND activo = 1) ";
+            }
+            $sql1 .= " ORDER BY a.descricao ASC;";
+            $command1=$connection->createCommand($sql1);
+            $rows0=$command1->queryAll();
+
+            $sql2 = "SELECT YEAR(e.data) AS 'ano', MONTH(e.data) as 'mes' from encomenda e ";
+            $sql2 .= " LEFT JOIN encomendalinha el ON el.idencomenda = e.id ";
+            $sql2 .= " WHERE el.idfornecedor = " . $id . " ";
+            if($inicio != "")
+            {
+                $sql2 .= " AND  e.data > '" . $inicio . " 00:00:00' ";
+            }
+            if($fim != "")
+            {
+                $sql2 .= " AND  e.data < '" . $fim . " 23:59:99' ";
+            }
+            if($loja > 0)
+            {
+                $sql2 .= " AND  el.idloja =" . $loja . " ";
+            }
+            $sql2 .= " GROUP BY YEAR(e.data) ASC, MONTH(e.data) ASC";
+            $command2=$connection->createCommand($sql2);
+            $rows1 = $command2->queryAll();
+
+            $fornecedor = Fornecedores::model()->findByPk($id);
+        }
+
+        $this->render("geraFornecedor", array("fornecedores" => $fornecedores, "lojas" => $lojas,"fornecedor1" => $fornecedor, "rows0" => $rows0, "rows1" => $rows1, "rows2" => $rows2, "inicio" => $inicio, "fim" => $fim, "loja1" => $loja));
     }
 
     public function actionEvolucaoFornecedor($id,$inicio = "",$fim = "", $loja = 0)
@@ -1073,6 +1137,6 @@ class EncomendasController extends Controller
 
         $fornecedor = Fornecedores::model()->findByPk($id);
 
-        $this->render("excel2", array("fornecedor" => $fornecedor, "rows0" => $rows0, "rows1" => $rows1, "rows2" => $rows2));
+        $this->render("excel2", array("fornecedor" => $fornecedor, "rows0" => $rows0, "rows1" => $rows1, "rows2" => $rows2, "inicio" => $inicio, "fim" => $fim, "idloja" => $id));
     }
 }

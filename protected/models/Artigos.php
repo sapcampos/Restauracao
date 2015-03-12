@@ -15,6 +15,7 @@
  * @property float $precounitarioinventario
  * @property string $tipo
  * @property string $referencia
+ * @property bool $deleted
  *
  * @property float $fornecedor0;
  * @property float $tipoartigo0;
@@ -57,7 +58,7 @@ class Artigos extends CActiveRecord
             array('referencia', 'length', 'max' => 60),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, descricao, idfornecedor, activo, tipounidade_enc, tipounidade_stock, tipo, referencia', 'safe', 'on'=>'search'),
+			array('id, descricao, idfornecedor, activo, tipounidade_enc, tipounidade_stock, tipo, referencia, deleted', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -95,6 +96,7 @@ class Artigos extends CActiveRecord
             'precounidadeinventario' => 'Preço Unidade Inventário',
             'tipo' => 'Tipo',
             'referencia' => 'Referência',
+            'deleted' => 'deleted'
 		);
 	}
 
