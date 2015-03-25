@@ -24,6 +24,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'type' => 'raw',
             'value' => 'CHtml::link("Abrir", array("site/xlsinv", "id" => $data->id), array("target" => "_BLANK")) ',
         ),
+        array(
+            'name' => 'Artigos p/fornecedor',
+            'type' => 'raw',
+            'value' => 'CHtml::link("Abrir", array("site/xlsinvArt", "id" => $data->id), array("target" => "_BLANK")) ',
+        ),
     ),
 ));
 ?>

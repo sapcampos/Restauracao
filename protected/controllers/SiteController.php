@@ -501,4 +501,41 @@ class SiteController extends Controller
         $this->layout = null;
         $this->render("excel", array("loja" => $loja, "data" => $rows));
     }
+
+    public function actionXlsInvArt($id)
+    {
+        if($id>0)
+        {
+            $loja_ = Loja::model()->findByPk($id);
+            $loja = $loja_->nome;
+        }
+        else
+        {
+            $loja = "Geral";
+        }
+        $sql = "SELECT f.nome AS 'Fornecedor', a.descricao AS 'Descricao', '' AS 'Ficha Tecnica', '' AS 'Notas'  ";
+        $sql = $sql . " FROM artigos a ";
+        if($id > 0) {
+            $sql = $sql . " LEFT JOIN artigoloja al ON a.id = al.idartigo ";
+            $sql = $sql . " LEFT JOIN entidadeencomenda ee ON al.idencomenda = ee.id ";
+            $sql = $sql . " LEFT JOIN entidadeentrega een ON al.identrega = een.id ";
+        }
+        $sql = $sql . " LEFT JOIN tipoartigo ta ON a.tipoartigo = ta.id ";
+        $sql = $sql . " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";
+        $sql = $sql . " LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id ";
+        $sql = $sql . " LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id ";
+        $sql = $sql . " WHERE a.activo = 1 ";
+        if($id > 0)
+        {
+            $sql = $sql . " AND al.idloja = " . $id;
+            $sql = $sql . " AND al.activo = 1";
+        }
+        $sql = $sql . " ORDER BY ta.ordem ASC, f.nome ASC, a.descricao ASC ";
+        $this->layout = "none";
+        $connection=Yii::app()->db;
+        $command=$connection->createCommand($sql);
+        $rows=$command->queryAll();
+        $this->layout = null;
+        $this->render("excel1", array("loja" => $loja, "data" => $rows));
+    }
 }
