@@ -2429,3 +2429,21 @@ Stack trace:
 REQUEST_URI=/restauracao/artigos/index
 in /Users/sapc/Sites/restauracao/protected/controllers/ArtigosController.php (394)
 in /Users/sapc/Sites/restauracao/index.php (31)
+2015/04/03 23:15:56 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'c19_restauracao.artigosvenda' doesn't exist. A declaração SQL executada foi: SHOW COLUMNS FROM `artigosvenda`.
+in /Users/sapc/Sites/restauracao/index.php (31)
+2015/04/03 23:19:00 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'c19_restauracao.artigosvendaloja' doesn't exist. A declaração SQL executada foi: SHOW COLUMNS FROM `artigosvendaloja`.
+in /Users/sapc/Sites/restauracao/index.php (31)
+2015/04/03 23:33:10 [error] [php] require_once(Text/Diff.php): failed to open stream: No such file or directory (/Users/sapc/Sites/yii/framework/gii/components/TextDiff.php:6)
+Stack trace:
+#0 unknown(0): autoload()
+#1 /Users/sapc/Sites/yii/framework/gii/CCodeGenerator.php(110): spl_autoload_call()
+#2 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): ModelGenerator->actionDiff()
+#3 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /Users/sapc/Sites/yii/framework/web/CController.php(287): ModelGenerator->runAction()
+#5 /Users/sapc/Sites/yii/framework/web/CController.php(266): ModelGenerator->runActionWithFilters()
+#6 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): ModelGenerator->run()
+#7 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#8 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Users/sapc/Sites/restauracao/index.php(31): CWebApplication->run()
+REQUEST_URI=/restauracao/gii/model/diff/id/0
+in /Users/sapc/Sites/restauracao/index.php (31)
