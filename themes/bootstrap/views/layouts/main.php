@@ -68,6 +68,10 @@ $this->widget('bootstrap.widgets.TbNavbar',array(
                     array('label'=>'Funcionários', 'url'=>array('/funcionarios/index')),
 
                 )),
+                array('label'=>'Registo Diário', 'url'=>'#', 'items' => array(
+                    array('label'=>'Lista', 'url'=>array('/Registodiario/index')),
+                    array('label'=>'Criar', 'url'=>array('/Registodiario/create')),
+                )),
                 //array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
                 //array('label'=>'Contact', 'url'=>array('/site/contact')),
                 array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
@@ -96,7 +100,10 @@ else if(Yii::app()->user->id > 1)
                         array('label'=>'Estatisticas Custos', 'url'=>array('/encomendasFornecedor/estatisticasCusto')),
                         array('label'=>'Graficos Encomendas', 'url'=>array('/encomendas/estatistica')),
                     )),
-
+                    array('label'=>'Registo Diário', 'url'=>'#', 'items' => array(
+                        array('label'=>'Lista', 'url'=>array('/Registodiario/index')),
+                        array('label'=>'Criar', 'url'=>array('/Registodiario/create')),
+                    )),
                     //array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
                     //array('label'=>'Contact', 'url'=>array('/site/contact')),
                     array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
