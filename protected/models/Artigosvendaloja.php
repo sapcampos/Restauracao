@@ -7,6 +7,7 @@
  * @property integer $ID
  * @property integer $IDArtigoVenda
  * @property integer $IDLoja
+ * @property bool $activo
  *
  * The followings are the available model relations:
  * @property Artigosvenda $iDArtigoVenda
@@ -44,7 +45,7 @@ class Artigosvendaloja extends CActiveRecord
 			array('IDArtigoVenda, IDLoja', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('ID, IDArtigoVenda, IDLoja', 'safe', 'on'=>'search'),
+			array('ID, IDArtigoVenda, IDLoja, activo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,6 +71,7 @@ class Artigosvendaloja extends CActiveRecord
 			'ID' => 'ID',
 			'IDArtigoVenda' => 'Idartigo Venda',
 			'IDLoja' => 'Idloja',
+            'activo' => 'Activo',
 		);
 	}
 
@@ -87,6 +89,7 @@ class Artigosvendaloja extends CActiveRecord
 		$criteria->compare('ID',$this->ID);
 		$criteria->compare('IDArtigoVenda',$this->IDArtigoVenda);
 		$criteria->compare('IDLoja',$this->IDLoja);
+        $criteria->compare('activo',$this->activo);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

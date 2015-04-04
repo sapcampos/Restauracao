@@ -32,7 +32,7 @@
 	</div>
 
     <div class="row">
-        <table class="table table-striped" width="40%">
+        <table class="table table-striped">
             <thead>
                 <th>
                    Loja
@@ -43,16 +43,18 @@
             <?php
             foreach($lojas as $loja)
             {
+                if($loja->activo == 1 && $loja->id != 6 && $loja->id != 7){
                 ?>
                 <tr>
                     <td>
                         <?php echo $loja->nome;?>
                     </td>
                     <td>
-                        <input type="checkbox" name="chk<?php echo $loja->id;?>" />
+                        <input type="checkbox" name="Loja["<?php echo $loja->id;?>"]" />
                     </td>
                 </tr>
             <?php
+            }
             }
             ?>
             </tbody>

@@ -66,12 +66,30 @@ class ArtigosvendaController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+        //$condition = array('activo' => 1);
         $lojas = Loja::model()->findAll();
 		if(isset($_POST['Artigosvenda']))
 		{
 			$model->attributes=$_POST['Artigosvenda'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->ID));
+			if($model->save()) {
+                $arr = $_POST['Loja'];
+                foreach ($lojas as $loja) {
+                    if(isset($arr["".$loja->id.""]))
+                    {
+                        $artvl = new Artigosvendaloja();
+                        $artvl->iDArtigoVenda = $model->ID;
+                        $artvl->iDLoja = $loja->id;
+                        if(!isset($arr["" . $loja->id . ""]) && $arr["" . $loja->id . ""] == "on" || $arr["" . $loja->id . ""] == 1) {
+                            $artvl->activo = true;
+                        }
+                        else {
+                            $artvl->activo = false;
+                        }
+                        $artvl->save();
+                    }
+                }
+                $this->redirect(array('update', 'id' => $model->ID));
+            }
 		}
 
 		$this->render('create',array(
@@ -88,7 +106,7 @@ class ArtigosvendaController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+        $lojas = Loja::model()->findAll();
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -96,7 +114,7 @@ class ArtigosvendaController extends Controller
 		{
 			$model->attributes=$_POST['Artigosvenda'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->ID));
+				$this->redirect(array('update','id'=>$model->ID));
 		}
 
 		$this->render('update',array(
