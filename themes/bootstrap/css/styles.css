@@ -1,3 +1,22 @@
 #page {
-    padding-top: 60px;
+    padding-top: 40px;
+}
+
+.breadcrumb
+{
+    margin-bottom: 0 !important;
+}
+
+.sidebar{
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.number{
+    text-align: right !important;
+}
+
+.number1{
+    text-align: right !important;
+    width: 100px;
 }

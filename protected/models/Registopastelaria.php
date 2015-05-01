@@ -1,27 +1,30 @@
 <?php
 
 /**
- * This is the model class for table "artigosvenda".
+ * This is the model class for table "registopastelaria".
  *
- * The followings are the available columns in table 'artigosvenda':
+ * The followings are the available columns in table 'registopastelaria':
  * @property integer $ID
- * @property string $Nome
+ * @property integer $IDRegisto
+ * @property string $Montra
+ * @property string $Quebras
+ * @property string $Vendidos
+ * @property string $PesoUnitario
  * @property string $PesoIdeal
- * @property integer $Activo
- * @property integer $Deleted
- * @property integer $tipoartigovenda
+ * @property integer $IDArtigoVenda
+ * @property integer $IDLoja
  *
  * The followings are the available model relations:
- * @property Artigosvendaloja[] $artigosvendalojas
- * @property Registogelado[] $registogelados
- * @property interger $tipoartigovenda0
+ * @property Artigosvenda $iDArtigoVenda
+ * @property Loja $iDLoja
+ * @property Registodiario $iDRegisto
  */
-class Artigosvenda extends CActiveRecord
+class Registopastelaria extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Artigosvenda the static model class
+	 * @return Registopastelaria the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -33,7 +36,7 @@ class Artigosvenda extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'artigosvenda';
+		return 'registopastelaria';
 	}
 
 	/**
@@ -44,13 +47,12 @@ class Artigosvenda extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Nome', 'required'),
-			array('Activo, Deleted, tipoartigovenda', 'numerical', 'integerOnly'=>true),
-			array('Nome', 'length', 'max'=>150),
-			array('PesoIdeal', 'length', 'max'=>18),
+			array('IDRegisto, IDArtigoVenda, IDLoja', 'required'),
+			array('IDRegisto, IDArtigoVenda, IDLoja', 'numerical', 'integerOnly'=>true),
+			array('Montra, Quebras, Vendidos, PesoUnitario, PesoIdeal', 'length', 'max'=>18),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('ID, Nome, PesoIdeal, Activo, Deleted, tipoartigovenda', 'safe', 'on'=>'search'),
+			array('ID, IDRegisto, Montra, Quebras, Vendidos, PesoUnitario, PesoIdeal, IDArtigoVenda, IDLoja', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,9 +64,9 @@ class Artigosvenda extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'artigosvendalojas' => array(self::HAS_MANY, 'Artigosvendaloja', 'IDArtigoVenda'),
-			'registogelados' => array(self::HAS_MANY, 'Registogelado', 'IDArtigo'),
-            'tipoartigovenda0'=>array(self::BELONGS_TO, 'Tipoartigovenda', 'tipoartigovenda'),
+			'iDArtigoVenda' => array(self::BELONGS_TO, 'Artigosvenda', 'IDArtigoVenda'),
+			'iDLoja' => array(self::BELONGS_TO, 'Loja', 'IDLoja'),
+			'iDRegisto' => array(self::BELONGS_TO, 'Registodiario', 'IDRegisto'),
 		);
 	}
 
@@ -75,11 +77,14 @@ class Artigosvenda extends CActiveRecord
 	{
 		return array(
 			'ID' => 'ID',
-			'Nome' => 'Nome',
+			'IDRegisto' => 'Idregisto',
+			'Montra' => 'Montra',
+			'Quebras' => 'Quebras',
+			'Vendidos' => 'Vendidos',
+			'PesoUnitario' => 'Peso Unitario',
 			'PesoIdeal' => 'Peso Ideal',
-			'Activo' => 'Activo',
-			'Deleted' => 'Deleted',
-            'tipoartigovenda' => 'Tipo Artigo',
+			'IDArtigoVenda' => 'Idartigo Venda',
+			'IDLoja' => 'Idloja',
 		);
 	}
 
@@ -95,23 +100,17 @@ class Artigosvenda extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('ID',$this->ID);
-		$criteria->compare('Nome',$this->Nome,true);
+		$criteria->compare('IDRegisto',$this->IDRegisto);
+		$criteria->compare('Montra',$this->Montra,true);
+		$criteria->compare('Quebras',$this->Quebras,true);
+		$criteria->compare('Vendidos',$this->Vendidos,true);
+		$criteria->compare('PesoUnitario',$this->PesoUnitario,true);
 		$criteria->compare('PesoIdeal',$this->PesoIdeal,true);
-		$criteria->compare('Activo',$this->Activo);
-		$criteria->compare('Deleted',$this->Deleted);
-        $criteria->compare('tipoartigovenda',$this->tipoartigovenda);
+		$criteria->compare('IDArtigoVenda',$this->IDArtigoVenda);
+		$criteria->compare('IDLoja',$this->IDLoja);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-
-    public function TemLoja()
-    {
-        $connection=Yii::app()->db;
-        $sql = "Select count(*) FROM artigosvendaloja WHERE IDArtigoVenda = " . $this->ID . " AND activo = 1";
-        $command=$connection->createCommand($sql);
-        $linhas=$command->queryScalar();
-        return $linhas;
-    }
 }

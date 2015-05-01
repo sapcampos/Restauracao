@@ -72,21 +72,31 @@ class ArtigosvendaController extends Controller
 		{
 			$model->attributes=$_POST['Artigosvenda'];
 			if($model->save()) {
-                $arr = $_POST['Loja'];
-                foreach ($lojas as $loja) {
-                    if(isset($arr["".$loja->id.""]))
+                if(isset($_POST['Loja'])) {
+                    $LOJ = $_POST['Loja'];
+                }
+                foreach($lojas as $l)
+                {
+                    $avl = new Artigosvendaloja();
+                    $l1 = Artigosvendaloja::model()->findAllByAttributes(array('IDArtigoVenda'=>$model->ID, 'IDLoja' => $l->id));
+                    //print_r($l1);
+                    if(isset($l1) && count($l1) > 0)
                     {
-                        $artvl = new Artigosvendaloja();
-                        $artvl->iDArtigoVenda = $model->ID;
-                        $artvl->iDLoja = $loja->id;
-                        if(!isset($arr["" . $loja->id . ""]) && $arr["" . $loja->id . ""] == "on" || $arr["" . $loja->id . ""] == 1) {
-                            $artvl->activo = true;
-                        }
-                        else {
-                            $artvl->activo = false;
-                        }
-                        $artvl->save();
+                        $avl = $l1[0];
                     }
+                    $avl->IDArtigoVenda = $model->ID;
+                    $avl->IDLoja = $l->id;
+                    //print_r($LOJ);
+                    if(isset($LOJ) && isset($LOJ["'$l->id'"]))
+                    {
+                        //echo "1";
+                        $avl->Activo = 1;
+                    }
+                    else{
+                        //echo "0";
+                        $avl->Activo = 0;
+                    }
+                    $avl->save();
                 }
                 $this->redirect(array('update', 'id' => $model->ID));
             }
@@ -109,16 +119,46 @@ class ArtigosvendaController extends Controller
         $lojas = Loja::model()->findAll();
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+        //print_r($_POST);
 		if(isset($_POST['Artigosvenda']))
 		{
 			$model->attributes=$_POST['Artigosvenda'];
+
 			if($model->save())
-				$this->redirect(array('update','id'=>$model->ID));
+            {
+                if(isset($_POST['Loja'])) {
+                    $LOJ = $_POST['Loja'];
+                }
+                foreach($lojas as $l)
+                {
+                    $avl = new Artigosvendaloja();
+                    $l1 = Artigosvendaloja::model()->findAllByAttributes(array('IDArtigoVenda'=>$model->ID, 'IDLoja' => $l->id));
+                    //print_r($l1);
+                    if(isset($l1) && count($l1) > 0)
+                    {
+                        $avl = $l1[0];
+                    }
+                    $avl->IDArtigoVenda = $model->ID;
+                    $avl->IDLoja = $l->id;
+                    //print_r($LOJ);
+                    if(isset($LOJ) && isset($LOJ["'$l->id'"]))
+                    {
+                        //echo "1";
+                        $avl->Activo = 1;
+                    }
+                    else{
+                        //echo "0";
+                        $avl->Activo = 0;
+                    }
+                    $avl->save();
+                }
+                $this->redirect(array('update','id'=>$model->ID));
+            }
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
+            'lojas'=>$lojas,
 		));
 	}
 

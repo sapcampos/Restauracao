@@ -63,9 +63,23 @@
 
     </div>
 <form method="post">
-    <div style="width:100%;">
+    <div class="row">
+        <div class="col-md-4">
+        <h4>Loja:</h4>
+        <?php
+        $loja = Loja::model()->findByPk($req->idloja);
+        if(isset($loja))
+        {
+            echo $loja->nome;
+        }
+        ?>
+
+        </div>
+        <div class="col-md-4">
         <h4>Data:</h4><?php echo $req->data;?>
-        <br/>
+
+        </div>
+        <div class="col-md-4">
         <h4>Utilizador:</h4><?php
         $user = Utilizadores::model()->findByPk($req->iduser);
         if(isset($user))
@@ -73,7 +87,7 @@
             echo $user->nome;
         }
         ?>
-
+        </div>
     </div>
     <br/>
     <br/>

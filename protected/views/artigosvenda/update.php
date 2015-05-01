@@ -9,13 +9,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Artigosvenda', 'url'=>array('index')),
-	array('label'=>'Create Artigosvenda', 'url'=>array('create')),
-	array('label'=>'View Artigosvenda', 'url'=>array('view', 'id'=>$model->ID)),
-	array('label'=>'Manage Artigosvenda', 'url'=>array('admin')),
+	array('label'=>'Listar Artigos venda', 'url'=>array('index')),
+	array('label'=>'Criar Artigos venda', 'url'=>array('create')),
 );
 ?>
 
-<h1>Update Artigosvenda <?php echo $model->ID; ?></h1>
+<h1>Update Artigos venda <?php echo $model->ID; ?></h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model, 'lojas' => $lojas)); ?>

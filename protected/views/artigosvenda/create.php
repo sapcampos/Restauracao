@@ -8,11 +8,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Artigosvenda', 'url'=>array('index')),
-	array('label'=>'Manage Artigosvenda', 'url'=>array('admin')),
+	array('label'=>'Listar Artigos Venda', 'url'=>array('index')),
 );
 ?>
 
-<h1>Create Artigosvenda</h1>
+<h1>Criar Artigos Venda</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model, 'lojas' => $lojas)); ?>

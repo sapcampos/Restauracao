@@ -254,7 +254,7 @@ class EncomendasController extends Controller
             $sql1 = $sql1 . " LEFT JOIN entidadeentrega een ON al.identrega = een.id ";
             $sql1 = $sql1 . " LEFT JOIN tipounidade tu1 ON a.tipounidade_enc = tu1.id ";
             $sql1 = $sql1 . " LEFT JOIN tipounidade tu2 ON a.tipounidade_stock = tu2.id ";
-            $sql1 = $sql1 . " WHERE a.activo = 1 AND al.idloja = " . $req->idloja . " AND al.activo = 1";
+            $sql1 = $sql1 . " WHERE ((a.activo = 1 AND al.activo = 1) OR (a.id IN ( SELECT idartigo FROM requesicao_linha WHERE idreq = " . $req->id . "))) AND al.idloja = " . $req->idloja . " ";
             $sql1 = $sql1 . " ORDER BY f.nome ASC, a.descricao ASC ";
 
 

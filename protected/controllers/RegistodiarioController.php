@@ -66,18 +66,60 @@ class RegistodiarioController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+        $userID = Yii::app()->user->id;
+        $model->Estado = 0;
+        $model->IDUtilizador = $userID;
+        $model->Data = date("Y-m-d H:i:s");
         $loja = 0;
+
+        $gelados = Artigosvenda::model()->findAllByAttributes(array("tipoartigovenda" => 1, "Activo" => 1, "Deleted" => 0));
+        $pastelaria = Artigosvenda::model()->findAllByAttributes(array("tipoartigovenda" => 2, "Activo" => 1, "Deleted" => 0));
 		if(isset($_POST['Registodiario']))
 		{
+            $model->Estado = 0;
+            $model->IDUtilizador = $userID;
 			$model->attributes=$_POST['Registodiario'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->ID));
+            {
+                if(isset($_POST["ArtigoVenda"])) {
+                    $LOJ = $_POST["ArtigoVenda"];
+                }
+                foreach($gelados as $g)
+                {
+                    $rg = new Registogelado();
+                    $rg->IDArtigo = $g->ID;
+                    $rg->IDLoja = $model->IDLoja;
+                    $rg->IDRegisto = $model->ID;
+
+                    if (isset($LOJ["".$g->ID."inicio"])) {
+                        $rg->PesoInicial = $LOJ["".$g->ID."inicio"];
+                    } else {
+                        $rg->PesoInicial = 0;
+                    }
+
+                    if (isset($LOJ["".$g->ID."fim"])) {
+                        $rg->PesoFinal = $LOJ["".$g->ID."fim"];
+                    } else {
+                        $rg->PesoFinal = 0;
+                    }
+
+                    if (isset($LOJ["".$g->ID."total"])) {
+                        $rg->Variacao = $LOJ["".$g->ID."total"];
+                    } else {
+                        $rg->Variacao = 0;
+                    }
+
+                    $rg->save();
+                }
+                $this->redirect(array('update','id'=>$model->ID));
+            }
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
             'loja' =>$loja,
+            'gelados' => $gelados,
+            'pastelaria' => $pastelaria,
 		));
 	}
 
@@ -92,17 +134,18 @@ class RegistodiarioController extends Controller
         $loja = 0;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+        $gelados = Array();
 		if(isset($_POST['Registodiario']))
 		{
 			$model->attributes=$_POST['Registodiario'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->ID));
+				$this->redirect(array('update','id'=>$model->ID));
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
             'loja' =>$loja,
+            'gelados' => $gelados,
 		));
 	}
 

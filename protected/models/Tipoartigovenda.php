@@ -1,26 +1,18 @@
 <?php
 
 /**
- * This is the model class for table "registodiario".
+ * This is the model class for table "tipoartigovenda".
  *
- * The followings are the available columns in table 'registodiario':
- * @property integer $ID
- * @property integer $IDLoja
- * @property string $Data
- * @property integer $IDUtilizador
- * @property integer $Estado
- *
- * The followings are the available model relations:
- * @property Utilizadores $iDUtilizador
- * @property Loja $iDLoja
- * @property Registogelado[] $registogelados
+ * The followings are the available columns in table 'tipoartigovenda':
+ * @property integer $id
+ * @property string $nome
  */
-class Registodiario extends CActiveRecord
+class Tipoartigovenda extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Registodiario the static model class
+	 * @return Tipoartigovenda the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -32,7 +24,7 @@ class Registodiario extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'registodiario';
+		return 'tipoartigovenda';
 	}
 
 	/**
@@ -43,11 +35,11 @@ class Registodiario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('IDLoja, Data, IDUtilizador', 'required'),
-			array('IDLoja, IDUtilizador, Estado', 'numerical', 'integerOnly'=>true),
+			array('nome', 'required'),
+			array('nome', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('ID, IDLoja, Data, IDUtilizador, Estado', 'safe', 'on'=>'search'),
+			array('id, nome', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,9 +51,6 @@ class Registodiario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'iDUtilizador' => array(self::BELONGS_TO, 'Utilizadores', 'IDUtilizador'),
-			'iDLoja' => array(self::BELONGS_TO, 'Loja', 'IDLoja'),
-			'registogelados' => array(self::HAS_MANY, 'Registogelado', 'IDRegisto'),
 		);
 	}
 
@@ -71,11 +60,8 @@ class Registodiario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ID' => 'ID',
-			'IDLoja' => 'Idloja',
-			'Data' => 'Data',
-			'IDUtilizador' => 'Idutilizador',
-			'Estado' => 'Estado',
+			'id' => 'ID',
+			'nome' => 'Nome',
 		);
 	}
 
@@ -90,11 +76,8 @@ class Registodiario extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('ID',$this->ID);
-		$criteria->compare('IDLoja',$this->IDLoja);
-		$criteria->compare('Data',$this->Data,true);
-		$criteria->compare('IDUtilizador',$this->IDUtilizador);
-		$criteria->compare('Estado',$this->Estado);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('nome',$this->nome,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

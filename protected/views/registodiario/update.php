@@ -16,4 +16,4 @@ $this->menu=array(
 
 <h1>Update Registo diário <?php echo $model->ID; ?></h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model, 'loja' => $loja)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model, 'loja' => $loja, 'gelados' => $gelados, 'pastelaria' => $pastelaria)); ?>
