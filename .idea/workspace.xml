@@ -2,58 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf33038-ddd5-479b-8667-b2a15d13d765" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_flat_10_000000_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_glass_100_f6f6f6_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_glass_100_fdf5ce_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-icons_ef8c08_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-icons_ffffff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/models/Tipoartigovenda.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery-ui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery-ui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery-ui.structure.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery-ui.structure.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery-ui.theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery-ui.theme.min.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/animated-overlay.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/ui-icons_888888_256x240.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/css/images/ui-icons_228ef1_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/css/images/ui-icons_ffd27a_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/css/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/css/images/ui-icons_222222_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Artigosvenda.php" afterPath="$PROJECT_DIR$/protected/models/Artigosvenda.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/ArtigosvendaController.php" afterPath="$PROJECT_DIR$/protected/controllers/ArtigosvendaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/EncomendasController.php" afterPath="$PROJECT_DIR$/protected/controllers/EncomendasController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Registodiario.php" afterPath="$PROJECT_DIR$/protected/models/Registodiario.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/RegistodiarioController.php" afterPath="$PROJECT_DIR$/protected/controllers/RegistodiarioController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/artigosvenda/_form.php" afterPath="$PROJECT_DIR$/protected/views/artigosvenda/_form.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/registodiario/_form.php" afterPath="$PROJECT_DIR$/protected/views/registodiario/_form.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="$PROJECT_DIR$/protected/runtime/application.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/artigosvenda/create.php" afterPath="$PROJECT_DIR$/protected/views/artigosvenda/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/registodiario/create.php" afterPath="$PROJECT_DIR$/protected/views/registodiario/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/artigosvenda/index.php" afterPath="$PROJECT_DIR$/protected/views/artigosvenda/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/registodiario/index.php" afterPath="$PROJECT_DIR$/protected/views/registodiario/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" afterPath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/bootstrap/css/styles.css" afterPath="$PROJECT_DIR$/themes/bootstrap/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/artigosvenda/update.php" afterPath="$PROJECT_DIR$/protected/views/artigosvenda/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/encomendas/update.php" afterPath="$PROJECT_DIR$/protected/views/encomendas/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/registodiario/update.php" afterPath="$PROJECT_DIR$/protected/views/registodiario/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Restauracao.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,8 +59,8 @@
       <file leaf-file-name="RegistodiarioController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/RegistodiarioController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5" vertical-offset="825" max-vertical-offset="3345">
-              <caret line="75" column="19" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="19" />
+            <state vertical-scroll-proportion="-16.25" vertical-offset="1770" max-vertical-offset="3945">
+              <caret line="144" column="41" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -116,8 +69,8 @@
       <file leaf-file-name="Registodiario.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/models/Registodiario.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-39.375" vertical-offset="0" max-vertical-offset="1620">
-              <caret line="63" column="27" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="27" />
+            <state vertical-scroll-proportion="-15.625" vertical-offset="600" max-vertical-offset="1650">
+              <caret line="65" column="85" selection-start-line="65" selection-start-column="85" selection-end-line="65" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -133,21 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArtigosvendaController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/ArtigosvendaController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.25" vertical-offset="1908" max-vertical-offset="3540">
-              <caret line="150" column="31" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Registopastelaria.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/models/Registopastelaria.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1815">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="1815">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -156,17 +99,30 @@
       <file leaf-file-name="_form.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/registodiario/_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6944444" vertical-offset="1290" max-vertical-offset="2760">
-              <caret line="111" column="43" selection-start-line="111" selection-start-column="43" selection-end-line="111" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.8888889" vertical-offset="1650" max-vertical-offset="3585">
+              <caret line="142" column="123" selection-start-line="142" selection-start-column="123" selection-end-line="142" selection-end-column="123" />
               <folding>
-                <marker date="1430521832000" expanded="true" signature="4208:6045" placeholder="..." />
-                <marker date="1430521832000" expanded="true" signature="4260:6026" placeholder="..." />
-                <marker date="1430521832000" expanded="true" signature="4288:4627" placeholder="..." />
-                <marker date="1430521832000" expanded="true" signature="4313:4598" placeholder="..." />
-                <marker date="1430521832000" expanded="true" signature="4655:6001" placeholder="..." />
-                <marker date="1430521832000" expanded="true" signature="6105:6161" placeholder="..." />
-                <marker date="1430521832000" expanded="true" signature="6254:6261" placeholder="..." />
+                <marker date="1430607909000" expanded="true" signature="4250:8307" placeholder="..." />
+                <marker date="1430607909000" expanded="true" signature="4302:8288" placeholder="..." />
+                <marker date="1430607909000" expanded="true" signature="4330:4669" placeholder="..." />
+                <marker date="1430607909000" expanded="true" signature="4355:4640" placeholder="..." />
+                <marker date="1430607909000" expanded="true" signature="4697:8263" placeholder="..." />
+                <marker date="1430607909000" expanded="true" signature="7827:7864" placeholder="..." />
+                <marker date="1430607909000" expanded="true" signature="8367:8423" placeholder="..." />
+                <marker date="1430607909000" expanded="true" signature="8516:8523" placeholder="..." />
+                <marker date="1430607909000" expanded="true" signature="8516:8625" placeholder="..." />
+                <marker date="1430607909000" expanded="true" signature="8555:8617" placeholder="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.375" vertical-offset="810" max-vertical-offset="2205">
+              <caret line="69" column="66" selection-start-line="69" selection-start-column="66" selection-end-line="69" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -244,7 +200,6 @@
         <option value="$PROJECT_DIR$/protected/models/Registogelado.php" />
         <option value="$PROJECT_DIR$/protected/views/registodiario/_view.php" />
         <option value="$PROJECT_DIR$/protected/models/Artigosvendaloja.php" />
-        <option value="$PROJECT_DIR$/protected/config/main.php" />
         <option value="$PROJECT_DIR$/protected/views/artigosvenda/update.php" />
         <option value="$PROJECT_DIR$/protected/views/artigosvenda/index.php" />
         <option value="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" />
@@ -253,13 +208,14 @@
         <option value="$PROJECT_DIR$/protected/views/encomendas/update.php" />
         <option value="$PROJECT_DIR$/protected/views/artigosvenda/create.php" />
         <option value="$PROJECT_DIR$/protected/views/artigosvenda/_form.php" />
-        <option value="$PROJECT_DIR$/protected/models/Registodiario.php" />
         <option value="$PROJECT_DIR$/protected/views/registodiario/index.php" />
         <option value="$PROJECT_DIR$/protected/controllers/ArtigosvendaController.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/RegistodiarioController.php" />
         <option value="$PROJECT_DIR$/protected/views/registodiario/create.php" />
         <option value="$PROJECT_DIR$/protected/views/registodiario/update.php" />
         <option value="$PROJECT_DIR$/themes/bootstrap/css/styles.css" />
+        <option value="$PROJECT_DIR$/protected/models/Registodiario.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/RegistodiarioController.php" />
         <option value="$PROJECT_DIR$/protected/views/registodiario/_form.php" />
       </list>
     </option>
@@ -932,13 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="810" max-vertical-offset="2205">
-          <caret line="68" column="88" selection-start-line="68" selection-start-column="88" selection-end-line="68" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/artigos/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.375" vertical-offset="1458" max-vertical-offset="2115">
@@ -1099,34 +1048,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Registodiario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-39.375" vertical-offset="0" max-vertical-offset="1620">
-          <caret line="63" column="27" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Registogelado.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375" vertical-offset="630" max-vertical-offset="1725">
-          <caret line="65" column="21" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/ArtigosvendaController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.25" vertical-offset="1908" max-vertical-offset="3540">
           <caret line="150" column="31" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Registopastelaria.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1815">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1155,14 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/RegistodiarioController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5" vertical-offset="825" max-vertical-offset="3345">
-          <caret line="75" column="19" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/bootstrap/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
@@ -1171,18 +1088,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Registodiario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.625" vertical-offset="600" max-vertical-offset="1650">
+          <caret line="65" column="85" selection-start-line="65" selection-start-column="85" selection-end-line="65" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Registogelado.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375" vertical-offset="630" max-vertical-offset="1725">
+          <caret line="65" column="21" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.375" vertical-offset="810" max-vertical-offset="2205">
+          <caret line="69" column="66" selection-start-line="69" selection-start-column="66" selection-end-line="69" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Registopastelaria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="1815">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/RegistodiarioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.25" vertical-offset="1770" max-vertical-offset="3945">
+          <caret line="144" column="41" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/registodiario/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6944444" vertical-offset="1290" max-vertical-offset="2760">
-          <caret line="111" column="43" selection-start-line="111" selection-start-column="43" selection-end-line="111" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.8888889" vertical-offset="1650" max-vertical-offset="3585">
+          <caret line="142" column="123" selection-start-line="142" selection-start-column="123" selection-end-line="142" selection-end-column="123" />
           <folding>
-            <marker date="1430521832000" expanded="true" signature="4208:6045" placeholder="..." />
-            <marker date="1430521832000" expanded="true" signature="4260:6026" placeholder="..." />
-            <marker date="1430521832000" expanded="true" signature="4288:4627" placeholder="..." />
-            <marker date="1430521832000" expanded="true" signature="4313:4598" placeholder="..." />
-            <marker date="1430521832000" expanded="true" signature="4655:6001" placeholder="..." />
-            <marker date="1430521832000" expanded="true" signature="6105:6161" placeholder="..." />
-            <marker date="1430521832000" expanded="true" signature="6254:6261" placeholder="..." />
+            <marker date="1430607909000" expanded="true" signature="4250:8307" placeholder="..." />
+            <marker date="1430607909000" expanded="true" signature="4302:8288" placeholder="..." />
+            <marker date="1430607909000" expanded="true" signature="4330:4669" placeholder="..." />
+            <marker date="1430607909000" expanded="true" signature="4355:4640" placeholder="..." />
+            <marker date="1430607909000" expanded="true" signature="4697:8263" placeholder="..." />
+            <marker date="1430607909000" expanded="true" signature="7827:7864" placeholder="..." />
+            <marker date="1430607909000" expanded="true" signature="8367:8423" placeholder="..." />
+            <marker date="1430607909000" expanded="true" signature="8516:8523" placeholder="..." />
+            <marker date="1430607909000" expanded="true" signature="8516:8625" placeholder="..." />
+            <marker date="1430607909000" expanded="true" signature="8555:8617" placeholder="{...}" />
           </folding>
         </state>
       </provider>

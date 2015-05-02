@@ -84,6 +84,10 @@ class RegistodiarioController extends Controller
                 if(isset($_POST["ArtigoVenda"])) {
                     $LOJ = $_POST["ArtigoVenda"];
                 }
+
+                if(isset($_POST["ArtigoPst"])) {
+                    $LOJ1 = $_POST["ArtigoPst"];
+                }
                 foreach($gelados as $g)
                 {
                     $rg = new Registogelado();
@@ -111,6 +115,40 @@ class RegistodiarioController extends Controller
 
                     $rg->save();
                 }
+
+                foreach($pastelaria as $p)
+                {
+                    $rp = new Registopastelaria();
+                    $rp->IDArtigoVenda = $p->ID;
+                    $rp->IDLoja = $model->IDLoja;
+                    $rp->IDRegisto = $model->ID;
+                    $rp->PesoUnitario = $p->PesoIdeal;
+
+                    if (isset($LOJ1["".$p->ID."montra"])) {
+                        $rp->Montra = $LOJ1["".$p->ID."montra"];
+                    } else {
+                        $rp->Montra = 0;
+                    }
+
+                    if (isset($LOJ1["".$p->ID."quebras"])) {
+                        $rp->Quebras = $LOJ1["".$p->ID."quebras"];
+                    } else {
+                        $rp->Quebras = 0;
+                    }
+
+                    if (isset($LOJ1["".$p->ID."vendidos"])) {
+                        $rp->Vendidos = $LOJ1["".$p->ID."vendidos"];
+                    } else {
+                        $rp->Vendidos = 0;
+                    }
+
+                    if (isset($LOJ1["".$p->ID."pesoideal"])) {
+                        $rp->PesoIdeal = $LOJ1["".$p->ID."pesoideal"];
+                    } else {
+                        $rp->PesoIdeal = 0;
+                    }
+                    $rp->save();
+                }
                 $this->redirect(array('update','id'=>$model->ID));
             }
 		}
@@ -135,6 +173,7 @@ class RegistodiarioController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
         $gelados = Array();
+        $pastelaria = Array();
 		if(isset($_POST['Registodiario']))
 		{
 			$model->attributes=$_POST['Registodiario'];
@@ -146,6 +185,7 @@ class RegistodiarioController extends Controller
 			'model'=>$model,
             'loja' =>$loja,
             'gelados' => $gelados,
+            'pastelaria' => $pastelaria,
 		));
 	}
 

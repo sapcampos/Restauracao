@@ -56,6 +56,7 @@
                     <tbody>
                     <?php
                     $totalGelado = 0;
+                    $totalPastelaria = 0;
                     if(isset($gelados) && $model->isNewRecord) {
                         foreach ($gelados as $gld) {
                             echo "<tr>";
@@ -106,7 +107,7 @@
                             foreach ($pastelaria as $pstl) {
                                 echo "<tr>";
                                 echo "<td>" . $pstl->Nome . "</td>";
-                                echo "<td> <input value=\"0.00\" type=\"text\" class=\"balcao number1\" name=\"ArtigoPst[" . $pstl->ID . "balcao]\" /> </td>";
+                                echo "<td> <input value=\"0.00\" type=\"text\" class=\"balcao number1\" name=\"ArtigoPst[" . $pstl->ID . "montra]\" /> </td>";
                                 echo "<td> <input value=\"0.00\" type=\"text\" class=\"quebras number1\" name=\"ArtigoPst[" . $pstl->ID . "quebras]\" /> </td>";
                                 echo "<td> <input value=\"0.00\" type=\"text\" class=\"vendidos number1\" name=\"ArtigoPst[" . $pstl->ID . "vendidos]\" /> </td>";
                                 echo "<td> " . number_format($pstl->PesoIdeal,2) . "gr <input value=\"" . number_format($pstl->PesoIdeal,2) . "\" type=\"hidden\" readonly class=\"pesounitario number1\" name=\"ArtigoPst[" . $pstl->ID . "pesounitario]\" /></td>";
@@ -114,7 +115,33 @@
                                 echo "</tr>";
                             }
                         }
+
+                        if(isset($model->registopastelaria) && $model->ID > 0) {
+                            foreach ($model->registopastelaria as $pstl) {
+                                echo "<tr>";
+                                echo "<td>" . $pstl->iDArtigoVenda->Nome . "</td>";
+                                echo "<td> <input value=\"" . number_format($pstl->Montra,2) . "\" type=\"text\" class=\"balcao number1\" name=\"ArtigoPst[" . $pstl->ID . "montra]\" /> </td>";
+                                echo "<td> <input value=\"" . number_format($pstl->Quebras,2) . "\" type=\"text\" class=\"quebras number1\" name=\"ArtigoPst[" . $pstl->ID . "quebras]\" /> </td>";
+                                echo "<td> <input value=\"" . number_format($pstl->Vendidos,2) . "\" type=\"text\" class=\"vendidos number1\" name=\"ArtigoPst[" . $pstl->ID . "vendidos]\" /> </td>";
+                                echo "<td> " . number_format($pstl->PesoUnitario,2) . "gr <input value=\"" . number_format($pstl->PesoUnitario,2) . "\" type=\"hidden\" readonly class=\"pesounitario number1\" name=\"ArtigoPst[" . $pstl->ID . "pesounitario]\" /></td>";
+                                echo "<td> <input value=\"" . number_format($pstl->PesoIdeal,2) . "\" type=\"text\" readonly class=\"pesoideal number1\" name=\"ArtigoPst[" . $pstl->ID . "pesoideal]\" /> </td>";
+                                echo "</tr>";
+                                $totalPastelaria += $pstl->PesoIdeal;
+                            }
+                        }
                     ?>
+                    <tr>
+                        <td colspan="5"><strong>Totais</strong></td>
+                        <td><input readonly type="text" class="ptotal number1" value="<?php echo number_format($totalPastelaria,2);?>"/> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><strong>Desperdicio</strong></td>
+                        <?php
+                            $total_ = 0;
+                            $total_ = $totalGelado - $totalPastelaria;
+                        ?>
+                        <td><input readonly type="text" class="desperdicio number1" value="<?php echo number_format($total_,2);?>"/></td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -144,6 +171,9 @@
             sum += parseFloat(this.value);
         });
         $("#TotalGelado").val(sum);
+        var total = $(".ptotal").val();
+        var tt = parseFloat(sum) - total;
+        $(".desperdicio").val(tt);
     }
     );
 
@@ -175,5 +205,30 @@
         var tt = parseFloat(parseFloat($(inicio).val()) - parseFloat($(this).val()));
         $(total).val(parseFloat(tt).toFixed(2));
         $(total).trigger("change");
+    });
+
+    $(".vendidos").on("change", function()
+    {
+        var pesounit = $(this).parent().parent().find(".pesounitario");
+        if(pesounit === "")
+        {
+            $(pesounit).val(0);
+        }
+        if($(this).val() === "")
+            $(this).val(0);
+        var ideal = $(this).parent().parent().find(".pesoideal");
+        var tt = parseFloat((parseFloat($(pesounit).val())/1000) * parseFloat($(this).val()));
+        $(ideal).val(parseFloat(tt).toFixed(2));
+        $(ideal).trigger("change");
+    });
+
+    $(".pesoideal").on("change", function(){
+        var total = 0;
+        $(".pesoideal").each(function(){
+            total += parseFloat($(this).val());
+        });
+        $(".ptotal").val(total);
+        var tt = parseFloat($("#TotalGelado").val()) - total;
+        $(".desperdicio").val(tt);
     });
 </script>

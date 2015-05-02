@@ -66,8 +66,8 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=127.0.0.1;dbname=c19_restauracao;port=4040;',
-            //'connectionString' => 'mysql:host=127.0.0.1;dbname=c32_restauracao;port=8889;',
+			//'connectionString' => 'mysql:host=127.0.0.1;dbname=c19_restauracao;port=4040;',
+            'connectionString' => 'mysql:host=127.0.0.1;dbname=c19_restauracao;port=8889;',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'root',
