@@ -35,7 +35,7 @@ $this->widget('bootstrap.widgets.TbNavbar',array(
                 //array('label'=>'Home', 'url'=>array('/site/index')),
                 array('label'=>'Configurações', 'url'=>'#', 'items' => array(
                     array('label'=>'Artigos', 'url'=>array('/artigos/index')),
-                    array('label'=>'Artigos Venda', 'url'=>array('/artigosVenda/index')),
+                    array('label'=>'Artigos Venda', 'url'=>array('/artigosvenda/index')),
                     array('label'=>'Listas Artigos', 'url'=>array('/artigos/imprimirArtigos')),
                     array('label'=>'Fornecedores', 'url'=>array('/fornecedores/index')),
                     array('label'=>'Concelhos', 'url'=>array('/concelhos/index')),
@@ -93,7 +93,7 @@ else if(Yii::app()->user->id > 1)
 
                     array('label'=>'Encomendas', 'url'=>'#', 'items' => array(
                         array('label'=>'Artigos', 'url'=>array('/artigos/index')),
-                        array('label'=>'Artigos Venda', 'url'=>array('/artigosVenda/index')),
+                        array('label'=>'Artigos Venda', 'url'=>array('/artigosvenda/index')),
                         array('label'=>'Criar Encomenda', 'url'=>array('/site/encomenda')),
                         array('label'=>'Lista Encomenda', 'url'=>array('/encomendas/index')),
                         array('label'=>'Documentos', 'url'=>array('/site/documentos')),

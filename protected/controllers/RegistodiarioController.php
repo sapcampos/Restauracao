@@ -112,7 +112,6 @@ class RegistodiarioController extends Controller
                     } else {
                         $rg->Variacao = 0;
                     }
-
                     $rg->save();
                 }
 
@@ -169,17 +168,77 @@ class RegistodiarioController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-        $loja = 0;
+        $loja = $model->IDLoja;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-        $gelados = Array();
-        $pastelaria = Array();
-		if(isset($_POST['Registodiario']))
-		{
-			$model->attributes=$_POST['Registodiario'];
-			if($model->save())
-				$this->redirect(array('update','id'=>$model->ID));
-		}
+        $gelados = Registogelado::model()->findAllByAttributes(array("IDRegisto" => $model->ID));
+        $pastelaria = Registopastelaria::model()->findAllByAttributes(array("IDRegisto" => $model->ID));
+        if(isset($_POST['Registodiario']))
+        {
+            $model->attributes=$_POST['Registodiario'];
+            if($model->save())
+            {
+                if(isset($_POST["ArtigoVenda"])) {
+                    $LOJ = $_POST["ArtigoVenda"];
+                }
+                if(isset($_POST["ArtigoPst"])) {
+                    $LOJ1 = $_POST["ArtigoPst"];
+                }
+                foreach($gelados as $g)
+                {
+                    if (isset($LOJ["".$g->ID."inicio"])) {
+                        $g->PesoInicial = $LOJ["".$g->ID."inicio"];
+                    } else {
+                        $g->PesoInicial = 0;
+                    }
+
+                    if (isset($LOJ["".$g->ID."fim"])) {
+                        $g->PesoFinal = $LOJ["".$g->ID."fim"];
+                    } else {
+                        $g->PesoFinal = 0;
+                    }
+
+                    if (isset($LOJ["".$g->ID."total"])) {
+                        $g->Variacao = $LOJ["".$g->ID."total"];
+                    } else {
+                        $g->Variacao = 0;
+                    }
+                    $g->save();
+                }
+
+                foreach($pastelaria as $p)
+                {
+                    if (isset($LOJ1["".$p->ID."montra"])) {
+                        $p->Montra = $LOJ1["".$p->ID."montra"];
+                    } else {
+                        $p->Montra = 0;
+                    }
+
+                    if (isset($LOJ1["".$p->ID."quebras"])) {
+                        $p->Quebras = $LOJ1["".$p->ID."quebras"];
+                    } else {
+                        $p->Quebras = 0;
+                    }
+
+                    if (isset($LOJ1["".$p->ID."vendidos"])) {
+                        $p->Vendidos = $LOJ1["".$p->ID."vendidos"];
+
+                    } else {
+                        $p->Vendidos = 0;
+
+                    }
+
+                    if (isset($LOJ1["".$p->ID."pesoideal"])) {
+                        $p->PesoIdeal = $LOJ1["".$p->ID."pesoideal"];
+                    } else {
+                        $p->PesoIdeal = 0;
+                    }
+                    $p->save();
+
+                }
+                $this->redirect(array('update','id'=>$model->ID));
+            }
+        }
 
 		$this->render('update',array(
 			'model'=>$model,

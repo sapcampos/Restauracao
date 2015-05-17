@@ -61,9 +61,9 @@
                         foreach ($gelados as $gld) {
                             echo "<tr>";
                             echo "<td>" . $gld->Nome . "</td>";
-                            echo "<td> <input value=\"0.00\" type=\"text\" class=\"inicio number\" name=\"ArtigoVenda[" . $gld->ID . "inicio]\" /> </td>";
-                            echo "<td> <input value=\"0.00\" type=\"text\" class=\"fim number\" name=\"ArtigoVenda[" . $gld->ID . "fim]\" /> </td>";
-                            echo "<td> <input value=\"0.00\" type=\"text\" readonly class=\"total number\" name=\"ArtigoVenda[" . $gld->ID . "total]\" /> </td>";
+                            echo "<td> <input value=\"0.000\" type=\"text\" class=\"inicio number\" name=\"ArtigoVenda[" . $gld->ID . "inicio]\" /> </td>";
+                            echo "<td> <input value=\"0.000\" type=\"text\" class=\"fim number\" name=\"ArtigoVenda[" . $gld->ID . "fim]\" /> </td>";
+                            echo "<td> <input value=\"0.000\" type=\"text\" readonly class=\"total number\" name=\"ArtigoVenda[" . $gld->ID . "total]\" /> </td>";
                             echo "</tr>";
                         }
                     }
@@ -71,9 +71,9 @@
                         foreach ($model->registogelados as $gld) {
                             echo "<tr>";
                             echo "<td>" . $gld->iDArtigo->Nome . "</td>";
-                            echo "<td> <input value=\"" . number_format($gld->PesoInicial,2) . "\" type=\"text\" class=\"inicio number\" name=\"ArtigoVenda[" . $gld->ID . "inicio]\" /> </td>";
-                            echo "<td> <input value=\"" . number_format($gld->PesoFinal,2) . "\" type=\"text\" class=\"fim number\" name=\"ArtigoVenda[" . $gld->ID . "fim]\" /> </td>";
-                            echo "<td> <input value=\"" . number_format($gld->Variacao,2) . "\" type=\"text\" readonly class=\"total number\" name=\"ArtigoVenda[" . $gld->ID . "total]\" /> </td>";
+                            echo "<td> <input value=\"" . number_format($gld->PesoInicial,3) . "\" type=\"text\" class=\"inicio number\" name=\"ArtigoVenda[" . $gld->ID . "inicio]\" /> </td>";
+                            echo "<td> <input value=\"" . number_format($gld->PesoFinal,3) . "\" type=\"text\" class=\"fim number\" name=\"ArtigoVenda[" . $gld->ID . "fim]\" /> </td>";
+                            echo "<td> <input value=\"" . number_format($gld->Variacao,3) . "\" type=\"text\" readonly class=\"total number\" name=\"ArtigoVenda[" . $gld->ID . "total]\" /> </td>";
                             echo "</tr>";
                             $totalGelado += $gld->Variacao;
                         }
@@ -107,11 +107,11 @@
                             foreach ($pastelaria as $pstl) {
                                 echo "<tr>";
                                 echo "<td>" . $pstl->Nome . "</td>";
-                                echo "<td> <input value=\"0.00\" type=\"text\" class=\"balcao number1\" name=\"ArtigoPst[" . $pstl->ID . "montra]\" /> </td>";
-                                echo "<td> <input value=\"0.00\" type=\"text\" class=\"quebras number1\" name=\"ArtigoPst[" . $pstl->ID . "quebras]\" /> </td>";
-                                echo "<td> <input value=\"0.00\" type=\"text\" class=\"vendidos number1\" name=\"ArtigoPst[" . $pstl->ID . "vendidos]\" /> </td>";
+                                echo "<td> <input value=\"0.000\" type=\"text\" class=\"balcao number1\" name=\"ArtigoPst[" . $pstl->ID . "montra]\" /> </td>";
+                                echo "<td> <input value=\"0.000\" type=\"text\" class=\"quebras number1\" name=\"ArtigoPst[" . $pstl->ID . "quebras]\" /> </td>";
+                                echo "<td> <input value=\"0.000\" type=\"text\" class=\"vendidos number1\" name=\"ArtigoPst[" . $pstl->ID . "vendidos]\" /> </td>";
                                 echo "<td> " . number_format($pstl->PesoIdeal,2) . "gr <input value=\"" . number_format($pstl->PesoIdeal,2) . "\" type=\"hidden\" readonly class=\"pesounitario number1\" name=\"ArtigoPst[" . $pstl->ID . "pesounitario]\" /></td>";
-                                echo "<td> <input value=\"0.00\" type=\"text\" readonly class=\"pesoideal number1\" name=\"ArtigoPst[" . $pstl->ID . "pesoideal]\" /> </td>";
+                                echo "<td> <input value=\"0.000\" type=\"text\" readonly class=\"pesoideal number1\" name=\"ArtigoPst[" . $pstl->ID . "pesoideal]\" /> </td>";
                                 echo "</tr>";
                             }
                         }
@@ -120,11 +120,11 @@
                             foreach ($model->registopastelaria as $pstl) {
                                 echo "<tr>";
                                 echo "<td>" . $pstl->iDArtigoVenda->Nome . "</td>";
-                                echo "<td> <input value=\"" . number_format($pstl->Montra,2) . "\" type=\"text\" class=\"balcao number1\" name=\"ArtigoPst[" . $pstl->ID . "montra]\" /> </td>";
-                                echo "<td> <input value=\"" . number_format($pstl->Quebras,2) . "\" type=\"text\" class=\"quebras number1\" name=\"ArtigoPst[" . $pstl->ID . "quebras]\" /> </td>";
-                                echo "<td> <input value=\"" . number_format($pstl->Vendidos,2) . "\" type=\"text\" class=\"vendidos number1\" name=\"ArtigoPst[" . $pstl->ID . "vendidos]\" /> </td>";
-                                echo "<td> " . number_format($pstl->PesoUnitario,2) . "gr <input value=\"" . number_format($pstl->PesoUnitario,2) . "\" type=\"hidden\" readonly class=\"pesounitario number1\" name=\"ArtigoPst[" . $pstl->ID . "pesounitario]\" /></td>";
-                                echo "<td> <input value=\"" . number_format($pstl->PesoIdeal,2) . "\" type=\"text\" readonly class=\"pesoideal number1\" name=\"ArtigoPst[" . $pstl->ID . "pesoideal]\" /> </td>";
+                                echo "<td> <input value=\"" . number_format($pstl->Montra,0) . "\" type=\"text\" class=\"balcao number1\" name=\"ArtigoPst[" . $pstl->ID . "montra]\" /> </td>";
+                                echo "<td> <input value=\"" . number_format($pstl->Quebras,0) . "\" type=\"text\" class=\"quebras number1\" name=\"ArtigoPst[" . $pstl->ID . "quebras]\" /> </td>";
+                                echo "<td> <input value=\"" . number_format($pstl->Vendidos,0) . "\" type=\"text\" class=\"vendidos number1\" name=\"ArtigoPst[" . $pstl->ID . "vendidos]\" /> </td>";
+                                echo "<td> " . number_format($pstl->PesoUnitario,0) . "gr <input value=\"" . number_format($pstl->PesoUnitario,3) . "\" type=\"hidden\" readonly class=\"pesounitario number1\" name=\"ArtigoPst[" . $pstl->ID . "pesounitario]\" /></td>";
+                                echo "<td> <input value=\"" . number_format($pstl->PesoIdeal,3) . "\" type=\"text\" readonly class=\"pesoideal number1\" name=\"ArtigoPst[" . $pstl->ID . "pesoideal]\" /> </td>";
                                 echo "</tr>";
                                 $totalPastelaria += $pstl->PesoIdeal;
                             }
@@ -132,7 +132,7 @@
                     ?>
                     <tr>
                         <td colspan="5"><strong>Totais</strong></td>
-                        <td><input readonly type="text" class="ptotal number1" value="<?php echo number_format($totalPastelaria,2);?>"/> </td>
+                        <td><input readonly type="text" class="ptotal number1" value="<?php echo number_format($totalPastelaria,3);?>"/> </td>
                     </tr>
                     <tr>
                         <td colspan="5"><strong>Desperdicio</strong></td>
@@ -140,7 +140,7 @@
                             $total_ = 0;
                             $total_ = $totalGelado - $totalPastelaria;
                         ?>
-                        <td><input readonly type="text" class="desperdicio number1" value="<?php echo number_format($total_,2);?>"/></td>
+                        <td><input readonly type="text" class="desperdicio number1" value="<?php echo number_format($total_,3);?>"/></td>
                     </tr>
                     </tbody>
                 </table>
@@ -170,10 +170,11 @@
         $('.total').each(function(){
             sum += parseFloat(this.value);
         });
-        $("#TotalGelado").val(sum);
+
+        $("#TotalGelado").val(parseFloat(sum).toFixed(3));
         var total = $(".ptotal").val();
         var tt = parseFloat(sum) - total;
-        $(".desperdicio").val(tt);
+        $(".desperdicio").val(parseFloat(tt).toFixed(3));
     }
     );
 
@@ -188,7 +189,7 @@
             $(this).val(0);
         var total = $(this).parent().parent().find(".total");
         var tt = parseFloat(parseFloat($(this).val()) - parseFloat($(fim).val()));
-        $(total).val(parseFloat(tt).toFixed(2));
+        $(total).val(parseFloat(tt).toFixed(3));
         $(total).trigger("change");
     });
 
@@ -203,7 +204,7 @@
             $(this).val(0);
         var total = $(this).parent().parent().find(".total");
         var tt = parseFloat(parseFloat($(inicio).val()) - parseFloat($(this).val()));
-        $(total).val(parseFloat(tt).toFixed(2));
+        $(total).val(parseFloat(tt).toFixed(3));
         $(total).trigger("change");
     });
 
@@ -218,7 +219,7 @@
             $(this).val(0);
         var ideal = $(this).parent().parent().find(".pesoideal");
         var tt = parseFloat((parseFloat($(pesounit).val())/1000) * parseFloat($(this).val()));
-        $(ideal).val(parseFloat(tt).toFixed(2));
+        $(ideal).val(parseFloat(tt).toFixed(3));
         $(ideal).trigger("change");
     });
 
@@ -227,8 +228,8 @@
         $(".pesoideal").each(function(){
             total += parseFloat($(this).val());
         });
-        $(".ptotal").val(total);
+        $(".ptotal").val(parseFloat(total).toFixed(3));
         var tt = parseFloat($("#TotalGelado").val()) - total;
-        $(".desperdicio").val(tt);
+        $(".desperdicio").val(parseFloat(tt).toFixed(3));
     });
 </script>

@@ -233,7 +233,7 @@ class EncomendasFornecedorController extends Controller
                             $encId = $encF->id;
                             foreach($_POST as $key=>$val)
                             {
-                                if($key != "fornecedorId" && $key !="fornecedor" && !empty($val) && intval($val) > 0)
+                                if($key != "fornecedorId" && $key !="fornecedor" && !empty($val) && floatval($val) > 0)
                                 {
                                     $encL = new Encomendalinhas();
                                     $encL->idencomenda = $encId;
@@ -249,7 +249,7 @@ class EncomendasFornecedorController extends Controller
                                             $encL->idunidadeinv = $artigo->tipounidade_stock;
                                         }
                                         $encL->idloja = $arrInfo[1];
-                                        $encL->quantidade = $val;
+                                        $encL->quantidade = floatval($val);
                                         if(!$encL->save())
                                         {
                                             $ex = new Exception("");

@@ -37,7 +37,7 @@ class ArtigosvendaController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -169,6 +169,11 @@ class ArtigosvendaController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+        $l = Artigosvendaloja::model()->findAllByAttributes(array('IDArtigoVenda'=>$id));
+        foreach($l as $l1)
+        {
+            $l1->delete();
+        }
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser

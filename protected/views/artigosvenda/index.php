@@ -27,7 +27,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'name' => 'Artigo',
             'type' => 'raw',
-            'value' => 'CHtml::link(CHtml::encode($data->Nome), array("artigosVenda/update", "id" => $data->ID))',
+            'value' => 'CHtml::link(CHtml::encode($data->Nome), array("artigosvenda/update", "id" => $data->ID))',
         ),
         array(
             'name' => 'Activo',
