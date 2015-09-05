@@ -233,7 +233,12 @@
                     echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$inv."\" style=\"width:40px; margin:5px;\" readonly/>".$uinv."</td>";
                     echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$enc."\" style=\"width:40px; margin:5px;\" readonly/>".$uenc."</td>";
                     echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"stock".$row["ID"]."\" class=\"inpt stock\" value=\"".$inv1."\"/>".$uinv1."</td>";
-                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"enc".$row["ID"]."\" class=\"inpt order\" value=\"".$enc1."\"/>".$uenc1."</td>";
+                    $readOnly = "";
+                    if($row["Bloquear"] == 1)
+                    {
+                        $readOnly = " readonly ";
+                    }
+                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"enc".$row["ID"]."\" class=\"inpt order\" ".$readOnly." value=\"".$enc1."\"/>".$uenc1."</td>";
                     echo "</tr>";
                     $i++;
                 }

@@ -9,6 +9,11 @@
  * @property string $username
  * @property string $password
  * @property integer $activo
+ * @property integer $tipoutilizador
+ * @property integer $loja
+ *
+ * @property integer $tipoutilizador0;
+ * @property integer $loja0;
  */
 class Utilizadores extends CActiveRecord
 {
@@ -39,12 +44,12 @@ class Utilizadores extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('nome, username, password', 'required'),
-            array('activo', 'numerical', 'integerOnly'=>true),
+            array('activo, tipoutilizador, loja', 'numerical', 'integerOnly'=>true),
 			array('nome', 'length', 'max'=>128),
 			array('username, password', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nome, username, password, activo', 'safe', 'on'=>'search'),
+			array('id, nome, username, password, activo, tipoutilizador, loja', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,6 +61,8 @@ class Utilizadores extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'tipoutilizador0'=>array(self::BELONGS_TO, 'Tipoutilizador', 'tipoutilizador'),
+            'loja0'=>array(self::BELONGS_TO, 'Loja', 'loja'),
 		);
 	}
 
@@ -70,6 +77,8 @@ class Utilizadores extends CActiveRecord
 			'username' => 'Username',
 			'password' => 'Password',
 			'activo' => 'Activo',
+            'tipoutilizador' => 'Tipo Utilizador',
+            'loja' => 'Loja'
 		);
 	}
 

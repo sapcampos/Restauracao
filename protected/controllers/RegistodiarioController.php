@@ -60,7 +60,7 @@ class RegistodiarioController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id = 0)
 	{
 		$model=new Registodiario;
 
@@ -70,11 +70,45 @@ class RegistodiarioController extends Controller
         $model->Estado = 0;
         $model->IDUtilizador = $userID;
         $model->Data = date("Y-m-d H:i:s");
-        $loja = 0;
+        if($id > 0)
+        {
+            $loja = $id;
+        }
+        else {
+            $loja = 1;
+        }
+        $model->IDLoja = $loja;
 
-        $gelados = Artigosvenda::model()->findAllByAttributes(array("tipoartigovenda" => 1, "Activo" => 1, "Deleted" => 0));
-        $pastelaria = Artigosvenda::model()->findAllByAttributes(array("tipoartigovenda" => 2, "Activo" => 1, "Deleted" => 0));
-		if(isset($_POST['Registodiario']))
+        //$gelados = Artigosvenda::model()->findAllByAttributes(array("tipoartigovenda" => 1, "Activo" => 1, "Deleted" => 0));
+        //$pastelaria = Artigosvenda::model()->findAllByAttributes(array("tipoartigovenda" => 2, "Activo" => 1, "Deleted" => 0));
+        //$gelados1 = Artigosvendaloja::model()->findAllByAttributes(array("IDLoja" => $id, "Activo" => 1))->iDArtigoVenda->findAllByAttributes(array("tipoartigovenda" => 1, "Activo" => 1, "Deleted" => 0));
+        //$pastelaria1 = Artigosvendaloja::model()->findAllByAttributes(array("IDLoja" => $id, "Activo" => 1))->iDArtigoVenda->findAllByAttributes(array("tipoartigovenda" => 1, "Activo" => 1, "Deleted" => 0));
+        //$gelados1 = Artigosvenda::model()->artigosvendalojas->findAllByAttributes(array("IDLoja" => $id, "Activo" => 1));
+        $criteria = new CDbCriteria;
+        $criteria->alias = "t";
+        $criteria->compare('tipoartigovenda', 1);
+        $criteria->compare('t.Activo', 1);
+        $criteria->compare('Deleted', 0);
+        $criteria->with = array('artigosvendalojas');
+        $criteria->compare( 'artigosvendalojas.IDLoja', $loja, true );
+        $criteria->compare( 'artigosvendalojas.Activo', 1, true );
+        $criteria->together = true;
+
+
+        $criteria1 = new CDbCriteria;
+        $criteria1->alias = "t";
+        $criteria1->compare('tipoartigovenda', 2);
+        $criteria1->compare('t.Activo', 1);
+        $criteria1->compare('Deleted', 0);
+        $criteria1->with = array('artigosvendalojas');
+        $criteria1->compare( 'artigosvendalojas.IDLoja', $loja, true );
+        $criteria1->compare( 'artigosvendalojas.Activo', 1, true );
+        $criteria1->together = true;
+
+        $gelados = Artigosvenda::model()->findAll($criteria);
+        $pastelaria = Artigosvenda::model()->findAll($criteria1);
+
+        if(isset($_POST['Registodiario']))
 		{
             $model->Estado = 0;
             $model->IDUtilizador = $userID;
@@ -88,6 +122,11 @@ class RegistodiarioController extends Controller
                 if(isset($_POST["ArtigoPst"])) {
                     $LOJ1 = $_POST["ArtigoPst"];
                 }
+
+                if(isset($_POST["Pasteis"])) {
+                    $PST = $_POST["Pasteis"];
+                }
+
                 foreach($gelados as $g)
                 {
                     $rg = new Registogelado();
@@ -147,6 +186,41 @@ class RegistodiarioController extends Controller
                         $rp->PesoIdeal = 0;
                     }
                     $rp->save();
+                }
+                //print_r($PST);
+                for($i = 0; $i < 3; $i++)
+                {
+                    $pasteis = new Registopasteis();
+                    if (isset($PST[($i * -1)."iniciais"])){
+                        $pasteis->iniciais = $PST[($i * -1)."iniciais"];
+                    } else {
+                        $pasteis->iniciais = 0;
+                    }
+                    //echo "1";
+                    if (isset($PST[($i * -1)."cozidos"])){
+                        $pasteis->cozidos = $PST[($i * -1)."cozidos"];
+                    } else {
+                        $pasteis->cozidos = 0;
+                    }
+                    //echo "2";
+                    if (isset($PST[($i * -1)."sobras"])){
+                        $pasteis->sobras = $PST[($i * -1)."sobras"];
+                    } else {
+                        $pasteis->sobras = 0;
+                    }
+                    //echo "3";
+                    if (isset($PST[($i * -1)."horaprod"])){
+                        $pasteis->horaprod = $PST[($i * -1)."horaprod"];
+                    } else {
+                        $pasteis->horaprod = "";
+                    }
+                    //echo "4";
+                    $pasteis->idregisto = $model->ID;
+
+                    $pasteis->save();
+
+                    print_r($pasteis->getErrors());
+                    echo "Save->";
                 }
                 $this->redirect(array('update','id'=>$model->ID));
             }

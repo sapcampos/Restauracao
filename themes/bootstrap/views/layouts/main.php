@@ -25,7 +25,11 @@
 <body>
 
 <?php
-if(!Yii::app()->user->isGuest && Yii::app()->user->id == 1)
+if(!Yii::app()->user->isGuest) {
+    $condition0 = array("id" => Yii::app()->user->id);
+    $user = Utilizadores::model()->findByAttributes($condition0);
+}
+if(!Yii::app()->user->isGuest && isset($user) && isset($user) && $user->tipoutilizador == 1)
 {
 $this->widget('bootstrap.widgets.TbNavbar',array(
     'items'=>array(
@@ -82,7 +86,7 @@ $this->widget('bootstrap.widgets.TbNavbar',array(
     ),
 ));
 }
-else if(Yii::app()->user->id > 1)
+else if( isset($user) && $user->tipoutilizador == 2)
 {
     $this->widget('bootstrap.widgets.TbNavbar',array(
         'items'=>array(
@@ -114,7 +118,35 @@ else if(Yii::app()->user->id > 1)
             ),
         ),
     ));
-}?>
+
+}
+else if( isset($user) && $user->tipoutilizador == 3)
+{
+    $this->widget('bootstrap.widgets.TbNavbar',array(
+        'items'=>array(
+            array(
+                'class'=>'bootstrap.widgets.TbMenu',
+                'items'=>array(
+                    //array('label'=>'Home', 'url'=>array('/site/index')),
+
+                    array('label'=>'Encomendas', 'url'=>'#', 'items' => array(
+                        array('label'=>'Criar Encomenda', 'url'=>array('/site/encomenda')),
+                        array('label'=>'Lista Encomenda', 'url'=>array('/encomendas/index')),
+                        array('label'=>'Documentos', 'url'=>array('/site/documentos')),
+                    )),
+                    array('label'=>'Registo Diário', 'url'=>'#', 'items' => array(
+                        array('label'=>'Lista', 'url'=>array('/Registodiario/index')),
+                        array('label'=>'Criar', 'url'=>array('/Registodiario/create')),
+                    )),
+                    array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+                    array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+                ),
+            ),
+        ),
+    ));
+
+}
+?>
 
 <div class="container" id="page">
 

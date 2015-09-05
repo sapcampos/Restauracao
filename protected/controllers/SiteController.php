@@ -264,7 +264,7 @@ class SiteController extends Controller
             $id = $_GET["id"];
 
         $sql = "SELECT a.id AS 'ID', a.descricao AS 'Descricao', precounidadeencomenda, precounidadeinventario, l.nome AS 'Loja', f.nome AS 'Fornecedor',  ";
-        $sql = $sql . "ee.nome AS 'Encomenda', een.nome AS 'Entrega', tu1.nome AS 'Unidade Encomenda', tu2.nome AS 'Unidade Stock' ";
+        $sql = $sql . "ee.nome AS 'Encomenda', een.nome AS 'Entrega', tu1.nome AS 'Unidade Encomenda', tu2.nome AS 'Unidade Stock', a.blockorders AS 'Bloquear' ";
         $sql = $sql . " FROM artigos a ";
         $sql = $sql . " LEFT JOIN artigoloja al ON a.id = al.idartigo ";
         $sql = $sql . " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";

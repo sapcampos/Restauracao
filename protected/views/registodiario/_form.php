@@ -16,7 +16,7 @@
     <div class="row">
         <?php echo $form->labelEx($model,'IDLoja'); ?>
         <?php //echo $form->textField($model,'idloja');
-        echo $form->dropDownList($model,'IDLoja',CHtml::listData(Loja::model()->findAll(array('order' => 'nome')),'id','nome'));
+        echo $form->dropDownList($model,'IDLoja',CHtml::listData(Loja::model()->findAllByAttributes(array("registo" => 1), array('order' => 'nome')),'id','nome'));
         ?>
         <?php echo $form->error($model,'IDLoja'); ?>
     </div>
@@ -39,6 +39,7 @@
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#gelados" aria-controls="gelados" role="tab" data-toggle="tab">Gelados</a></li>
             <li role="presentation"><a href="#outros" aria-controls="outros" role="tab" data-toggle="tab">Outros</a></li>
+            <li role="presentation"><a href="#pasteis" aria-controls="pasteis" role="tab" data-toggle="tab">Pasteis de Nata</a></li>
             </ul>
 
         <!-- Tab panes -->
@@ -145,6 +146,44 @@
                     </tbody>
                 </table>
             </div>
+
+            <div role="tabpanel" class="tab-pane" id="pasteis">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Existencias Iniciais</th>
+                        <th>Nº Cozidos</th>
+                        <th>Hora Produção</th>
+                        <th>Sobras</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    if($model->isNewRecord) {
+                        for($i = 0; $i < 3 ; $i++) {
+                            echo "<tr>";
+                            echo "<td> <input value=\"0\" type=\"text\" class=\"EI number1\" name=\"Pasteis[" . ($i * -1) . "iniciais]\" /> </td>";
+                            echo "<td> <input value=\"0\" type=\"text\" class=\"NCoz number1\" name=\"Pasteis[" . ($i * -1) . "cozidos]\" /> </td>";
+                            echo "<td> <input value=\"00:00\" type=\"text\" class=\"horaprod number1\" name=\"Pasteis[" . ($i * -1) . "horaprod]\" /> </td>";
+                            echo "<td> <input value=\"0\" type=\"text\" class=\"sobras number1\" name=\"Pasteis[" . ($i * -1) . "sobras]\" /> </td>";
+                            echo "</tr>";
+                        }
+                    }
+
+                    if(isset($model->registopasteis) && $model->ID > 0) {
+                        foreach ($model->registopasteis as $pstl) {
+                            echo "<tr>";
+                            echo "<td> <input value=\"" . number_format($pstl->iniciais,0) . "\" type=\"text\" class=\"balcao number1\" name=\"Pasteis[" . $pstl->ID . "iniciais]\" /> </td>";
+                            echo "<td> <input value=\"" . number_format($pstl->cozidos,0) . "\" type=\"text\" class=\"quebras number1\" name=\"Pasteis[" . $pstl->ID . "cozidos]\" /> </td>";
+                            echo "<td> <input value=\"" . $pstl->horaprod . "\" type=\"text\" class=\"vendidos number1\" name=\"Pasteis[" . $pstl->ID . "horaprod]\" /> </td>";
+                            echo "<td> <input value=\"" . number_format($pstl->sobras,3) . "\" type=\"text\" readonly class=\"pesoideal number1\" name=\"Pasteis[" . $pstl->ID . "sobras]\" /> </td>";
+                            echo "</tr>";
+                        }
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
             </div>
 
     </div>
@@ -159,6 +198,17 @@
 </div><!-- form -->
 
 <script>
+
+    <?php if(!$model->isNewRecord){ ?>
+        $("#Registodiario_IDLoja").attr("disabled", "disabled");
+    <?php } ?>
+
+    $("#Registodiario_IDLoja").on("change", function(){
+        if($(this).val() != "") {
+            window.location = "<?php echo $this->createUrl("registodiario/create",array());?>/?id=" + $(this).val();
+        }
+    });
+
     $('#myTab a').click(function (e) {
         e.preventDefault()
         $(this).tab('show')

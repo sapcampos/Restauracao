@@ -95,7 +95,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value' => 'isset($data->tipoartigo0) ? $data->tipoartigo0->nome : ""',
         ),
         array(
-            'name' => 'Preço Encomenda',
+            'name' => 'Preço Enc',
             'type' => 'raw',
             'value' => '$data->precounidadeencomenda',
         ),
@@ -103,6 +103,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'name' => 'Activo',
             'type' => 'raw',
             'value' => 'CHtml::CheckBox("Activo",$data->activo, array("disabled"=>true,))',
+        ),
+        array(
+            'name' => 'Bloq Enc',
+            'type' => 'raw',
+            'value' => 'CHtml::CheckBox("Bloqueado",$data->blockorders, array("disabled"=>true,))',
         ),
         array(
             'name' => 'Tem Lojas',

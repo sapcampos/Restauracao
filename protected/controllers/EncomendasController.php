@@ -51,9 +51,20 @@ class EncomendasController extends Controller
      */
     public function actionIndex()
     {
+        $condition0 = array("id" => Yii::app()->user->id);
+        $user = Utilizadores::model()->findByAttributes($condition0);
+        $cond = "";
+        if(isset($user) && $user->tipoutilizador == 3 && isset($user->loja))
+        {
+            $cond = " r.idloja = " .$user->loja . " ";
+        }
         $sql = "SELECT r.id AS id, data, l.nome AS nomeLoja, u.nome AS nomeUser FROM requesicao r ";
         $sql = $sql . " LEFT JOIN loja l ON r.idloja = l.id ";
         $sql = $sql . " LEFT JOIN utilizadores u ON r.iduser = u.id";
+        if($cond != "")
+        {
+            $sql = $sql . " WHERE ".$cond;
+        }
         $sql = $sql . " ORDER BY data DESC";
 
         $id = 0;
@@ -245,7 +256,7 @@ class EncomendasController extends Controller
             $req = Requesicao::model()->findByPk($id);
 
             $sql1 = "SELECT a.id AS 'ID', a.descricao AS 'Descricao', precounidadeencomenda, precounidadeinventario, l.nome AS 'Loja', f.nome AS 'Fornecedor',  ";
-            $sql1 = $sql1 . "ee.nome AS 'Encomenda', een.nome AS 'Entrega', tu1.nome AS 'Unidade Encomenda', tu2.nome AS 'Unidade Stock' ";
+            $sql1 = $sql1 . "ee.nome AS 'Encomenda', een.nome AS 'Entrega', tu1.nome AS 'Unidade Encomenda', tu2.nome AS 'Unidade Stock' , a.blockorders AS 'Bloquear'";
             $sql1 = $sql1 . " FROM artigos a ";
             $sql1 = $sql1 . " LEFT JOIN artigoloja al ON a.id = al.idartigo ";
             $sql1 = $sql1 . " LEFT JOIN fornecedores f ON a.idfornecedor = f.id ";

@@ -37,6 +37,12 @@
                         case 9:
                             $codeAviludo = "(402467 M3)";
                             break;
+                        case 10:
+                            $codeAviludo = "(406434 M1)";
+                            break;
+                        case 11:
+                            $codeAviludo = "(406719 M1)";
+                            break;
                     }
                 }
                 echo "<td>".$r1["nome"]."";

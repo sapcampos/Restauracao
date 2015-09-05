@@ -64,6 +64,11 @@
             <?php echo $form->checkbox($model,'activo'); ?>
             <?php echo $form->error($model,'activo'); ?>
         </div>
+        <div class="row row2">
+            <?php echo $form->labelEx($model,'blockorders'); ?>
+            <?php echo $form->checkbox($model,'blockorders'); ?>
+            <?php echo $form->error($model,'blockorders'); ?>
+        </div>
 
         <div class="row row2">
             <?php echo $form->labelEx($model,'tipo'); ?>

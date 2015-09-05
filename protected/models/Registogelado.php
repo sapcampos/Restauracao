@@ -62,7 +62,7 @@ class Registogelado extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'iDRegisto' => array(self::BELONGS_TO, 'C19Restauração.RegistoDiario', 'IDRegisto'),
+			'iDRegisto' => array(self::BELONGS_TO, 'Registodiario', 'IDRegisto'),
 			'iDArtigo' => array(self::BELONGS_TO, 'Artigosvenda', 'IDArtigo'),
 			'iDLoja' => array(self::BELONGS_TO, 'Loja', 'IDLoja'),
 		);

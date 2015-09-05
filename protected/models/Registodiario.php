@@ -15,6 +15,7 @@
  * @property Loja $iDLoja
  * @property Registogelado[] $registogelados
  * @property Registopastelaria[] $registopastelaria
+ * @property Registopasteis[] $registopasteis
  */
 class Registodiario extends CActiveRecord
 {
@@ -64,6 +65,7 @@ class Registodiario extends CActiveRecord
 			'iDLoja' => array(self::BELONGS_TO, 'Loja', 'IDLoja'),
 			'registogelados' => array(self::HAS_MANY, 'Registogelado', 'IDRegisto'),
             'registopastelaria' => array(self::HAS_MANY, 'Registopastelaria', 'IDRegisto'),
+            'registopasteis' => array(self::HAS_MANY, 'Registopasteis', 'IDRegisto'),
 		);
 	}
 

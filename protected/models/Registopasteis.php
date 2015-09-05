@@ -1,25 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "Loja".
+ * This is the model class for table "registopasteis".
  *
- * The followings are the available columns in table 'Loja':
+ * The followings are the available columns in table 'registopasteis':
  * @property integer $id
- * @property string $nome
- * @property integer $idconcelho
- * @property integer $activo
- * @property string $corloja
- * @property string $registo
- *
- * The followings are the available model relations:
- * @property Concelhos $idconcelho0
+ * @property integer $idregisto
+ * @property integer $iniciais
+ * @property integer $cozidos
+ * @property integer $sobras
+ * @property string $horaprod
  */
-class Loja extends CActiveRecord
+class Registopasteis extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Loja the static model class
+	 * @return Registopasteis the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -31,7 +28,7 @@ class Loja extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'loja';
+		return 'registopasteis';
 	}
 
 	/**
@@ -42,13 +39,12 @@ class Loja extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idconcelho', 'required'),
-			array('idconcelho, activo, registo', 'numerical', 'integerOnly'=>true),
-			array('nome', 'length', 'max'=>128),
-            array('corloja', 'length', 'max'=>16),
+			array('idregisto, horaprod', 'required'),
+			array('idregisto, iniciais, cozidos, sobras', 'numerical', 'integerOnly'=>true),
+			array('horaprod', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nome, idconcelho, activo, corloja, registo', 'safe', 'on'=>'search'),
+			array('id, idregisto, iniciais, cozidos, sobras, horaprod', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,7 +56,6 @@ class Loja extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idconcelho0' => array(self::BELONGS_TO, 'Concelhos', 'idconcelho'),
 		);
 	}
 
@@ -71,11 +66,11 @@ class Loja extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nome' => 'Nome',
-			'idconcelho' => 'Idconcelho',
-			'activo' => 'Activo',
-            'corloja' => 'Côr Loja',
-            'Registo' => 'Registo',
+			'idregisto' => 'Idregisto',
+			'iniciais' => 'Iniciais',
+			'cozidos' => 'Cozidos',
+			'sobras' => 'Sobras',
+			'horaprod' => 'Horaprod',
 		);
 	}
 
@@ -91,9 +86,11 @@ class Loja extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('nome',$this->nome,true);
-		$criteria->compare('idconcelho',$this->idconcelho);
-		$criteria->compare('activo',$this->activo);
+		$criteria->compare('idregisto',$this->idregisto);
+		$criteria->compare('iniciais',$this->iniciais);
+		$criteria->compare('cozidos',$this->cozidos);
+		$criteria->compare('sobras',$this->sobras);
+		$criteria->compare('horaprod',$this->horaprod,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

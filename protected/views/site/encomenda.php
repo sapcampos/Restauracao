@@ -7,7 +7,17 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
 <div style="width: 100%">
 <div style="float:left;">
     <?php
-    $lojas = Loja::model()->findAll();
+    $condition0 = array("id" => Yii::app()->user->id);
+    $user = Utilizadores::model()->findByAttributes($condition0);
+    if(isset($user) && $user->tipoutilizador == 3 && isset($user->loja))
+    {
+        $condition = array("id" => $user->loja);
+        $lojas = Loja::model()->findAllByAttributes($condition);
+    }
+    else {
+        $lojas = Loja::model()->findAll();
+    }
+    //print_r($lojas);
     echo "<select id=\"loja\" name=\"loja\">";
     /*if($id !=0 )
         echo "<option value=\"0\">Todas</option>";
@@ -92,7 +102,12 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
                 echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$inv."\" style=\"width:40px; margin:5px;\" readonly/>".$row["Unidade Stock"]."</td>";
                 echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$enc."\" style=\"width:40px; margin:5px;\" readonly/>".$row["Unidade Encomenda"]."</td>";
                 echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" class=\"inpt stock\" name=\"stock".$row["ID"]."\"/>".$row["Unidade Stock"]."</td>";
-                echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" class=\"inpt order\" name=\"enc".$row["ID"]."\"/>".$row["Unidade Encomenda"]."</td>";
+                $readOnly = "";
+                if($row["Bloquear"] == 1)
+                {
+                    $readOnly = " readonly ";
+                }
+                echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" class=\"inpt order\" ".$readOnly." name=\"enc".$row["ID"]."\"/>".$row["Unidade Encomenda"]."</td>";
                 echo "</tr>";
                 $i++;
             }

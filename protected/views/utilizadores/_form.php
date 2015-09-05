@@ -38,6 +38,20 @@
 		<?php echo $form->checkbox($model,'activo',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'activo'); ?>
 	</div>
+
+    <div class="row row2">
+        <?php echo $form->labelEx($model,'tipoutilizador'); ?>
+        <?php //echo $form->textField($model,'tipounidade_stock'); ?>
+        <?php echo $form->dropDownList($model,'tipoutilizador', CHtml::listData(Tipoutilizador::model()->findAll(array('order' => 'nome')),'idtipoutilizador','nome'));?>
+        <?php echo $form->error($model,'tipoutilizador'); ?>
+    </div>
+
+    <div class="row row2">
+        <?php echo $form->labelEx($model,'loja'); ?>
+        <?php //echo $form->textField($model,'tipounidade_stock'); ?>
+        <?php echo $form->dropDownList($model,'loja', CHtml::listData(Loja::model()->findAll(array('order' => 'nome')),'id','nome'));?>
+        <?php echo $form->error($model,'loja'); ?>
+    </div>
     <br/>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Criar' : 'Guardar'); ?>

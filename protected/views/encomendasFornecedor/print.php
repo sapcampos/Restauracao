@@ -37,6 +37,14 @@ border:1px solid #000000;
         <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;Lojas: Mr. Pz Alvalade.
         <br/>
+        CÓDIGO MATINAL,LDA (NIF <i>513471790</i>)
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;Lojas: Mr. Pz Campo de Ourique.
+        <br/>
+        TALENTO & SIMPATIA,LDA (NIF <i>513369767</i>)
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;Lojas: Mr. Pz Lumiar.
+        <br/>
         VERDADEIRAS TENTAÇÕES,LDA (NIF <i>509153151</i>)
         <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;Lojas: Ice'It Leiria.
@@ -101,6 +109,12 @@ border:1px solid #000000;
                         break;
                     case 9:
                         $codeAviludo = "Cliente:<br/> 402467 M3";
+                        break;
+                    case 10:
+                        $codeAviludo = "Cliente:<br/> 406434 M1";
+                        break;
+                    case 11:
+                        $codeAviludo = "Cliente:<br/> 406719 M1";
                         break;
                 }
             }

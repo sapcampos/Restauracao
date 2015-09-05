@@ -16,6 +16,7 @@
  * @property string $tipo
  * @property string $referencia
  * @property bool $deleted
+ * @property integer $blockorders
  *
  * @property float $fornecedor0;
  * @property float $tipoartigo0;
@@ -51,14 +52,14 @@ class Artigos extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('descricao, idfornecedor, tipounidade_enc, tipounidade_stock', 'required'),
-			array('idfornecedor, tipoartigo, activo, tipounidade_enc, tipounidade_stock, tipoartigo', 'numerical', 'integerOnly'=>true),
+			array('idfornecedor, tipoartigo, activo, tipounidade_enc, tipounidade_stock, tipoartigo, blockorders', 'numerical', 'integerOnly'=>true),
             array('precounidadeencomenda, precounidadeinventario', 'numerical'),
 			array('descricao', 'length', 'max'=>256),
             array('tipo', 'length', 'max' => 2),
             array('referencia', 'length', 'max' => 60),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, descricao, idfornecedor, activo, tipounidade_enc, tipounidade_stock, tipo, referencia, deleted', 'safe', 'on'=>'search'),
+			array('id, descricao, idfornecedor, activo, tipounidade_enc, tipounidade_stock, tipo, referencia, deleted,blockorders', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -96,7 +97,8 @@ class Artigos extends CActiveRecord
             'precounidadeinventario' => 'Preço Unidade Inventário',
             'tipo' => 'Tipo',
             'referencia' => 'Referência',
-            'deleted' => 'deleted'
+            'deleted' => 'deleted',
+            'blockorders' => 'Bloquear Encomenda'
 		);
 	}
 

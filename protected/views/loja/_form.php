@@ -39,6 +39,12 @@
         <?php echo $form->error($model,'corloja'); ?>
     </div>
 
+    <div class="row">
+        <?php echo $form->labelEx($model,'registo'); ?>
+        <?php echo $form->checkbox($model,'registo'); ?>
+        <?php echo $form->error($model,'registo'); ?>
+    </div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Criar' : 'Guardar'); ?>
 	</div>
