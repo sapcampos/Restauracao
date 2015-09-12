@@ -262,6 +262,14 @@ class SiteController extends Controller
         $id = 1;
         if(isset($_GET["id"]) && !empty($_GET["id"]) && $_GET["id"] > 0)
             $id = $_GET["id"];
+        if(!Yii::app()->user->isGuest) {
+            $condition0 = array("id" => Yii::app()->user->id);
+            $user = Utilizadores::model()->findByAttributes($condition0);
+            if(isset($user) && $user->tipoutilizador == 3 && isset($user->loja))
+            {
+                $id = $user->loja;
+            }
+        }
 
         $sql = "SELECT a.id AS 'ID', a.descricao AS 'Descricao', precounidadeencomenda, precounidadeinventario, l.nome AS 'Loja', f.nome AS 'Fornecedor',  ";
         $sql = $sql . "ee.nome AS 'Encomenda', een.nome AS 'Entrega', tu1.nome AS 'Unidade Encomenda', tu2.nome AS 'Unidade Stock', a.blockorders AS 'Bloquear' ";
