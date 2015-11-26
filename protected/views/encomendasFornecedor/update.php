@@ -75,9 +75,9 @@
             {
 
                 if(isset($rows[$r2["id"]."-".$r1["id"]]))
-                    echo "<td style=\"text-align:center;vertical-align:middle;\"><input type=\"text\"  name=\"".$r2["id"]."-".$r1["id"]."\" value=\"".$rows[$r2["id"]."-".$r1["id"]]."\" style=\"width:50px;text-align:right;\"/></td>";
+                    echo "<td style=\"text-align:center;vertical-align:middle;\"><input type=\"number\" step=\"any\" name=\"".$r2["id"]."-".$r1["id"]."\" value=\"".$rows[$r2["id"]."-".$r1["id"]]."\" style=\"width:50px;text-align:right;\"/></td>";
                 else
-                    echo "<td style=\"text-align:center;vertical-align:middle;\"><input type=\"text\"  name=\"".$r2["id"]."-".$r1["id"]."\" value=\"0\" style=\"width:50px;text-align:right;\"/></td>";
+                    echo "<td style=\"text-align:center;vertical-align:middle;\"><input type=\"number\" step=\"any\" name=\"".$r2["id"]."-".$r1["id"]."\" value=\"0\" style=\"width:50px;text-align:right;\"/></td>";
             }
             echo "</tr>";
             $i++;
@@ -120,7 +120,10 @@
     <input type="submit" value="Gravar" />
     <div style="width:100%">
         <div style="text-align:right;">
-            <?php echo CHtml::link("Imprimir",$this->createUrl("print", array("id"=>$id)), array("target" => "_BLANK"));?>
+            <?php echo CHtml::link("[Imprimir]",$this->createUrl("print", array("id"=>$id)), array("target" => "_BLANK"));?>
+                &nbsp;&nbsp;
+
+            <?php echo CHtml::link("[Imprimir Com Preços]",$this->createUrl("print", array("id"=>$id, "price" => 1)), array("target" => "_BLANK"));?>
         </div>
     </div>
 

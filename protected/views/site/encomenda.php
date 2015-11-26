@@ -47,7 +47,7 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
 <div style="width:100%;float: left; margin: 20px;">
     <strong>NOTA:</strong>&nbsp;<comment>Deve usar . para as casas décimais.</comment>
 </div>
-<div style="float:left;width:100%; padding-top: 25px; padding-bottom: 30px;">
+<div style="float:left;width:100%; padding-top: 25px; padding-bottom: 30px;" class="fkBtn">
     <input type="button" value="Encomendar" onclick="javascript:validate();"/>
 </div>
 <div style="float:left">
@@ -101,13 +101,13 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
                 echo "<td>".$row["Entrega"]."</td>";
                 echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$inv."\" style=\"width:40px; margin:5px;\" readonly/>".$row["Unidade Stock"]."</td>";
                 echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$enc."\" style=\"width:40px; margin:5px;\" readonly/>".$row["Unidade Encomenda"]."</td>";
-                echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" class=\"inpt stock\" name=\"stock".$row["ID"]."\"/>".$row["Unidade Stock"]."</td>";
+                echo "<td><input type=\"number\" step=\"any\" style=\"width:40px; margin:5px;\" class=\"inpt stock\" name=\"stock".$row["ID"]."\"/>".$row["Unidade Stock"]."</td>";
                 $readOnly = "";
                 if($row["Bloquear"] == 1)
                 {
                     $readOnly = " readonly ";
                 }
-                echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" class=\"inpt order\" ".$readOnly." name=\"enc".$row["ID"]."\"/>".$row["Unidade Encomenda"]."</td>";
+                echo "<td><input type=\"number\" step=\"any\" style=\"width:40px; margin:5px;\" class=\"inpt order\" ".$readOnly." name=\"enc".$row["ID"]."\"/>".$row["Unidade Encomenda"]."</td>";
                 echo "</tr>";
                 $i++;
             }
@@ -120,8 +120,8 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
 
 ?>
 </div>
-<div style="float:left;width:100%; padding-top: 25px; padding-bottom: 30px;">
-    <input type="button" value="Encomendar" onclick="javascript:validate();"/>
+<div style="float:left;width:100%; padding-top: 25px; padding-bottom: 30px;" class="fkBtn">
+    <input type="button" value="Encomendar" onclick="javascript:validate();" />
     <input type="submit" value="Encomendar" style="display: none;" id="subbtn" />
 </div>
 </form>
@@ -136,6 +136,7 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
 <script>
     function validate()
     {
+        $(".fkBtn").hide();
         var ok = 0;
         $('.inpt').each(function() {
             var currentElement = $(this);
@@ -149,7 +150,9 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
         });
         if(ok != 0)
         {
+            $.unblockUI();
             alert("Tem que usar . para separar as casas decimais");
+            $(".fkBtn").show();
         }
         else
         {

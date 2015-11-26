@@ -492,7 +492,7 @@ class EncomendasFornecedorController extends Controller
         }
     }
 
-    public function actionPrint($id)
+    public function actionPrint($id, $price = 0)
     {
         $this->layout = 'none';
         $mpdf = Yii::app()->ePdf->mpdf();
@@ -502,7 +502,7 @@ class EncomendasFornecedorController extends Controller
 
         $connection=Yii::app()->db;
 
-        $sql = "SELECT el.quantidade AS quantidade, CONCAT(el.idartigo,'-',el.idloja) as 'index', el.idartigo, el.id, tu.nome AS unidade ";
+        $sql = "SELECT el.quantidade AS quantidade, CONCAT(el.idartigo,'-',el.idloja) as 'index', el.idartigo, el.id, tu.nome AS unidade, a.precounidadeencomenda AS preco";
         $sql = $sql . " FROM encomendalinha el ";
         $sql = $sql . " LEFT JOIN artigos a ON el.idartigo = a.id ";
         $sql = $sql . " LEFT JOIN tipounidade tu ON el.idunidadeenc = tu.id ";
@@ -546,7 +546,7 @@ class EncomendasFornecedorController extends Controller
             $obs = $r["obs"];
         }
 
-        $sql2 = "SELECT a.id, a.descricao, tu.nome AS unidade FROM artigos a LEFT JOIN tipounidade tu ON a.tipounidade_enc = tu.id WHERE a.id in (SELECT idartigo FROM encomendalinha WHERE idencomenda = " . $id . " AND quantidade > 0) ORDER BY a.descricao ASC;";
+        $sql2 = "SELECT a.id, a.descricao, tu.nome AS unidade, a.precounidadeencomenda AS preco FROM artigos a LEFT JOIN tipounidade tu ON a.tipounidade_enc = tu.id WHERE a.id in (SELECT idartigo FROM encomendalinha WHERE idencomenda = " . $id . " AND quantidade > 0) ORDER BY a.descricao ASC;";
         $command2=$connection->createCommand($sql2);
         $rows2=$command2->queryAll();
         $mpdf->showImageErrors = true;
@@ -557,7 +557,7 @@ class EncomendasFornecedorController extends Controller
             $isAviludo = true;
         }
 
-        $mpdf->WriteHTML($this->render('print', array("rows" => $rows, "rows1" => $rows1, "rows2" => $rows2, "fornecedor" => $nome, "data" => $data,"rowsUnidades" => $rowsUnidades, "isAviludo" => $isAviludo), true));
+        $mpdf->WriteHTML($this->render('print', array("rows" => $rows, "rows1" => $rows1, "rows2" => $rows2, "fornecedor" => $nome, "data" => $data,"rowsUnidades" => $rowsUnidades, "isAviludo" => $isAviludo, "price" => $price), true));
         $mpdf->Output();
 
 

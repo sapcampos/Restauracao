@@ -58,7 +58,7 @@
 <div style="width:100%">
     <strong>NOTA:</strong>&nbsp;<comment>Deve usar . para as casas décimais.</comment>
 </div>
-    <div style="float:left;width:100%; padding-top: 25px; padding-bottom: 30px;">
+    <div style="float:left;width:100%; padding-top: 25px; padding-bottom: 30px;"  class="fkBtn">
         <input type="button" value="Encomendar" style="padding-left: 30px;" onclick="javascript:validate();"/>
 
     </div>
@@ -232,13 +232,13 @@
                     echo "<td>".$row["Entrega"]."</td>";
                     echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$inv."\" style=\"width:40px; margin:5px;\" readonly/>".$uinv."</td>";
                     echo "<td style=\"background-color:".$color.";\"><input type=\"text\" value=\"".$enc."\" style=\"width:40px; margin:5px;\" readonly/>".$uenc."</td>";
-                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"stock".$row["ID"]."\" class=\"inpt stock\" value=\"".$inv1."\"/>".$uinv1."</td>";
+                    echo "<td><input type=\"number\" style=\"width:40px; margin:5px;\" name=\"stock".$row["ID"]."\" class=\"inpt stock\" value=\"".$inv1."\"/>".$uinv1."</td>";
                     $readOnly = "";
                     if($row["Bloquear"] == 1)
                     {
                         $readOnly = " readonly ";
                     }
-                    echo "<td><input type=\"text\" style=\"width:40px; margin:5px;\" name=\"enc".$row["ID"]."\" class=\"inpt order\" ".$readOnly." value=\"".$enc1."\"/>".$uenc1."</td>";
+                    echo "<td><input type=\"number\" style=\"width:40px; margin:5px;\" name=\"enc".$row["ID"]."\" class=\"inpt order\" ".$readOnly." value=\"".$enc1."\"/>".$uenc1."</td>";
                     echo "</tr>";
                     $i++;
                 }
@@ -250,7 +250,7 @@
 
         ?>
     </div>
-    <div style="float:left;width:100%; padding-top: 25px; padding-bottom: 30px;">
+    <div style="float:left;width:100%; padding-top: 25px; padding-bottom: 30px;" class="fkBtn">
         <input type="button" value="Encomendar" style="padding-left: 30px;" onclick="javascript:validate();"/>
         <input id="subbtn" type="submit" value="Encomendar" style="padding-left: 30px; display:none;"/>
     </div>
@@ -259,6 +259,7 @@
 <script>
     function validate()
     {
+        $(".fkBtn").hide();
         var ok = 0;
         $('.inpt').each(function() {
             var currentElement = $(this);
@@ -273,6 +274,7 @@
         if(ok != 0)
         {
             alert("Tem que usar . para separar as casas decimais");
+            $(".fkBtn").show();
         }
         else
         {

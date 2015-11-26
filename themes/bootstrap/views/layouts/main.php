@@ -15,8 +15,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <!--<script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.jqGrid.min.js" type="text/javascript"></script>-->
     <script src="<?php echo Yii::app()->baseUrl; ?>/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
     <script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.colorPicker.js" type="text/javascript"></script>
-
+    <script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.blockUI.js" type="text/javascript"></script>
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
 	<?php Yii::app()->bootstrap->register(); ?>

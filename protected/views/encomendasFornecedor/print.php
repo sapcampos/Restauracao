@@ -86,6 +86,11 @@ border:1px solid #000000;
     <tr style="background-color:#ededec; color:#666;font-weight:bold;height:40px;padding:5px;text-align:center;">
         <td class="title" style="width:40%;">Artigo</td>
         <td class="title" style="width:10%;">Unidade</td>
+        <?php if($price == 1){
+           ?>
+            <td class="title" style="width:10%;">Preço</td>
+        <?php
+        }?>
         <?php
         $width = 60/count($rows1);
         foreach($rows1 as $r1)
@@ -138,6 +143,9 @@ border:1px solid #000000;
         //echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$r2["unidade"]."</td>";
         //echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$rows["u".$r2["id"]]."</td>";
         echo "<td style=\"text-align:left;vertical-align:middle;\">&nbsp;".$r2["unidade"]."</td>";
+        if($price == 1) {
+            echo "<td style=\"text-align:right;vertical-align:middle;\">&nbsp;" . number_format($r2["preco"],2) . "€</td>";
+        }
         foreach($rows1 as $r1)
         {
 

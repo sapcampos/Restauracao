@@ -6474,3 +6474,76 @@ REQUEST_URI=/restauracao/site/login
 in /Users/sapc/Sites/restauracao/protected/models/Utilizadores.php (27)
 in /Users/sapc/Sites/restauracao/protected/components/UserIdentity.php (26)
 in /Users/sapc/Sites/restauracao/protected/models/LoginForm.php (52)
+2015/11/26 22:53:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Utilizadores))
+#7 /Users/sapc/Sites/restauracao/protected/models/Utilizadores.php(27): CActiveRecord::model('Utilizadores')
+#8 /Users/sapc/Sites/restauracao/protected/components/UserIdentity.php(26): Utilizadores::model()
+#9 /Users/sapc/Sites/restauracao/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#10 /Users/sapc/Sites/yii/framework/validators/CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#11 /Users/sapc/Sites/yii/framework/validators/CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 /Users/sapc/Sites/yii/framework/base/CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#13 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(121): CModel->validate()
+#14 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#15 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#16 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#17 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#19 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#20 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#22 {main}
+REQUEST_URI=/restauracao/site/login
+HTTP_REFERER=http://localhost:8888/restauracao/site/login
+---
+2015/11/26 22:54:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Connection refused' in /Users/sapc/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/sapc/Sites/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/sapc/Sites/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/sapc/Sites/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /Users/sapc/Sites/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Utilizadores))
+#7 /Users/sapc/Sites/restauracao/protected/models/Utilizadores.php(27): CActiveRecord::model('Utilizadores')
+#8 /Users/sapc/Sites/restauracao/protected/components/UserIdentity.php(26): Utilizadores::model()
+#9 /Users/sapc/Sites/restauracao/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#10 /Users/sapc/Sites/yii/framework/validators/CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#11 /Users/sapc/Sites/yii/framework/validators/CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 /Users/sapc/Sites/yii/framework/base/CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#13 /Users/sapc/Sites/restauracao/protected/controllers/SiteController.php(121): CModel->validate()
+#14 /Users/sapc/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#15 /Users/sapc/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#16 /Users/sapc/Sites/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#17 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#19 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#20 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#22 {main}
+REQUEST_URI=/restauracao/site/login
+HTTP_REFERER=http://localhost:8888/restauracao/site/login
+---
+2015/11/26 23:03:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Sua requisição é inválida.' in /Users/sapc/Sites/yii/framework/web/CController.php:337
+Stack trace:
+#0 /Users/sapc/Sites/yii/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/sapc/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /Users/sapc/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /Users/sapc/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/sapc/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/sapc/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#7 /Users/sapc/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(283): CController->run('print')
+#9 /Users/sapc/Sites/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('encomendasForne...')
+#10 /Users/sapc/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/sapc/Sites/restauracao/index.php(31): CApplication->run()
+#12 {main}
+REQUEST_URI=/restauracao/encomendasFornecedor/print/1569&preco=1
+---
